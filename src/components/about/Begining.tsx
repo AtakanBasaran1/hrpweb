@@ -5,11 +5,14 @@ export default function Begining() {
     return (
         <div className='relative h-screen w-full bg-black overflow-hidden'>
 
-            <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gradient-to-b from-[#A066FF] via-[#5B2EFF] to-transparent rounded-full blur-[120px] opacity-70 pointer-events-none z-0" />
+            <div className="flex flex-col absolute top-[-150px] mt-200 left-1/2 -translate-x-1/2 w-full md:w-[800px] h-[500px] bg-gradient-to-b from-[#A066FF] via-[#5B2EFF] to-transparent rounded-full blur-[120px] opacity-70 pointer-events-none z-0" />
 
-            <div className=' w-full h-auto m-2 p-9 flex flex-row justify-center' style={{ marginTop: '150px' }}>
+            
+            
+            
+            <div className='flex flex-col-reverse w-full h-auto m-2 sm:p-9 items-center  md:flex-row justify-center' style={{ marginTop: '150px' }}>
 
-                <div className='w-[40%] flex'>
+                <div className='order-2 sm:order-1 sm:w-[40%] flex my-12 sm:m-0 justify-center '>
                     <Image
                         className='cursor-pointer'
                         src="/images/regeditlogo2.png"
@@ -20,17 +23,17 @@ export default function Begining() {
 
                     />
                 </div>
-                <div className='w-[60%]'>
+                <div className='order-1 sm:order-2 sm:w-[60%]'>
 
-                    <h1 className="cursor-pointer sm:text-7xl text-4xl font-bold m-3 bg-gradient-to-r from-white via-gray-200 to-sky-300 text-transparent bg-clip-text">
+                    <h1 className="cursor-pointer sm:text-8xl text-4xl font-bold m-3 bg-gradient-to-r from-white via-gray-200 to-sky-300 text-transparent bg-clip-text">
                         15 Yıllık Tecrübe,
                     </h1>
 
-                    <h1 className=" cursor-pointer sm:text-6xl text-4xl  font-bold m-3 bg-gradient-to-r from-blue-600 via-sky-200 to-gray-300 text-transparent bg-clip-text">
+                    <h1 className=" cursor-pointer sm:text-6xl text-3xl  font-bold m-3 bg-gradient-to-r from-blue-600 via-sky-200 to-gray-300 text-transparent bg-clip-text">
                         Güvenilir Teknoloji,
                     </h1>
 
-                    <h1 className="cursor-pointer sm:text-6xl text-4xl  font-bold m-3 bg-gradient-to-r from-white via-gray-200 to-sky-300  text-transparent bg-clip-text">
+                    <h1 className="cursor-pointer sm:text-6xl text-2xl  font-bold m-3 bg-gradient-to-r from-blue-600 via-sky-200 to-gray-300  text-transparent bg-clip-text">
                         Kalıcı Çözümler
                     </h1>
 
@@ -38,6 +41,11 @@ export default function Begining() {
 
                 </div>
 
+            </div>
+           
+            <div className='flex text-gray-400 justify-center items-center sm:text-xl text-md text-center h-auto w-full mt-12'>
+                <p>Regedit Bilişim olarak, sektördeki deneyimimiz ve uzman ekibimizle, işletmeniz için sürdürülebilir ve yenilikçi çözümler sunuyoruz.
+                </p>
             </div>
 
         </div>

@@ -16,7 +16,7 @@ export default function CompanyInfo() {
 
 
             <div className="w-full h-auto p-12 sm:p-9 sm:flex items-center justify-center gap-3" style={{ background: '#0A0046' }}>
-               
+
                 <h1 className="text-8xl font-bold">
                     Neden <br />
                     Biz?
@@ -25,7 +25,7 @@ export default function CompanyInfo() {
                     <p>İşinizi gerçekten anlayan, pratik ve güvenilir çözümler sunan bir teknoloji ortağıyız. <br />
                         Süreçlerinizi sadeleştirir, operasyonel yükünüzü hafifletir ve her adımda yanınızda oluruz.
                     </p>
-                    <button className='sm:mt-3 float-right cursor-pointer hover:bg-white hover:text-black rounded-2xl py-2 px-4 flex items-center justify-center gap-2 bg-transparent border-1 border-white transition duration-300'>
+                    <button className='mt-3 float-right cursor-pointer hover:bg-white hover:text-black rounded-2xl py-2 px-4 flex items-center justify-center gap-2 bg-transparent border-1 border-white transition duration-300'>
                         <p>Hizmetlerimiz</p>
                         <FaAngleRight />
                     </button>
@@ -34,50 +34,43 @@ export default function CompanyInfo() {
 
 
 
-            <div className="mt-12 flex flex-wrap gap-4 p-3 mx-24 justify-center ">
+            <div className="mt-12 sm:w-auto w-full flex flex-wrap gap-4 p-3 sm:mx-24 justify-center ">
 
                 <div className="sm:w-1/4 rounded-3xl hover:rounded-sm border-2 border-blue-900 p-6 gap-2 text-black transition-all duration-150" style={{ color: '#0A0046' }} >
                     <IoRocketOutline className="text-6xl" />
-                    <h1 className="text-md font-bold font-bold my-3">Hızlı Yanıt</h1>
+                    <h1 className="text-md  font-bold my-3">Hızlı Yanıt</h1>
                     <p className="text-xs">Önceliğimiz müşterilerimize her durumda hızlı yanıt verip hızla çözüm üretmek.</p>
                 </div>
 
                 <div className="sm:w-1/4 rounded-3xl hover:rounded-sm border-2 border-blue-900 p-6 gap-1 text-black transition-all duration-150" style={{ color: '#0A0046' }}>
                     <GoShieldCheck className="text-6xl" />
-                    <h1 className="text-md font-bold font-bold my-3">Ürün Garantisi</h1>
+                    <h1 className="text-md font-bold my-3">Ürün Garantisi</h1>
                     <p className="text-xs">Ürünlerimiz firmamızın teknis servisinin garantisi altındadır.</p>
                 </div>
 
 
                 <div className="sm:w-1/4 rounded-3xl hover:rounded-sm border-2 border-blue-900 p-6 gap-1 text-black transition-all duration-150" style={{ color: '#0A0046' }}>
                     <FaRegLightbulb className="text-6xl" />
-                    <h1 className="text-md font-bold font-bold my-3">Kalıcı Çözümler</h1>
+                    <h1 className="text-md font-bold my-3">Kalıcı Çözümler</h1>
                     <p className="text-xs">Uçtan uca çözüm sunuyor, çözümlerimizin kalıcılığına önem gösteriyoruz.</p>
                 </div>
 
                 <div className="sm:w-1/4 rounded-3xl hover:rounded-sm border-2 border-blue-900 p-6 gap-1 text-black transition-all duration-150" style={{ color: '#0A0046' }}>
                     <LuLayers3 className="text-6xl" />
-                    <h1 className="text-md font-bold font-bold my-3">Geniş Ürün Portföyü</h1>
+                    <h1 className="text-md font-bold my-3">Geniş Ürün Portföyü</h1>
                     <p className="text-xs">Geniş ürün yelpazemiz ile, tüm ihtiyaçlarınızda yanınızdayız.</p>
                 </div>
                 <div className="sm:w-1/4 rounded-3xl hover:rounded-sm border-2 border-blue-900 p-6 gap-1 text-black transition-all duration-150" style={{ color: '#0A0046' }}>
                     <VscTools className="text-6xl" />
-                    <h1 className="text-md font-bold font-bold my-3">Kurulum Hizmeti</h1>
+                    <h1 className="text-md  font-bold my-3">Kurulum Hizmeti</h1>
                     <p className="text-xs">Projeleriniz baştan sonra anahtar teslim olacak şekilde tamamlanır.</p>
                 </div>
 
                 <div className="sm:w-1/4 rounded-3xl hover:rounded-sm border-2 border-blue-900 p-6 gap-1 text-black transition-all duration-150" style={{ color: '#0A0046' }}>
                     <HiOutlineTruck className="text-6xl" />
-                    <h1 className="text-md font-bold font-bold my-3">Yerinde Teknik Servis</h1>
+                    <h1 className="text-md  font-bold my-3">Yerinde Teknik Servis</h1>
                     <p className="text-xs">Arızalı cihazlarınıza yerinde müdahale ediyor, operasyonunuzu aksatmıyoruz.</p>
                 </div>
-
-
-
-
-
-
-
 
 
             </div>
