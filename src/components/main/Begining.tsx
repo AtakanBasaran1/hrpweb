@@ -1,6 +1,6 @@
 export default function Begining() {
     return (
-        <div className="h-screen flex flex-col items-center justify-center h-screen w-full bg-black overflow-hidden">
+        <div className="h-screen flex flex-col items-center justify-center w-full bg-black overflow-hidden">
             <div className="h-auto">
                 <h1 className="shadow-xl text-white text-center font-bold text-5xl sm:text-7xl p-9">
                     Restoranlarınızı <span className="text-purple-500">Geleceğe</span> <br />
@@ -15,10 +15,10 @@ export default function Begining() {
 
             </div>
             <button
-                className="before:ease relative overflow-hidden  transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-green-500 hover:before:-translate-x-40 bg-blue-900 cursor-pointer h-auto py-2 px-4 m-9 rounded-3xl shadow-2xl font-bold text-2xl text-white"
-                style={{
-                    boxShadow: '0 4px 6px rgba(255, 255, 255, 0.3)' 
-                }}
+                className="bg-blue-900 rounded-full font-medium md:text-3xl text-xl text-white md:py-4 md:px-8 py-2 px-6 m-9 shadow-2xl shadow-white/50 hover:shadow-blue-700 duration-500 before:ease relative overflow-hidden hover:before:-translate-x-40  transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 cursor-pointer "
+                // style={{
+                //     boxShadow: '0 4px 6px rgba(255, 255, 255, 0.2)' 
+                // }}
             >
                 Bizi Tanıyın
             </button>

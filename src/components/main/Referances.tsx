@@ -33,7 +33,7 @@ export default function Referances() {
                         <img
                             src={`/images/referances/${logo}`}
                             alt={`Logo ${i + 1}`}
-                            className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition duration-150"
+                            className="max-w-full max-h-full object-contain md:grayscale grayscale-0 hover:grayscale-0 transition duration-150"
                         />
                     </div>
                 ))}
