@@ -9,7 +9,7 @@ export default function Footer() {
             <div className='md:w-[80%] w-full flex md:flex-row flex-col justify-between self-center items-center'>
                 <img src="/images/regedit_white.png" alt="Logo" className='w-48 h-auto rounded-xl text-center' />
                 <div className='w-full h-full'>
-                    <ul className='sm:flex flex flex-wrap gap-6 md:text-2xl justify-center items-center'>
+                    <ul className='sm:flex flex flex-wrap gap-6 md:text-xl justify-center items-center'>
                         <li className='cursor-pointer transition  transform hover:scale-105 duration-300'>Anasayfa</li>
                         <li className='cursor-pointer transition  transform hover:scale-105 duration-300'>Hakkımızda</li>
                         <li className='cursor-pointer transition  transform hover:scale-105 duration-300'>Ürünlerimiz</li>

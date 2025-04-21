@@ -1,6 +1,7 @@
 export default function Begining() {
     return (
         <div className="h-screen flex flex-col items-center justify-center w-full bg-black overflow-hidden">
+            <img src="/images/regedit_white.png" alt="Regedit Informatics" className="h-40 rounded-md absolute top-0 md:left-10" />
             <div className="h-auto">
                 <h1 className="shadow-xl text-white text-center font-bold text-5xl sm:text-7xl p-9">
                     Restoranlarınızı <span className="text-purple-500">Geleceğe</span> <br />
