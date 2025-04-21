@@ -15,7 +15,7 @@ export default function Begining() {
 
             </div>
             <button
-                className="bg-blue-900 rounded-full font-medium md:text-3xl text-xl text-white md:py-4 md:px-8 py-2 px-6 m-9 shadow-2xl shadow-white/50 hover:shadow-blue-700 duration-500 before:ease relative overflow-hidden hover:before:-translate-x-40  transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 cursor-pointer "
+                className="bg-blue-900 rounded-full font-medium md:text-3xl text-xl text-white md:py-4 md:px-8 py-2 px-6 m-9 shadow-2xl shadow-white/30 hover:shadow-blue-700 duration-500 before:ease relative overflow-hidden hover:before:-translate-x-40  transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 cursor-pointer "
                 // style={{
                 //     boxShadow: '0 4px 6px rgba(255, 255, 255, 0.2)' 
                 // }}
