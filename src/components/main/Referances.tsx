@@ -16,7 +16,7 @@ export default function Referances() {
 
     ];
     return (
-        <div className="h-auto w-full flex flex-col items-center mt-24">
+        <div className="h-auto w-full flex flex-col items-center">
             <h1 className="sm:text-7xl text-4xl text-center font-bold m-3 bg-gradient-to-r from-indigo-900 via-pink-500 to-gray-600 text-transparent bg-clip-text">
                 Referanslarımız
             </h1>
@@ -24,7 +24,7 @@ export default function Referances() {
                 “Restoranını geleceğe taşıyan markalar bizimle çalışıyor.”
             </p>
 
-            <div className="w-[95%] h-auto p-6 flex flex-wrap justify-center gap-4 my-24">
+            <div className="w-[95%] h-auto p-6 flex flex-wrap justify-center gap-4 my-4">
                 {logos.map((logo, i) => (
                     <div
                         key={i}

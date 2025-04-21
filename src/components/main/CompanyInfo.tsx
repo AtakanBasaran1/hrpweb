@@ -11,7 +11,7 @@ import { HiOutlineTruck } from "react-icons/hi2";
 export default function CompanyInfo() {
 
     return (
-        <div className="h-auto w-full text-white mb-24">
+        <div className="h-auto w-full text-white mb-12">
 
 
 
@@ -76,7 +76,7 @@ export default function CompanyInfo() {
             </div>
 
             <div className="w-full flex items-center justify-center">
-                <div className="w-[80%] m-24" style={{ background: '#0A0046', height: '1px' }}></div>
+                <div className="w-[80%] my-24" style={{ background: '#0A0046', height: '1px' }}></div>
 
 
             </div>

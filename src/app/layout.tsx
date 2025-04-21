@@ -25,7 +25,7 @@ export default function RootLayout({
       const currentScrollY = window.scrollY;
   
       if (currentScrollY <= 0) {
-        setShowHeader(false); 
+        setShowHeader(true); 
       } else if (currentScrollY > lastScrollY) {
         setShowHeader(true);  
       } else {
@@ -46,8 +46,8 @@ export default function RootLayout({
       <div className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${showHeader ? 'translate-y-0' : '-translate-y-full'}`}>
         <Navbar />
       </div>
-
-      {children}
+ 
+      {children} 
       <Footer/>
 
       <ScrollHide /> 

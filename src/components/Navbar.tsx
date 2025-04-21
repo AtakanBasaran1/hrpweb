@@ -18,7 +18,7 @@ export default function Navbar() {
     { label: 'Ürünlerimiz', href: '/products' },
     { label: 'Hizmetlerimiz', href: '/hizmetlerimiz' },
     { label: 'Medya', href: '/medya' },
-    { label: 'İletişim', href: '/iletisim' },
+    { label: 'İletişim', href: '/contact' },
   ];
 
   // Menü dışına tıklanınca menüyü kapat
@@ -42,7 +42,7 @@ export default function Navbar() {
 
   return (
     <nav className="flex flex-col justify-center z-50 w-full" ref={menuRef}> 
-      <div className="w-full backdrop-blur-md bg-white border-b border-black/30 text-white flex items-center px-8 md:px-20 py-2 overflow-hidden self-center">
+      <div className="w-full backdrop-blur-md bg-white border-b border-black/30 text-white flex items-center px-8 md:px-20 py-2 overflow-hidden self-center h-[7lvh]">
         <Link href="/" className="flex items-center space-x-2">
           <img src="/images/regedit_blue.png" alt="Regedit Informatics" className="h-12 rounded-md" />
         </Link>
