@@ -11,11 +11,8 @@ export default function MiddleOfPage() {
   },[]);
 
   const { setSelectedCategory } = useProduct();
- 
-      
-  // Kategori değiştirme fonksiyonu
   const handleCategoryChange = (category: string) => {
-    setSelectedCategory(category); // Butona tıklanıldığında kategori ayarlanır
+    setSelectedCategory(category); 
   };
 
  

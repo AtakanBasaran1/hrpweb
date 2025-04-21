@@ -30,8 +30,8 @@ export default function Begining() {
                 <h1 className="cursor-pointer sm:text-9xl text-4xl font-bold m-3 bg-gradient-to-r from-[#123466] via-blue-600 to-blue-400 text-transparent bg-clip-text">
                     Ürünlerimiz
                 </h1>
-                <p className='text-gray-500'>
-                    RegeditPos olarak ürünlerimizin performansı ile öne çıkıyoruz.
+                <p className='text-gray-900'>
+                    RegeditPos olarak ürünlerimizin <span className='text-sky-700'>performansı</span>  ile öne çıkıyoruz.
                 </p>
 
             </div>

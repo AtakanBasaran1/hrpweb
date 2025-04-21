@@ -7,7 +7,7 @@ import Maps from '@/components/contact/google-maps';
 export default function page() {
     return ( 
         <Fade in={true} timeout={500}>
-            <div>
+            <div className='bg-gray-100'>
                 <Form />
                 <Maps />
             </div>

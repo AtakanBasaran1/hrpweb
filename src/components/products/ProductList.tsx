@@ -8,8 +8,6 @@ import ProductModal from '../ProductModal';
 import { Fade } from '@mui/material';
 
 
-
-
 export default function ProductList() {
   const { filteredProducts } = useProduct();
 
@@ -32,9 +30,7 @@ export default function ProductList() {
         {
           filteredProducts.map((product) => (
             <Fade  key={product.id} in={true} timeout={800}>
-
             <div
-             
               onClick={() => handleOpen(product)}
               className='sm:w-[32%] w-full cursor-pointer gap-2 shadow bg-gray-100 rounded flex flex-col items-center p-5'
             >
