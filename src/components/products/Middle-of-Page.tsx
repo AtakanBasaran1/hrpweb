@@ -21,9 +21,11 @@ export default function MiddleOfPage() {
  
   return (
     <div className='h-auto w-full mt-24'>
-
       <Category></Category>
       <ProductList></ProductList>     
     </div>
   )
+
+  
+
 }

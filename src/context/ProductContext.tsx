@@ -35,7 +35,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
     {
       id: 2, name: "Kioks Masa Tipi",
       description: "EXAMPLE",
-      image: "/images/hardware/kioks6.jpg", category: "Kioks"
+      image: "/images/hardware/kioks7.jpeg", category: "Kioks"
     },
     
     
