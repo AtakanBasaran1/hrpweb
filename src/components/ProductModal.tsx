@@ -1,9 +1,10 @@
-// components/ProductModal.tsx
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Product } from "@/context/ProductContext";
 import { IoClose } from "react-icons/io5";
+
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import Image from "next/image";
 import { Fade } from '@mui/material';
 
@@ -14,19 +15,71 @@ interface Props {
 }
 
 export default function ProductModal({ product, isOpen, onClose }: Props) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    if (product) {
+      const defaultIndex = product.image.findIndex(img => img.default);
+      setCurrentImageIndex(defaultIndex !== -1 ? defaultIndex : 0);
+    }
+  }, [product]);
+
   if (!isOpen || !product) return null;
+
+  const handleNext = () => {
+    setCurrentImageIndex((prev) =>
+      prev === product.image.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const handlePrev = () => {
+    setCurrentImageIndex((prev) =>
+      prev === 0 ? product.image.length - 1 : prev - 1
+    );
+  };
 
   return (
     <Fade in={true} timeout={500}>
+      <div className="fixed inset-0 flex justify-center items-center z-50 backdrop-blur bg-black/60">
+        <button className="absolute top-3 right-3 text-3xl text-white hover:text-gray-400 transition" onClick={onClose}> 
+          <IoClose/>
+        </button>
 
-      <div className="fixed inset-0 flex justify-center items-center z-50 backdrop-blur bg-black/40">
-
-        <div className="bg-gray-100 rounded-lg p-6 w-full max-w-2xl relative shadow-lg">
-       
+        <div className="bg-white rounded-lg p-6 md:w-full md:max-w-7xl w-[90vw] shadow-xl gap-6 flex flex-col md:flex-row">
+          <div className="md:w-1/2 w-full relative flex items-center justify-center">
+            <img
+              src={product.image[currentImageIndex].img}
+              alt={product.name}
+              className="rounded md:aspect-square object-cover md:w-112 w-full"
+            />
+ 
+            {product.image.length > 1 && (
+              <>
+                <button
+                  className="absolute left-0 bg-gray-900 text-white p-4 md:p-6 rounded-full aspect-square cursor-pointer"
+                  onClick={handlePrev}
+                >
+                  <FaArrowLeft className="md:text-2xl text-xl"/>
+                </button>
+                <button
+                  className="absolute right-0 bg-gray-900 text-white p-4 md:p-6 rounded-full aspect-square cursor-pointer"
+                  onClick={handleNext}
+                >
+                  <FaArrowRight className="md:text-2xl text-xl"/>
+                </button>
+              </>
+            )}
+          </div>
+          <div className="md:w-1/2 w-full flex flex-col gap-4">
+            <h2 className="text-3xl font-bold text-gray-800">{product.name}</h2>
+            <span className="text-sm font-medium text-sky-600">
+              /{product.category}
+            </span>
+            <p className="text-gray-600 whitespace-pre-line">{product.description}</p>
+            
+          </div>
         </div>
-
       </div>
     </Fade>
-
   );
 }

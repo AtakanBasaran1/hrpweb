@@ -52,8 +52,7 @@ export default function ProductList() {
           ))
         }
       </div>
-
-      {/* Popup modal */}
+ 
       <ProductModal
         product={selectedProduct}
         isOpen={modalOpen}

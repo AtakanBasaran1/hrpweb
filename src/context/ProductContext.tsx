@@ -31,7 +31,10 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       id: 1,
       name: "Kioks",
       description: "EXAMPLE",
-      image: [{ img: "/images/kioks3.png", default: true }],
+      image: [
+        { img: "/images/kioks3.png", default: true },
+        { img: "/images/hardware/dual.JPG", default: true },
+        { img: "/images/hardware/android.jpeg", default: false }],
       category: "Kioks"
     },
     {
@@ -45,7 +48,10 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       id: 3,
       name: "Regedit Sektörel Pos Cihazı RGT-50",
       description: "Ekran boyutu: True Flat 15 Capacitive Touch Screen İşlemci: İntel Celeron J6412 Quad Core (Fansız) Ram: Kingston DDR4 8 GB. Kingston 128 GB M.2 Sata - Dahili Wifi - Dahili Hoparlör 6 Adet Usb Port(4 adet Usb 3.0, 2 adet Usb 2.0) • 1 Adet RJ11 (Para Çekmecesi Port) • 1 Adet VGA Port • 1 Adet Ethernet Port • 1 Adet Audio Port • 3 Adet ComPort • Harici Müşteri Göstergesi Portu • Harici Kart Okuyucu Portu",
-      image: [{ img: "/images/hardware/dual.JPG", default: true }],
+      image: [
+        { img: "/images/hardware/dual.JPG", default: true },
+        { img: "/images/hardware/android.jpeg", default: false }
+      ],
       category: "RGT Bilgisayarlar"
     },
     {
