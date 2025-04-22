@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { BiSolidCategory } from "react-icons/bi";
 import { HiMiniComputerDesktop } from "react-icons/hi2";
 import { FaMobileScreen } from "react-icons/fa6";
@@ -21,27 +21,33 @@ export default function Category() {
     { name: "Bağlantı", icon: FaWifi },
   ];
 
-  const { setSelectedCategory } = useProduct();
+
+  const { selectedCategory, setSelectedCategory } = useProduct();
 
   // Kategori değiştirme fonksiyonu
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category); // Butona tıklanıldığında kategori ayarlanır
+   
   };
 
   return (
     <div className="w-full flex items-center justify-center">
-      <div className="w-full h-auto flex items-center border-b-1 border-gray-400 m-12">
-        <ul className="flex">
+      <div className="w-full h-auto border-b border-gray-400 px-4 py-2 overflow-x-auto">
+        <ul className="flex flex-nowrap gap-2">
           {buttonList.map((item, index) => {
             const Icon = item.icon;
             return (
-              <li key={index}>
+              <li key={index} className="flex-shrink-0">
                 <button
-                  onClick={() => handleCategoryChange(item.name)} // Butona tıklanıldığında kategori seçilir
-                  className="flex items-center justify-center gap-2 m-2 border-1 p-3 rounded-xl hover:text-white hover:bg-black transition-all duration-150"
+                  onClick={() => handleCategoryChange(item.name)}
+                  className={`flex items-center justify-center gap-2 border p-3 rounded-xl transition-all duration-150
+                    ${selectedCategory === item.name
+                      ? "bg-black text-white"
+                      : "bg-white text-black hover:text-white hover:bg-black"}
+                  `}
                 >
                   <Icon className="text-2xl" />
-                  <p className="text-sm font-bold"> {item.name}</p>
+                  <p className="text-sm font-bold">{item.name}</p>
                 </button>
               </li>
             );
@@ -50,4 +56,5 @@ export default function Category() {
       </div>
     </div>
   );
+  
 }
