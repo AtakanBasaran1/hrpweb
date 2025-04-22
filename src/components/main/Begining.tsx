@@ -1,8 +1,8 @@
 export default function Begining() {
     return (
         <div className="h-screen flex flex-col items-center justify-center w-full bg-black overflow-hidden pt-[7lvh]">
-           
-           
+
+
             <div className="h-auto">
                 <h1 className="shadow-xl text-white text-center font-bold text-5xl sm:text-7xl p-9">
                     Restoranlarınızı <span className="text-purple-500">Geleceğe</span> <br />
@@ -16,13 +16,8 @@ export default function Begining() {
                 </p>
 
             </div>
-            <button
-                className="bg-blue-900 rounded-full font-medium md:text-3xl text-xl text-white md:py-4 md:px-8 py-2 px-6 m-9 shadow-2xl shadow-white/30 hover:shadow-blue-700 duration-500 before:ease relative overflow-hidden hover:before:-translate-x-40  transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 cursor-pointer "
-                // style={{
-                //     boxShadow: '0 4px 6px rgba(255, 255, 255, 0.2)' 
-                // }}
-            >
-                Bizi Tanıyın
+            <button className="relative flex m-4 rounded-2xl py-3 px-5 items-center justify-center overflow-hidden bg-gray-600 text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-blue-800 before:duration-500 before:ease-out hover:shadow-blue-800 hover:before:h-56 hover:before:w-56 duraiton-300">
+                <span className="relative text-2xl z-10">Bizi Tanıyın</span>
             </button>
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full md:w-[600px] h-[400px] bg-[#8072FF] rounded-full blur-3xl opacity-50 pointer-events-none" />
         </div>

@@ -42,7 +42,7 @@ export default function ProductModal({ product, isOpen, onClose }: Props) {
     <Fade in={true} timeout={500}>
       <div className="fixed inset-0 flex justify-center items-center z-50 backdrop-blur bg-black/60">
         <button className="absolute top-3 right-3 text-3xl text-white hover:text-gray-400 transition" onClick={onClose}> 
-          <IoClose/>
+          <IoClose className="cursor-pointer"/>
         </button>
 
         <div className="bg-white rounded-lg p-6 md:w-full md:max-w-7xl w-[90vw] shadow-xl gap-6 flex flex-col md:flex-row">
@@ -72,7 +72,7 @@ export default function ProductModal({ product, isOpen, onClose }: Props) {
           </div>
           <div className="md:w-1/2 w-full flex flex-col gap-4">
             <h2 className="text-3xl font-bold text-gray-800">{product.name}</h2>
-            <span className="text-sm font-medium text-sky-600">
+            <span className="text-sm font-medium text-gray-500">
               /{product.category}
             </span>
             <p className="text-gray-600 whitespace-pre-line">{product.description}</p>
