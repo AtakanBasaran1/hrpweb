@@ -5,7 +5,7 @@ export default function MissionAndVision() {
     const [isVisionHovered, setIsVisionHovered] = useState(false);
 
     return (
-        <div className="w-full sm:flex h-auto my-32"> 
+        <div className="w-full sm:flex h-auto my-56"> 
             <div
                 className={`sm:w-1/2 p-6 h-auto flex flex-col items-center justify-center transition-all duration-300 ${
                     isVisionHovered
