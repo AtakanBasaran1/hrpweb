@@ -10,9 +10,10 @@ export default function Begining() {
             
             
             
-            <div className='flex flex-col-reverse w-full h-auto m-2 sm:p-9 items-center  md:flex-row justify-center' style={{ marginTop: '150px' }}>
+            <div className='flex flex-col-reverse w-full h-auto m-2 sm:p-9 items-center  md:flex-col-reverse space-y-12 justify-center' style={{ marginTop: '150px' }}>
 
-                <div className='order-2 sm:order-1 sm:w-[40%] flex my-12 sm:m-0 justify-center '>
+               {/**
+                *   <div className='order-2 sm:order-1 sm:w-[40%]   flex my-12 sm:m-0 justify-center '>
                     <Image
                         className='cursor-pointer'
                         src="/images/regeditlogo2.png"
@@ -23,14 +24,15 @@ export default function Begining() {
 
                     />
                 </div>
-                <div className='order-1 sm:order-2 sm:w-[60%]'>
+                */}
+                <div className='order-1 sm:order-2 flex flex-col items-center sm:w-[60%]'>
 
                     <h1 className="cursor-pointer sm:text-8xl text-4xl font-bold m-3 bg-gradient-to-r from-white via-gray-200 to-sky-300 text-transparent bg-clip-text">
-                        15 Yıllık Tecrübe,
+                        15 Yıllık Tecrübe
                     </h1>
 
                     <h1 className=" cursor-pointer sm:text-6xl text-3xl  font-bold m-3 bg-gradient-to-r from-blue-600 via-sky-200 to-gray-300 text-transparent bg-clip-text">
-                        Güvenilir Teknoloji,
+                        Güvenilir Teknoloji
                     </h1>
 
                     <h1 className="cursor-pointer sm:text-6xl text-2xl  font-bold m-3 bg-gradient-to-r from-blue-600 via-sky-200 to-gray-300  text-transparent bg-clip-text">

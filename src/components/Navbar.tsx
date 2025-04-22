@@ -22,7 +22,29 @@ export default function Navbar() {
   ];
 
   // Menü dışına tıklanınca menüyü kapat
-  const menuRef = useRef<HTMLDivElement>(null); // ✅ doğru tip
+  const menuRef = useRef<HTMLDivElement>(null);
+  const [showHeader, setShowHeader] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+  
+      if (currentScrollY <= 0) {
+        setShowHeader(false); 
+      } else if (currentScrollY > lastScrollY) {
+        setShowHeader(true);  
+      } else {
+        setShowHeader(false);  
+      }
+  
+      setLastScrollY(currentScrollY);
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+  
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent | TouchEvent) => { // ✅ doğru event tipi
@@ -42,9 +64,9 @@ export default function Navbar() {
 
   return (
     <nav className="flex flex-col justify-center z-50 w-full" ref={menuRef}> 
-      <div className="w-full backdrop-blur-md bg-white border-b border-black/30 text-white flex items-center px-8 md:px-20 py-2 overflow-hidden self-center h-[7lvh]">
+      <div className={`w-full backdrop-blur-md  ${showHeader ? "bg-white":"bg-black"}  border-b border-black/30 text-white flex items-center px-8 md:px-20 py-2 overflow-hidden self-center h-[7lvh] `}>
         <Link href="/" className="flex items-center space-x-2">
-          <img src="/images/regedit_blue.png" alt="Regedit Informatics" className="h-12 rounded-md" />
+          <img src={`${showHeader ? "/images/regedit_blue.png":"/images/regedit_white.png"}`} alt="Regedit Informatics" className="h-20  rounded-md" />
         </Link>
 
         <div className="flex-1 flex justify-center z-50">
@@ -55,7 +77,7 @@ export default function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href} 
-                  className={`navbar-text hover:text-gray-300 transition-colors text-black flex items-center gap-2 ${isActive && 'border-b-2 border-black'}`}
+                  className={`navbar-text hover:text-gray-300 transition-colors ${showHeader ? "text-black":"text-white"}    flex items-center gap-2 ${isActive && 'border-b-2 border-black'}`}
                 >
                   {item.label}
                 </Link>
