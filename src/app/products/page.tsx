@@ -2,6 +2,7 @@ import Begining from '@/components/products/Begining'
 import React from 'react'
 import { Fade } from '@mui/material';
 import MiddleOfPage from '@/components/products/Middle-of-Page';
+import Category from '@/components/products/Category';
 
 export default function page() {
   return (
@@ -9,6 +10,7 @@ export default function page() {
       <div>
         <Begining />
         <MiddleOfPage />
+      
       </div>
     </Fade>
   )

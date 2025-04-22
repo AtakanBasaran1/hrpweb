@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import { useState,useEffect } from "react";
 
 import ScrollHide from "./tools/scrollHide"; 
+import { ProductProvider } from "@/context/ProductContext";
  
 
 export default function RootLayout({
@@ -43,6 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
      <body className={`${poppins.className} antialiased bg-black text-white`}>
+     <ProductProvider>
       <div className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${showHeader ? 'translate-y-0' : '-translate-y-full'}`}>
         <Navbar />
       </div>
@@ -51,6 +53,7 @@ export default function RootLayout({
       <Footer/>
 
       <ScrollHide /> 
+   </ProductProvider>
     </body>
   </html>
   );
