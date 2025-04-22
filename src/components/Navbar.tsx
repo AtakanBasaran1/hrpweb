@@ -35,7 +35,7 @@ export default function Navbar() {
       } else if (currentScrollY > lastScrollY) {
         setShowHeader(true);  
       } else {
-        setShowHeader(false);  
+        setShowHeader(true);  
       }
   
       setLastScrollY(currentScrollY);
@@ -64,9 +64,26 @@ export default function Navbar() {
 
   return (
     <nav className="flex flex-col justify-center z-50 w-full" ref={menuRef}> 
-      <div className={`w-full backdrop-blur-md  ${showHeader ? "bg-white":"bg-black"}  border-b border-black/30 text-white flex items-center px-8 md:px-20 py-2 overflow-hidden self-center h-[7lvh] `}>
+      <div className={`w-full backdrop-blur-md  
+        ${pathname === '/products'
+                ? "bg-transparent"
+                : showHeader
+                  ? "bg-white"
+                  : "bg-black"}
+        
+        text-white flex items-center px-8 md:px-20 py-2 overflow-hidden self-center h-[7lvh] `}>
         <Link href="/" className="flex items-center space-x-2">
-          <img src={`${showHeader ? "/images/regedit_blue.png":"/images/regedit_white.png"}`} alt="Regedit Informatics" className="h-20  rounded-md" />
+        <img
+            src={
+              pathname === '/products'
+                ? "/images/regedit_blue.png"
+                : showHeader
+                  ? "/images/regedit_black.png"
+                  : "/images/regedit_white.png"
+            }
+            alt="Regedit Informatics"
+            className="h-20 rounded-md"
+          />
         </Link>
 
         <div className="flex-1 flex justify-center z-50">
@@ -77,7 +94,7 @@ export default function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href} 
-                  className={`navbar-text hover:text-gray-300 transition-colors ${showHeader ? "text-black":"text-white"}    flex items-center gap-2 ${isActive && 'border-b-2 border-black'}`}
+                  className={`hover:text-gray-300 transition-colors ${showHeader ? "text-black":"text-white"}    flex items-center gap-2 ${isActive && 'border-b-2 ${showHeader ? "border-white":"border-black"}'}`}
                 >
                   {item.label}
                 </Link>
