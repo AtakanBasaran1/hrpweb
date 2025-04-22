@@ -8,7 +8,7 @@ export default function Begining() {
             {/* Üstteki gradient ışık süzmesi */}
             <div className="flex flex-col absolute top-[-150px] left-1/2 -translate-x-1/2 w-full md:w-[800px] h-[500px] bg-gradient-to-b from-[#123466] via-blue-500 to-transparent rounded-full blur-[120px] opacity-90 pointer-events-none z-0" />
 
-            <div className="absolute bottom-[-100px] left-1/2 -translate-x-1/2 w-[500px] z-0 opacity-90 relative">
+            <div className="bottom-[-100px] left-1/2 -translate-x-1/2 w-[500px] z-0 opacity-90 relative">
                 <Image
                     src="/images/hardware/kioks5.png"
                     alt="Ürün Görseli"

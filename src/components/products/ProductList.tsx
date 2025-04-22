@@ -41,7 +41,7 @@ export default function ProductList() {
                 <IoIosArrowForward />
               </button>
               <Image
-                src={product.image}
+                src={product.image.find(img => img.default)?.img || "/images/logo.png"}
                 alt={product.name}
                 width={1000}
                 height={600}
