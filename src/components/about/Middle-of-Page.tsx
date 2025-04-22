@@ -31,7 +31,7 @@ export default function MiddleOfPage() {
                             İşletmenizin Yanında,
                             Her Aşamada
                         </h1>
-                        <p className='sm:text-center m-3 sm:text-left'>LOREMYalnızca yazılım değil, donanımda da yanınızdayız.
+                        <p className='sm:text-center m-3 text-left'>LOREMYalnızca yazılım değil, donanımda da yanınızdayız.
                             Yüksek performanslıanslı, dayanıklı ve kullanım kolaylığıyla öne çıkan POS cihazlarımız, restoran
                             operasyonlarınızı hızlandırmak ve müşterilerinize kusursuz bir deneyim sunmak için tasarlandı.
                             yapısıyla, uzun ömürlü ve güvenilir çözümler sunuyoruz.</p>
