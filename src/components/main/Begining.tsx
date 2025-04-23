@@ -16,7 +16,7 @@ export default function Begining() {
                 </p>
 
             </div>
-            <button className="relative flex m-4 rounded-2xl py-3 px-5 items-center justify-center overflow-hidden bg-gray-600 text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-blue-800 before:duration-500 before:ease-out hover:shadow-blue-800 hover:before:h-56 hover:before:w-56 duraiton-300">
+            <button className="relative flex m-4 rounded-2xl py-3 px-5 items-center justify-center overflow-hidden md:bg-gray-600 bg-blue-800 text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-blue-800 before:duration-500 before:ease-out hover:shadow-blue-800 hover:before:h-56 hover:before:w-56 duraiton-300">
                 <span className="relative text-2xl z-10">Bizi Tanıyın</span>
             </button>
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full md:w-[600px] h-[400px] bg-[#8072FF] rounded-full blur-3xl opacity-50 pointer-events-none" />

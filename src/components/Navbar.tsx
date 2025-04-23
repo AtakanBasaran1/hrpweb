@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import { motion, AnimatePresence } from 'framer-motion';
+import path from 'path';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,9 +35,7 @@ export default function Navbar() {
         setShowHeader(false); 
       } else if (currentScrollY > lastScrollY) {
         setShowHeader(true);  
-      } else {
-        setShowHeader(true);  
-      }
+      } 
   
       setLastScrollY(currentScrollY);
     };
@@ -67,9 +66,13 @@ export default function Navbar() {
       <div className={`w-full backdrop-blur-md  
         ${pathname === '/products'
                 ? "bg-transparent"
-                : showHeader
-                  ? "bg-white"
-                  : "bg-black"}
+                : 
+                    showHeader
+                      ? "bg-white"
+                      :  
+                        pathname === '/contact'
+                          ? "bg-[#123466]"
+                          :"bg-black"}
         
         text-white flex items-center px-8 md:px-20 py-2 overflow-hidden self-center h-[7lvh] `}>
         <Link href="/" className="flex items-center space-x-2">
@@ -82,11 +85,11 @@ export default function Navbar() {
                   : "/images/regedit_white.png"
             }
             alt="Regedit Informatics"
-            className="h-20 rounded-md"
+            className="h-26 rounded-md"
           />
         </Link>
 
-        <div className="flex-1 flex justify-center z-50">
+        <div className="flex-1 flex justify-center z-50 w-full">
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
@@ -95,20 +98,61 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href} 
                   className={`hover:text-gray-300 transition-colors ${showHeader ? "text-black":"text-white"}    flex items-center gap-2 ${isActive && 'border-b-2 ${showHeader ? "border-white":"border-black"}'}`}
-                >
-                  {item.label}
+                  onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
                 </Link>
               );
             })}
           </div>
         </div>
 
+        <Link href="/" className="items-center space-x-2 md:flex hidden opacity-0">
+          <img
+              src={
+                pathname === '/products'
+                  ? "/images/regedit_blue.png"
+                  : showHeader
+                    ? "/images/regedit_black.png"
+                    : "/images/regedit_white.png"
+              }
+              alt="Regedit Informatics"
+              className="h-20 rounded-md"
+            />
+        </Link>
+
         <button
           className="md:hidden text-white ml-auto"
           onClick={toggleMenu}
           aria-label="Menu"
         >
-          {isOpen ? <FaAngleUp size={28} color="#000" /> : <FaAngleDown size={28} color="#000" />}
+          {isOpen ?  
+              <FaAngleUp size={28} color={`${
+                pathname === '/products'
+                  ? "#123466"
+                  : 
+                      showHeader
+                        ? "#000"
+                        :  
+                          pathname === '/contact'
+                            ? "#FFF"
+                            : "#FFF"}`}/> 
+                          
+            : 
+            
+              <FaAngleDown size={28} color={`${
+                pathname === '/products'
+                  ? "#123466"
+                  : 
+                      showHeader
+                        ? "#000"
+                        :  
+                          pathname === '/contact'
+                            ? "#FFF"
+                            : "#FFF"}`}  />
+          }
+
+
         </button>
       </div>
 

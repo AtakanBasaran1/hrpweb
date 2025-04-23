@@ -1,8 +1,18 @@
 import React from 'react'
 import { FaLinkedin, FaInstagram } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import Link from 'next/link';
 
 export default function Footer() {
+
+    const navItems = [
+        { label: 'Anasayfa', href: '/' },
+        { label: 'Hakkımızda', href: '/about' },
+        { label: 'Ürünlerimiz', href: '/products' },
+        { label: 'Hizmetlerimiz', href: '/hizmetlerimiz' },
+        { label: 'Medya', href: '/medya' },
+        { label: 'İletişim', href: '/contact' },
+      ];
     return (
         <footer className="text-white h-auto px-2 py-4 flex flex-col items-center justify-between bg-[#0A0046] xl:gap-3 gap-1 rounded-tr-xl rounded-tl-xl xl:rounded-none">
 
@@ -10,12 +20,17 @@ export default function Footer() {
                 <img src="/images/regedit_white.png" alt="Logo" className='w-48 h-auto rounded-xl text-center' />
                 <div className='w-full h-full'>
                     <ul className='sm:flex flex flex-wrap gap-6 xl:text-xl justify-center items-center'>
-                        <li className='cursor-pointer transition  transform hover:scale-105 duration-300'>Anasayfa</li>
-                        <li className='cursor-pointer transition  transform hover:scale-105 duration-300'>Hakkımızda</li>
-                        <li className='cursor-pointer transition  transform hover:scale-105 duration-300'>Ürünlerimiz</li>
-                        <li className='cursor-pointer transition  transform hover:scale-105 duration-300'>Hizmetlerimiz</li>
-                        <li className='cursor-pointer transition  transform hover:scale-105 duration-300'>Medya</li>
-                        <li className='cursor-pointer transition  transform hover:scale-105 duration-300'>İletişim</li>
+                        {navItems.map((item) => { 
+                            return (
+                                <Link
+                                    key={item.href}
+                                    href={item.href} 
+                                    className={`cursor-pointer transition  transform hover:scale-105 duration-300`}
+                                    >
+                                        {item.label}
+                                </Link>
+                            );
+                        })} 
                     </ul>
                 </div>
                 
