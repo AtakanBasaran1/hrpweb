@@ -80,7 +80,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       name: "Regedit Para Çekmecesi RGT-80",
       description: "5 Kağıt/8 Bozuk Para Haznesi. RJ11 1.5 m Kablo 410x420x100mm",
       image: [{ img: "/images/hardware/rgt-80ctransparent.png", default: true }],
-      category: "Yazar Kasa"
+      category: "Para Çekmecesi"
     },
     {
       id: 8,

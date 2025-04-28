@@ -14,10 +14,10 @@ export default function Category() {
     { name: "Tüm Ürünler", icon: BiSolidCategory },
     { name: "Kioks", icon: PiDeviceMobileLight },
     { name: "RGT Bilgisayarlar", icon: HiMiniComputerDesktop },
+    { name: "Yazıcı", icon: TiPrinter },
+    { name: "Para Çekmecesi", icon: PiCashRegister },
     { name: "El Terminali", icon: FaMobileScreen },
     { name: "Pos Cihazı", icon: CiCreditCard1 },
-    { name: "Yazıcı", icon: TiPrinter },
-    { name: "Yazar Kasa", icon: PiCashRegister },
     { name: "Bağlantı", icon: FaWifi },
   ];
 
