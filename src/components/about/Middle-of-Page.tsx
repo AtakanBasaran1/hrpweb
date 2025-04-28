@@ -19,7 +19,7 @@ export default function MiddleOfPage() {
                     <div className="sm:w-[30%] h-auto">
                         <Image
                             className='cursor-pointer'
-                            src="/images/created2.webp"
+                            src="/images/aboutpageimage.webp"
                             alt="Logo"
                             width={400}
                             height={500}
@@ -31,7 +31,7 @@ export default function MiddleOfPage() {
                             İşletmenizin Yanında,
                             Her Aşamada
                         </h1>
-                        <p className='sm:text-center m-3 text-left'>LOREMYalnızca yazılım değil, donanımda da yanınızdayız.
+                        <p className='text-center sm:text-left m-3'>LOREMYalnızca yazılım değil, donanımda da yanınızdayız.
                             Yüksek performanslıanslı, dayanıklı ve kullanım kolaylığıyla öne çıkan POS cihazlarımız, restoran
                             operasyonlarınızı hızlandırmak ve müşterilerinize kusursuz bir deneyim sunmak için tasarlandı.
                             yapısıyla, uzun ömürlü ve güvenilir çözümler sunuyoruz.</p>
@@ -46,7 +46,7 @@ export default function MiddleOfPage() {
                     <div className="order-1 sm:order-2  sm:w-[30%] h-auto">
                         <Image
                             className='cursor-pointer'
-                            src="/images/created3.webp"
+                            src="/images/aboutpageimage2.webp"
                             alt="Logo"
                             width={400}
                             height={500}
@@ -57,7 +57,7 @@ export default function MiddleOfPage() {
                         <h1 className="sm:text-4xl text-3xl font-bold m-3 bg-gradient-to-r from-blue-700 via-sky-500 to-gray-400 text-transparent bg-clip-text">
                             Bizi Neden Tercih etmelisiniz?
                         </h1>
-                        <p className='sm:text-center m-3 '>LOREMYalnızca yazılım değil, donanımda da yanınızdayız.
+                        <p className='text-center sm:text-left m-3 '>LOREMYalnızca yazılım değil, donanımda da yanınızdayız.
                             Yüksek performanslıanslı, dayanıklı ve kullanım kolaylığıyla öne çıkan POS cihazlarımız, restoran
                             operasyonlarınızı hızlandırmak ve müşterilerinize kusursuz bir deneyim sunmak için tasarlandı.
                             yapısıyla, uzun ömürlü ve güvenilir çözümler sunuyoruz.</p>

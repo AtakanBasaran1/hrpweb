@@ -32,16 +32,16 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       name: "Kioks",
       description: "EXAMPLE",
       image: [
-        { img: "/images/kioks3.png", default: true },
+        { img: "/images/hardware/kioks33.png", default: true },
         { img: "/images/hardware/dual.JPG", default: true },
-        { img: "/images/hardware/android.jpeg", default: false }],
+        { img: "/images/hardware/androidtransparent.png", default: false }],
       category: "Kioks"
     },
     {
       id: 2,
       name: "Kioks Masa Tipi",
       description: "EXAMPLE",
-      image: [{ img: "/images/hardware/kioks6.jpg", default: true }],
+      image: [{ img: "/images/hardware/kioks2transparent.png", default: true }],
       category: "Kioks"
     },
     {
@@ -49,8 +49,8 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       name: "Regedit Sektörel Pos Cihazı RGT-50",
       description: "Ekran boyutu: True Flat 15 Capacitive Touch Screen İşlemci: İntel Celeron J6412 Quad Core (Fansız) Ram: Kingston DDR4 8 GB. Kingston 128 GB M.2 Sata - Dahili Wifi - Dahili Hoparlör 6 Adet Usb Port(4 adet Usb 3.0, 2 adet Usb 2.0) • 1 Adet RJ11 (Para Çekmecesi Port) • 1 Adet VGA Port • 1 Adet Ethernet Port • 1 Adet Audio Port • 3 Adet ComPort • Harici Müşteri Göstergesi Portu • Harici Kart Okuyucu Portu",
       image: [
-        { img: "/images/hardware/dual.JPG", default: true },
-        { img: "/images/hardware/android.jpeg", default: false }
+        { img: "/images/hardware/dualtransparent2.png", default: true },
+        { img: "/images/hardware/androidtransparent.png", default: false }
       ],
       category: "RGT Bilgisayarlar"
     },
@@ -58,35 +58,35 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       id: 4,
       name: "Regedit Sektörel Pos Cihazı RGT-59",
       description: "Ekran boyutu: True Flat 18.5 Capacitive Touch Screen İşlemci: İntel Celeron J6412 Quad Core (Fansız) Ram: Kingston DDR4 8 GB.Kingston 128 gb M.2 Sata - Dahili Wifi - Dahili Hoparlör 6 Adet Usb Port(4 adet Usb 3.0, 2 adet Usb 2.0) • 1 Adet RJ11 (Para Çekmecesi Port) • 1 Adet VGA Port • 1 Adet Ethernet Port • 1 Adet Audio Port • 3 Adet ComPort • Harici Müşteri Göstergesi Portu • Harici Kart Okuyucu Portu",
-      image: [{ img: "/images/hardware/dual.JPG", default: true }],
+      image: [{ img: "/images/hardware/dualtransparent2.png", default: true }],
       category: "RGT Bilgisayarlar"
     },
     {
       id: 5,
       name: "Regedit Sektörel Android Pos Cihazı RGT-40A",
       description: "Ekran boyutu: True Flat 15,6 Capacitive Touch Screen İşlemci: RK 3568 Ram: DDR4 4 GB. EMMC FLASH 128 gb - Dahili Wifi - Dahili Hoparlör 6 Adet Usb Port(4 adet Usb 2.0, 2 adet Usb 3.0) • 1 Adet RJ11 (Para Çekmecesi Port) • 1 Adet Ethernet Port • 1 Adet Audio Port • 2 Adet ComPort • Harici Müşteri Göstergesi Portu • Harici Kart Okuyucu Portu",
-      image: [{ img: "/images/hardware/android.jpeg", default: true }],
+      image: [{ img: "/images/hardware/androidtransparent.png", default: true }],
       category: "RGT Bilgisayarlar"
     },
     {
       id: 6,
       name: "Regedit Termal Yazıcı RGT-60",
       description: "80 mm Termal Printer; 203 DPI. YAZDIRMA HIZI: 230mm/s USB+ETHERNET Port - Metal Termal Kafa",
-      image: [{ img: "/images/hardware/yazici.png", default: true }],
+      image: [{ img: "/images/hardware/yazicitransparent.png", default: true }],
       category: "Yazıcı"
     },
     {
       id: 7,
       name: "Regedit Para Çekmecesi RGT-80",
       description: "5 Kağıt/8 Bozuk Para Haznesi. RJ11 1.5 m Kablo 410x420x100mm",
-      image: [{ img: "/images/hardware/rgt-80c.jpg", default: true }],
+      image: [{ img: "/images/hardware/rgt-80ctransparent.png", default: true }],
       category: "Yazar Kasa"
     },
     {
       id: 8,
       name: "Regedit Müşteri Göstergesi RGT-90",
       description: "9,7 Lcd Ekran",
-      image: [{ img: "/images/hardware/dual2.JPG", default: true }],
+      image: [{ img: "/images/hardware/dual2transparent.png", default: true }],
       category: "RGT Bilgisayarlar"
     },
     {
@@ -107,21 +107,21 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       id: 11,
       name: "INGENİCO",
       description: "example",
-      image: [{ img: "/images/hardware/ingenico.jpg", default: true }],
+      image: [{ img: "/images/hardware/ingenicotransparent.png", default: true }],
       category: "Pos Cihazı"
     },
     {
       id: 12,
       name: "Acces Point",
       description: "300 Mbps, Merkezi Yönetim Platformu, Tavan Montajlı ,Toz Koruyuculu Tasarım",
-      image: [{ img: "/images/hardware/access.jpg", default: true }],
+      image: [{ img: "/images/hardware/accesstransparent.png", default: true }],
       category: "Bağlantı"
     },
     {
       id: 13,
       name: "Ubiquiti UniFi AC Lite",
       description: "example",
-      image: [{ img: "/images/hardware/aclite.png", default: true }],
+      image: [{ img: "/images/hardware/aclite2.png", default: true }],
       category: "Bağlantı"
     }
   ];
