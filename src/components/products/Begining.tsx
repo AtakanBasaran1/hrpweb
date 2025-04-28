@@ -19,7 +19,7 @@ export default function Begining() {
                 />
 
                 {/* Alt kısma geçişli blur efekti */}
-                <div className="absolute bottom-0 left-0 w-full h-[160px] bg-gradient-to-t from-white/95 to-transparent pointer-events-none" />
+                <div className="absolute bottom-0 left-0 w-full h-[450px] bg-gradient-to-t from-white/95 to-transparent pointer-events-none" />
             </div>
 
 
