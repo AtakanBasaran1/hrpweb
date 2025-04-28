@@ -71,7 +71,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       description: "27' STAND KİOSKU INTELJ6412 CPU (No Fan), KINGSTON 8G DDR4 RAM, KINGSTON 128G (M2)SSD, WIN10 OS, USB, WIFI, LAN Modül: QR- Kod Okuyucu, Epson Termal Yazıcı, POS Bağlantı Aparatı, Numaratör ve Pos Bağlantısı Özel Olarak Tasarlanmış Numaratör Aparatı ve Pos Cihazı Bağlantı Aparatı (Tüm Pos Cihazlarına Uyumlu), Kilitli Açılır Ön Panel. Yüksek Kalite Ekran Kapasitif Dokunmatik Ekran 1920*1080, Yüksek Çözünürlük ve 700nits Parlaklık. 21,5' MASAÜSTÜ KIOSK INTELJ6412 CPU (Fan Yok), KINGSTON 8G DDR4 RAM, KINGSTON 128G (M2)SSD, WIN10 İşletim Sistemi, USB, WIFI, LAN Modül: QR-Kod Okuyucu, Epson Termal Yazıcı, POS Bağlantı Aparatı.",
       image: [
         { img: "/images/hardware/kioks33.png", default: true },
-        { img: "/images/hardware/dual.JPG", default: true },
+        { img: "/images/hardware/dual.png", default: true },
         { img: "/images/hardware/androidtransparent.png", default: false }],
       category: "Kioks"
     },

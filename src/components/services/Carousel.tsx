@@ -29,7 +29,7 @@ export default function Carousel() {
                                 <Image
                                     src={post.image}
                                     alt="İmage"
-                                    layout="fill"
+                                    fill
                                     objectFit="cover"
                                     priority
                                 />
