@@ -9,7 +9,7 @@ import path from 'path';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname(); 
+  const pathname = usePathname();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -29,18 +29,18 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-  
+
       if (currentScrollY <= 0) {
-        setShowHeader(false); 
+        setShowHeader(false);
       } else if (currentScrollY > lastScrollY) {
-        setShowHeader(true);  
-      } 
-  
+        setShowHeader(true);
+      }
+
       setLastScrollY(currentScrollY);
     };
-  
+
     window.addEventListener("scroll", handleScroll);
-  
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
@@ -50,10 +50,10 @@ export default function Navbar() {
         setIsOpen(false);
       }
     };
-  
+
     document.addEventListener('mousedown', handleClickOutside);
     document.addEventListener('touchstart', handleClickOutside);
-  
+
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('touchstart', handleClickOutside);
@@ -61,21 +61,21 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="flex flex-col justify-center z-50 w-full" ref={menuRef}> 
+    <nav className="flex flex-col justify-center z-50 w-full" ref={menuRef}>
       <div className={`w-full backdrop-blur-md  
         ${pathname === '/products'
-                ? "bg-transparent"
-                : 
-                    showHeader
-                      ? "bg-white"
-                      :  
-                        pathname === '/contact'
-                          ? "bg-[#123466]"
-                          :"bg-black"}
+          ? "bg-transparent"
+          :
+          showHeader
+            ? "bg-white"
+            :
+            pathname === '/contact'
+              ? "bg-[#123466]"
+              : "bg-black"}
         
         text-white flex items-center px-8 md:px-20 py-2 overflow-hidden self-center h-[7lvh] `}>
         <Link href="/" className="flex items-center space-x-2">
-        <img
+          <img
             src={
               pathname === '/products'
                 ? "/images/regedit_blue.png"
@@ -95,11 +95,11 @@ export default function Navbar() {
               return (
                 <Link
                   key={item.href}
-                  href={item.href} 
-                  className={`hover:text-gray-300 transition-colors ${showHeader ? "text-black":"text-white"}    flex items-center gap-2 ${isActive && 'border-b-2 ${showHeader ? "border-white":"border-black"}'}`}
+                  href={item.href}
+                  className={`hover:text-gray-300 transition-colors ${showHeader ? "text-black" : "text-white"}    flex items-center gap-2 ${isActive && 'border-b-2 ${showHeader ? "border-white":"border-black"}'}`}
                   onClick={() => setIsOpen(false)}
-                  >
-                    {item.label}
+                >
+                  {item.label}
                 </Link>
               );
             })}
@@ -108,16 +108,16 @@ export default function Navbar() {
 
         <Link href="/" className="items-center space-x-2 md:flex hidden opacity-0">
           <img
-              src={
-                pathname === '/products'
-                  ? "/images/regedit_blue.png"
-                  : showHeader
-                    ? "/images/regedit_black.png"
-                    : "/images/regedit_white.png"
-              }
-              alt="Regedit Informatics"
-              className="h-20 rounded-md"
-            />
+            src={
+              pathname === '/products'
+                ? "/images/regedit_blue.png"
+                : showHeader
+                  ? "/images/regedit_black.png"
+                  : "/images/regedit_white.png"
+            }
+            alt="Regedit Informatics"
+            className="h-20 rounded-md"
+          />
         </Link>
 
         <button
@@ -125,30 +125,28 @@ export default function Navbar() {
           onClick={toggleMenu}
           aria-label="Menu"
         >
-          {isOpen ?  
-              <FaAngleUp size={28} color={`${
-                pathname === '/products'
-                  ? "#123466"
-                  : 
-                      showHeader
-                        ? "#000"
-                        :  
-                          pathname === '/contact'
-                            ? "#FFF"
-                            : "#FFF"}`}/> 
-                          
-            : 
-            
-              <FaAngleDown size={28} color={`${
-                pathname === '/products'
-                  ? "#123466"
-                  : 
-                      showHeader
-                        ? "#000"
-                        :  
-                          pathname === '/contact'
-                            ? "#FFF"
-                            : "#FFF"}`}  />
+          {isOpen ?
+            <FaAngleUp size={28} color={`${pathname === '/products'
+                ? "#123466"
+                :
+                showHeader
+                  ? "#000"
+                  :
+                  pathname === '/contact'
+                    ? "#FFF"
+                    : "#FFF"}`} />
+
+            :
+
+            <FaAngleDown size={28} color={`${pathname === '/products'
+                ? "#123466"
+                :
+                showHeader
+                  ? "#000"
+                  :
+                  pathname === '/contact'
+                    ? "#FFF"
+                    : "#FFF"}`} />
           }
 
 
@@ -173,7 +171,7 @@ export default function Navbar() {
                   className="py-2 w-full text-left hover:text-gray-300 transition-colors flex items-center gap-2"
                   onClick={() => setIsOpen(false)}
                 >
-                  <span className={`font-bold text-black ${isActive ? 'opacity-100' : 'opacity-0'}`}>|</span> 
+                  <span className={`font-bold text-black ${isActive ? 'opacity-100' : 'opacity-0'}`}>|</span>
                   {item.label}
                 </Link>
               );

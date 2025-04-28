@@ -1,8 +1,15 @@
+"use client";
 import React from 'react'
 import Image from 'next/image'
 import { FaAngleRight } from "react-icons/fa";
+import { useRouter } from 'next/navigation';
 
 export default function MiddleOfPage() {
+ const router=useRouter();
+    const handleContactPageRoute = () => {
+        router.push("/contact"); 
+    };
+
     return (
         <div className='h-auto w-full flex flex-col items-center  justfiy-center'>
             <h1 style={{ marginTop: '100px' }} className="sm:text-6xl text-4xl text-center font-extrabold">
@@ -61,7 +68,7 @@ export default function MiddleOfPage() {
                             Yüksek performanslıanslı, dayanıklı ve kullanım kolaylığıyla öne çıkan POS cihazlarımız, restoran
                             operasyonlarınızı hızlandırmak ve müşterilerinize kusursuz bir deneyim sunmak için tasarlandı.
                             yapısıyla, uzun ömürlü ve güvenilir çözümler sunuyoruz.</p>
-                        <button className='mt-3 mx-3 cursor-pointer hover:bg-blue-900 hover:text-white rounded-2xl py-2 px-4 flex items-center justify-center gap-2 bg-transparent border-1 border-black transition duration-300'>
+                        <button onClick={(e)=>handleContactPageRoute()} className='mt-3 mx-3 cursor-pointer hover:bg-blue-900 hover:text-white rounded-2xl py-2 px-4 flex items-center justify-center gap-2 bg-transparent border-1 border-black transition duration-300'>
                             <p>İletişime Geç</p>
                             <FaAngleRight />
 

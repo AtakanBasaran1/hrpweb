@@ -1,10 +1,18 @@
 
+"use client";
 import Image from 'next/image'
 import { FaAngleRight } from "react-icons/fa";
+import { useRouter } from 'next/navigation'; // App Router'da yönlendirme için useRouter kullanılır
 
 
 
 export default function MiddleOfPage() {
+     const router = useRouter();
+    
+        const handleProductPageRoute = () => {
+            router.push("/products"); 
+        };
+        
     return (
         <div id='whitezone' className="h-auto w-full mb-24">
 
@@ -60,7 +68,7 @@ export default function MiddleOfPage() {
                                 <br /><br />
                                 <span className='bg-gradient-to-r from-gray-600 via-sky-500 to-blue-900 text-transparent bg-clip-text'>Bugünün ihtiyaçlarına, yarının çözümleriyle cevap veriyoruz.</span>
 
-                                <button className='mt-3 mx-3 cursor-pointer hover:bg-blue-900 hover:text-white rounded-2xl py-2 px-4 flex items-center justify-center gap-2 bg-transparent border-1 border-black transition duration-300'>
+                                <button onClick={(e)=>handleProductPageRoute()} className='mt-3 cursor-pointer hover:bg-blue-900 hover:text-white rounded-2xl py-2 px-4 flex items-center justify-center gap-2 bg-transparent border-1 border-black transition duration-300'>
                                     <p>Tüm Ürünler</p>
                                     <FaAngleRight />
 

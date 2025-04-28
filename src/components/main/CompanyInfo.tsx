@@ -1,4 +1,5 @@
 
+"use client";
 import { FaAngleRight } from "react-icons/fa";
 import { IoRocketOutline } from "react-icons/io5";
 import { GoShieldCheck } from "react-icons/go";
@@ -6,9 +7,14 @@ import { FaRegLightbulb } from "react-icons/fa6";
 import { LuLayers3 } from "react-icons/lu";
 import { VscTools } from "react-icons/vsc";
 import { HiOutlineTruck } from "react-icons/hi2";
+import { useRouter } from "next/navigation";
 
 
 export default function CompanyInfo() {
+    const router=useRouter();
+    const handleServicePageRoute = () => {
+        router.push("/services"); 
+    };
 
     return (
         <div className="h-auto w-full text-white mb-12">
@@ -25,7 +31,7 @@ export default function CompanyInfo() {
                     <p>İşinizi gerçekten anlayan, pratik ve güvenilir çözümler sunan bir teknoloji ortağıyız. <br />
                         Süreçlerinizi sadeleştirir, operasyonel yükünüzü hafifletir ve her adımda yanınızda oluruz.
                     </p>
-                    <button className='mt-3 float-right cursor-pointer hover:bg-white hover:text-black rounded-2xl py-2 px-4 flex items-center justify-center gap-2 bg-transparent border-1 border-white transition duration-300'>
+                    <button onClick={(e)=>handleServicePageRoute()} className='mt-3 float-right cursor-pointer hover:bg-white hover:text-black rounded-2xl py-2 px-4 flex items-center justify-center gap-2 bg-transparent border-1 border-white transition duration-300'>
                         <p>Hizmetlerimiz</p>
                         <FaAngleRight />
                     </button>
