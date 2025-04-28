@@ -29,7 +29,6 @@ export default function MiddleOfPage() {
                             alt="Logo"
                             width={400}
                             height={500}
-                            layout="responsive"
                         />
 
                     </div>

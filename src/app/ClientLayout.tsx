@@ -1,13 +1,12 @@
 'use client';
 
 import { useState } from "react";
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
 import ScrollHide from "./tools/scrollHide";
 import HeaderControl from "./tools/headerControl";
 import Loading from "./tools/Loading";
+import { Suspense } from 'react';
 
 export default function ClientLayout({
   children,
@@ -38,8 +37,12 @@ export default function ClientLayout({
         <Footer />
         <ScrollHide />
         <HeaderControl setShowHeader={setShowHeader} lastScrollY={lastScrollY} setLastScrollY={setLastScrollY} />
-        <Loading setIsLoading={setIsLoading} />
       </div>
+
+      {/* Suspending the Loading component */}
+      <Suspense fallback={null}>
+        <Loading setIsLoading={setIsLoading} />
+      </Suspense>
     </>
   );
 }
