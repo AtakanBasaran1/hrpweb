@@ -7,8 +7,13 @@ import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import 'swiper/css/pagination';
+import { useProduct } from '@/context/ProductContext';
+
 
 export default function Carousel() {
+    const { services_posts } = useProduct();
+
+
     return (
         <div className="w-full">
             <Swiper
@@ -18,42 +23,43 @@ export default function Carousel() {
                 modules={[EffectCards, Pagination]}
                 className="mySwiper">
 
-                <SwiperSlide className="flex justify-center items-center p-12">
-                    <div className="relative w-full max-w-[calc(100%-2rem)] h-[calc(100vh-2rem)] rounded-3xl overflow-hidden">
-                        <Image
-                            src="/images/services1.jpeg" 
-                            alt="Shelby Background"
-                            layout="fill"
-                            objectFit="cover"
-                            priority
-                        />
 
-                        <div className="absolute bottom-0 w-full p-6 flex flex-col items-center justify-center bg-gradient-to-t from-black via-transparent to-transparent rounded-b-3xl">
-                            <div className='bg-white rounded-3xl w-full max-w-3xl p-6 text-center'>
-                                <h1 className='text-3xl font-bold mb-4'>RegeditPos</h1>
-                                <p>Lorem, ipsum dolor sit amet consectlorum. Eligendi libero quae, iste quo tenetur atque rerum vel amet pariatur.</p>
-                            </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className="flex justify-center items-center p-12">
-                    <div className="relative w-full max-w-[calc(100%-2rem)] h-[calc(100vh-2rem)] rounded-3xl overflow-hidden">
-                        <Image
-                            src="/images/shelby.jpg" 
-                            alt="Shelby Background"
-                            layout="fill"
-                            objectFit="cover"
-                            priority
-                        />
+                {
+                    services_posts.map((post) => (
+                        <SwiperSlide key={post.id} className="flex justify-center items-center p-12">
+                            <div className="relative w-full max-w-[calc(100%-2rem)] h-[calc(100vh-2rem)] rounded-3xl overflow-hidden">
+                                <Image
+                                    src={post.image}
+                                    alt="Shelby Background"
+                                    layout="fill"
+                                    objectFit="cover"
+                                    priority
+                                />
 
-                        <div className="absolute bottom-0 w-full p-6 flex flex-col items-center justify-center bg-gradient-to-t from-black via-transparent to-transparent rounded-b-3xl">
-                            <div className='bg-white rounded-3xl w-full max-w-3xl p-6 text-center'>
-                                <h1 className='text-3xl font-bold mb-4'>RegeditPos</h1>
-                                <p>Lorem, ipsum dolor sit amet consectlorum. Eligendi libero quae, iste quo tenetur atque rerum vel amet pariatur.</p>
+                                <div className="absolute bottom-0 w-full p-6 flex flex-col items-center justify-center bg-gradient-to-t from-black via-transparent to-transparent rounded-b-3xl">
+                                    <div className='bg-white rounded-3xl w-full max-w-3xl p-6 text-center flex items-center gap-2'>
+                                        <div className='flex items-center justify-center'>
+                                            <Image
+                                                src="/images/regedit_black.png"
+                                                width={82}
+                                                height={64}
+                                                alt='Logo'
+                                            />
+                                        </div>
+                                        <h1 className='text-xl'>
+                                            {post.description}
+                                        </h1>
+                                    </div>
+                                </div>
+
                             </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
+                        </SwiperSlide>
+                    ))
+                }
+
+
+
+
 
 
 

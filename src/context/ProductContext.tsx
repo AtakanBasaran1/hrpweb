@@ -14,17 +14,55 @@ export interface Product {
   category: string;
 }
 
+
+export interface Post {
+  id: number;
+  description: string;
+  image: string;
+}
+
+
 interface ProductContextType {
   selectedCategory: string;
   setSelectedCategory: (category: string) => void;
   products: Product[];
   filteredProducts: Product[];
+  services_posts:Post[];
 }
 
 const ProductContext = createContext<ProductContextType | undefined>(undefined);
 
 export const ProductProvider = ({ children }: { children: ReactNode }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>("Tüm Ürünler");
+
+  const services_posts: Post[] = [
+    {
+      id: 1,
+      description:"Doyuyo Bursa Anatolium Avm Kiosk ve Pos Sistem Kurulumu",
+      image: "/images/services1.jpeg",
+    },
+    {
+      id: 2,
+      description: "Green Salads Tema World Avm Kiosk Kurulumu",
+      image: "/images/services2.jpeg",
+    },
+    {
+      id: 3,
+      description: "Doyuyo Marmara Forum Avm Kiosk ve Pos Sistem Projesi ",
+      image: "/images/services3.jpeg",
+    },
+
+    {
+      id: 4,
+      description: "Doyuyo Adana Turgut Özal Bulvarı Kiosk ve Pos Sistem Projesi ",
+      image: "/images/services44.jpeg",
+    },
+    {
+      id: 5,
+      description: "21.5” Tabletop Kiosk Ürünümüz",
+      image: "/images/services5.png",
+    },
+  ];
 
   const products: Product[] = [
     {
@@ -125,14 +163,14 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       category: "Bağlantı"
     }
   ];
-  
+
 
   const filteredProducts = selectedCategory === "Tüm Ürünler"
     ? products
     : products.filter(product => product.category === selectedCategory);
 
   return (
-    <ProductContext.Provider value={{ selectedCategory, setSelectedCategory, products, filteredProducts }}>
+    <ProductContext.Provider value={{ selectedCategory, setSelectedCategory, products, filteredProducts, services_posts }}>
       {children}
     </ProductContext.Provider>
   );
