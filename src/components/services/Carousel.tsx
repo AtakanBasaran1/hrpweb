@@ -13,7 +13,6 @@ import { useProduct } from '@/context/ProductContext';
 export default function Carousel() {
     const { services_posts } = useProduct();
 
-
     return (
         <div className="w-full">
             <Swiper
@@ -23,14 +22,13 @@ export default function Carousel() {
                 modules={[EffectCards, Pagination]}
                 className="mySwiper">
 
-
                 {
                     services_posts.map((post) => (
-                        <SwiperSlide key={post.id} className="flex justify-center items-center p-12">
+                        <SwiperSlide key={post.id} className="flex justify-center items-center ">
                             <div className="relative w-full max-w-[calc(100%-2rem)] h-[calc(100vh-2rem)] rounded-3xl overflow-hidden">
                                 <Image
                                     src={post.image}
-                                    alt="Shelby Background"
+                                    alt="İmage"
                                     layout="fill"
                                     objectFit="cover"
                                     priority
@@ -56,12 +54,6 @@ export default function Carousel() {
                         </SwiperSlide>
                     ))
                 }
-
-
-
-
-
-
 
             </Swiper>
         </div>
