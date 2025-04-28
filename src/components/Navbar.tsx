@@ -17,7 +17,7 @@ export default function Navbar() {
     { label: 'Anasayfa', href: '/' },
     { label: 'Hakkımızda', href: '/about' },
     { label: 'Ürünlerimiz', href: '/products' },
-    { label: 'Hizmetlerimiz', href: '/hizmetlerimiz' },
+    { label: 'Hizmetlerimiz', href: '/services' },
     { label: 'İletişim', href: '/contact' },
   ];
 
