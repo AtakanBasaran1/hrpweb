@@ -55,7 +55,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
     {
       id: 4,
       description: "Doyuyo Adana Turgut Özal Bulvarı Kiosk ve Pos Sistem Projesi ",
-      image: "/images/services44.jpeg",
+      image: "/images/doyuyoadana.jpeg",
     },
     {
       id: 5,

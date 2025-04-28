@@ -64,6 +64,7 @@ export default function Begining() {
             <button onClick={handleButtonClick} className="cursor-pointer relative flex m-4 rounded-3xl py-3 px-8 items-center justify-center overflow-hidden md:bg-gray-600 bg-blue-800 text-white shadow-2xl hover:rounded-sm transition-all duraiton-300">
                 <span className="relative text-3xl z-10">Bizi Tanıyın</span>
             </button>
+            
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full md:w-[800px] h-[600px] bg-gradient-to-r from-[#8072FF] via-[#4D2DFF] to-[#1F1DFF] rounded-full blur-[120px] opacity-40 pointer-events-none shadow-2xl" />
 
         </div>
