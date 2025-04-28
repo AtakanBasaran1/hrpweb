@@ -18,7 +18,6 @@ export default function Navbar() {
     { label: 'Hakkımızda', href: '/about' },
     { label: 'Ürünlerimiz', href: '/products' },
     { label: 'Hizmetlerimiz', href: '/hizmetlerimiz' },
-    { label: 'Medya', href: '/medya' },
     { label: 'İletişim', href: '/contact' },
   ];
 

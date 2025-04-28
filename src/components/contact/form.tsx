@@ -83,10 +83,10 @@ export default function Form () {
                             <p className="md:text-4xl text-xl">Sosyal Medya</p>
                             <div className="flex space-x-4">
                                 <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                                    <FaLinkedin className='md:text-5xl text-2xl' /> 
+                                    <FaLinkedin className='md:text-3xl text-2xl' /> 
                                 </a>
                                 <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                                    <FaInstagram className='md:text-5xl text-2xl' /> 
+                                    <FaInstagram className='md:text-3xl text-2xl' /> 
                                 </a>
                             </div>
                         </div>
