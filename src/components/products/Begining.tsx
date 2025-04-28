@@ -31,7 +31,7 @@ export default function Begining() {
                     Ürünlerimiz
                 </h1>
                 <p className='text-gray-900 text-center'>
-                    RegeditPos olarak ürünlerimizin <span className='text-sky-700'>performansı</span>  ile öne çıkıyoruz.
+                    RegeditPos olarak ürünlerimizin <span className='text-sky-400'>performansı</span>  ile öne çıkıyoruz.
                 </p>
 
             </div>
