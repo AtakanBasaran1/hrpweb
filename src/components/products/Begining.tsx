@@ -1,5 +1,7 @@
+"use client";
 import React from 'react'
 import Image from 'next/image'
+import { motion } from 'framer-motion';
 
 export default function Begining() {
     return (
@@ -27,9 +29,26 @@ export default function Begining() {
             {/* En altta sabit yazılar */}
             <div className='absolute bottom-0 w-full p-9 z-10 flex flex-col items-center justify-center'>
 
-                <h1 className="cursor-pointer sm:text-9xl text-6xl font-bold m-3 bg-gradient-to-r from-[#123466] via-blue-600 to-blue-400 text-transparent bg-clip-text">
+                <motion.h1
+                    initial={{
+                        opacity: 0,
+                        y: 20,
+                        filter: "blur(10px)",
+                    }}
+                    animate={{
+                        opacity: 1,
+                        y: 0,
+                        filter: "blur(0px)",
+                    }}
+                    transition={{
+                        delay: 0.3, // Gecikme süresi
+                        duration: 0.8, // Geçiş süresi
+                        ease: "easeOut", // Geçiş şekli
+                    }}
+                    className="cursor-pointer sm:text-9xl text-6xl font-bold m-3 bg-gradient-to-r from-[#123466] via-blue-600 to-blue-400 text-transparent bg-clip-text"
+                >
                     Ürünlerimiz
-                </h1>
+                </motion.h1>
                 <p className='text-gray-900 text-center'>
                     RegeditPos olarak ürünlerimizin <span className='text-sky-400'>performansı</span>  ile öne çıkıyoruz.
                 </p>
