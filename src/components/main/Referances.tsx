@@ -24,7 +24,7 @@ export default function Referances() {
                 “Restoranını geleceğe taşıyan markalar bizimle çalışıyor.”
             </p>
 
-            <div className="w-[95%] h-auto p-6 flex flex-wrap justify-center gap-4 my-4">
+            <div className="w-[85%] h-auto p-6 flex flex-wrap justify-center gap-4 my-4">
                 {logos.map((logo, i) => (
                     <div
                         key={i}
