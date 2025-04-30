@@ -27,12 +27,12 @@ export default function MiddleOfPage() {
                 </p>
             </div>
 
-            <div className="flex items-center mt-24 justify-center h-auto my-2 p-2">
+            <div className="flex items-center  mt-24 justify-center h-auto my-2 p-2">
                 <div className='w-[95%] sm:w-[75%] sm:flex'>
 
                     <div className="sm:w-1/2 h-auto">
                         <Image
-                            className='cursor-pointer p-4'
+                            className='cursor-pointer'
                             src="/images/hardware/kioks4.png"
                             alt="Logo"
                             width={400}
@@ -60,7 +60,7 @@ export default function MiddleOfPage() {
                 <div className="flex items-center mt-24 justify-center h-auto my-2 p-2">
 
                     <div className="w-[95%] sm:w-[80%] flex flex-col-reverse sm:flex-row">
-                        <div className="sm:w-[60%] h-auto pt-9 pr-9 pb-9">
+                        <div className="sm:w-[60%]  flex items-center h-auto pt-9 pr-9 pb-9">
 
                             <p className='text-center sm:text-left text-md m-4 sm:m-0'>
                                 İşinizi bir adım öteye taşıyan kiosklar, el terminalleri ve donanım çözümlerimizle tanışın.Siparişten ödemeye tüm süreçleri hızlandıran bu cihazlar, personel yükünü azaltır, müşteri memnuniyetini artırır. Şık tasarımı ve sezgisel arayüzüyle kiosklarımız, self-servis deneyimini kolaylaştırır, markanızın teknolojik imajını güçlendirir.
@@ -75,7 +75,7 @@ export default function MiddleOfPage() {
                                 </button>
                             </p>
                         </div>
-                        <div className="sm:w-[40%] h-auto">
+                        <div className="sm:w-[40%] h-auto ">
                             <Image
                                 className="cursor-pointer p-6"
                                 src="/images/hardware/dualtransparent2.png"

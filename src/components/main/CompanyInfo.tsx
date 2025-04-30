@@ -19,9 +19,7 @@ export default function CompanyInfo() {
     return (
         <div className="h-auto w-full text-white mb-12">
 
-
-
-            <div className="w-full h-auto p-12 sm:p-9 sm:flex items-center justify-center gap-3" style={{ background: '#0A0046' }}>
+            <div className="w-full h-auto p-12 sm:p-16 sm:flex items-center justify-center gap-3" style={{ background: '#0A0046' }}>
 
                 <h1 className="text-8xl font-bold">
                     Neden <br />

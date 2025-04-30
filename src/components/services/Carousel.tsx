@@ -35,16 +35,16 @@ export default function Carousel() {
                                 />
 
                                 <div className="absolute bottom-0 w-full p-6 flex flex-col items-center justify-center bg-gradient-to-t from-black via-transparent to-transparent rounded-b-3xl">
-                                    <div className='bg-white rounded-3xl w-full max-w-3xl p-6 text-center flex items-center gap-2'>
-                                        <div className='flex items-center justify-center'>
+                                    <div className="bg-white/80 backdrop-blur-md border border-white/20 shadow-2xl rounded-3xl w-full max-w-3xl p-6 text-center flex items-center gap-2">
+                                        <div className='flex items-center p-2 shadow-xl rounded-3xl  justify-center'>
                                             <Image
                                                 src="/images/regedit_black.png"
-                                                width={82}
+                                                width={64}
                                                 height={64}
                                                 alt='Logo'
                                             />
                                         </div>
-                                        <h1 className='text-xl'>
+                                        <h1 className='text-xl p-1 font-semibold'>
                                             {post.description}
                                         </h1>
                                     </div>
