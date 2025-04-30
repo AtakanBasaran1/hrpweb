@@ -160,22 +160,26 @@ export default function Navbar() {
             animate={{ y: '0%' }}
             exit={{ y: '-150%' }}
             transition={{ type: 'tween', duration: 0.3 }}
-            className="w-full bg-white flex flex-col items-center px-6 py-4 md:hidden -z-10 border-b border-black/30"
+            className="w-full bg-white flex flex-col items-center px-6 py-4 md:hidden z-10 border-b border-black/30"
           >
-            {navItems.map((item) => {
-              const isActive = pathname === item.href;
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="py-2 w-full text-left hover:text-gray-300 transition-colors flex items-center gap-2"
-                  onClick={() => setIsOpen(false)}
-                >
-                  <span className={`font-bold text-black ${isActive ? 'opacity-100' : 'opacity-0'}`}>|</span>
-                  {item.label}
-                </Link>
-              );
-            })}
+            <div className="flex-1 flex justify-center w-full">
+              <nav className="flex flex-col w-full space-y-4">
+                {navItems.map((item) => {
+                  const isActive = pathname === item.href;
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                  className="text-xl py-2 w-full text-left hover:text-gray-300 transition-colors flex items-center gap-2"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <span className={`font-bold text-black ${isActive ? 'opacity-100' : 'opacity-0'}`}>|</span>
+                      {item.label}
+                    </Link>
+                  );
+                })}
+              </nav>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
