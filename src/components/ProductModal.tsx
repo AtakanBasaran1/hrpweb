@@ -56,16 +56,16 @@ export default function ProductModal({ product, isOpen, onClose }: Props) {
             {product.image.length > 1 && (
               <>
                 <button
-                  className="absolute left-0 bg-gray-900 text-white p-4 md:p-6 rounded-full aspect-square cursor-pointer"
+                  className="absolute left-0 text-white p-4 md:p-6 rounded-full aspect-square cursor-pointer"
                   onClick={handlePrev}
                 >
-                  <FaArrowLeft className="md:text-2xl text-xl"/>
+                  <FaArrowLeft className="md:text-2xl text-xl text-black"/>
                 </button>
                 <button
-                  className="absolute right-0 bg-gray-900 text-white p-4 md:p-6 rounded-full aspect-square cursor-pointer"
+                  className="absolute right-0  text-white p-4 md:p-6 rounded-full aspect-square cursor-pointer"
                   onClick={handleNext}
                 >
-                  <FaArrowRight className="md:text-2xl text-xl"/>
+                  <FaArrowRight className="md:text-2xl text-xl text-black"/>
                 </button>
               </>
             )}
