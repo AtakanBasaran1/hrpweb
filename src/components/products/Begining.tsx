@@ -27,7 +27,7 @@ export default function Begining() {
             {/* En altta sabit yazılar */}
             <div className='absolute bottom-0 w-full p-9 z-10 flex flex-col items-center justify-center'>
 
-                <h1 className="cursor-pointer sm:text-9xl text-5xl font-bold m-3 bg-gradient-to-r from-[#123466] via-blue-600 to-blue-400 text-transparent bg-clip-text">
+                <h1 className="cursor-pointer sm:text-9xl text-6xl font-bold m-3 bg-gradient-to-r from-[#123466] via-blue-600 to-blue-400 text-transparent bg-clip-text">
                     Ürünlerimiz
                 </h1>
                 <p className='text-gray-900 text-center'>

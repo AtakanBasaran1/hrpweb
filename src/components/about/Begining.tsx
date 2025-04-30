@@ -21,8 +21,8 @@ export default function Begining() {
                     </div>
                 </div>
            
-            <div className='flex text-gray-400 justify-center items-center sm:text-xl text-md text-center h-auto w-full mt-12  p-2'>
-                <p>Regedit Bilişim olarak, sektördeki deneyimimiz ve uzman ekibimizle, <br /> işletmeniz için sürdürülebilir ve yenilikçi çözümler sunuyoruz.
+            <div className='flex text-gray-400 justify-center items-center sm:text-xl text-sm text-center h-auto w-full mt-12  p-2'>
+                <p>Regedit Bilişim olarak, sektördeki deneyimimiz ve uzman ekibimizle, <br className='hidden sm:inline'/> işletmeniz için sürdürülebilir ve yenilikçi çözümler sunuyoruz.
                 </p>
             </div>
         </div>

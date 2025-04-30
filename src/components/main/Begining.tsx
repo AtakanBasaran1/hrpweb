@@ -4,7 +4,9 @@ import { motion } from "framer-motion";
 import { useRouter } from 'next/navigation'; // App Router'da yönlendirme için useRouter kullanılır
 
 export default function Begining() {
-    const text = "Restoranlarınızı Geleceğe\nTaşıyan Akıllı Çözümler";
+    const textmobile = "Restoranlarınızı\nGeleceğe\nTaşıyan Akıllı\nÇözümler";
+    const textwide= "Restoranlarınızı Geleceğe\nTaşıyan Akıllı Çözümler";
+
     const router = useRouter();
 
     const handleButtonClick = () => {
@@ -13,8 +15,43 @@ export default function Begining() {
     return (
         <div className="h-screen flex flex-col items-center justify-center w-full bg-black overflow-hidden pt-[7lvh]">
             <div className="h-auto">
-                <h1 className="shadow-xl text-white text-center font-bold text-5xl sm:text-7xl p-9 leading-tight">
-                    {text.split("").map((char, index) => {
+                <h1 className="md:flex hidden shadow-xl  text-white text-center font-bold text-5xl sm:text-7xl p-9 leading-tight">
+                    {textwide.split("").map((char, index) => {
+                        if (char === "\n") {
+                            return <br key={index} />;
+                        }
+                        const randomY = Math.random() * 40 - 20; // -20px ile +20px arasında rastgele Y pozisyonu
+                        const randomDelay = 0.02 * index + Math.random() * 0.05; // index'e göre + hafif rastgele
+
+                        return (
+                            <motion.span
+                                key={index}
+                                initial={{
+                                    opacity: 0,
+                                    y: randomY,
+                                    scale: 0.8,
+                                    textShadow: "0px 0px 0px #9333ea", // Morumsu ışık yokken
+                                }}
+                                animate={{
+                                    opacity: 1,
+                                    y: 0,
+                                    scale: 1,
+                                    textShadow: "0px 0px 8px #9333ea", // Mor ışık parlaması
+                                }}
+                                transition={{
+                                    duration: 0.5,
+                                    delay: randomDelay,
+                                    ease: "easeOut",
+                                }}
+                                className="inline-block"
+                            >
+                                {char === " " ? "\u00A0" : char}
+                            </motion.span>
+                        );
+                    })}
+                </h1>
+                <h1 className="md:hidden  shadow-xl text-white text-center font-bold text-5xl sm:text-7xl p-9 leading-tight">
+                    {textmobile.split("").map((char, index) => {
                         if (char === "\n") {
                             return <br key={index} />;
                         }
