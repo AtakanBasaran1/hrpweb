@@ -1,3 +1,4 @@
+"use client";
 import Begining from "@/components/main/Begining";
 import CompanyInfo from "@/components/main/CompanyInfo";
 import MiddleOfPage from "@/components/main/Middle-of-Page";

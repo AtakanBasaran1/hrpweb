@@ -21,8 +21,8 @@ export default function MiddleOfPage() {
 
             </p>
 
-            <div className="flex mb-24 items-center mt-24 justify-center h-auto my-2 p-2">
-                <div className='w-[95%] gap-6 sm:w-[75%] sm:flex'>
+            <div className="flex mb-24 items-center mt-24 justify-center h-auto my-2  p-0 sm:p-2">
+                <div className='w-[95%]  gap-6 sm:w-[75%] sm:flex'>
                     <div className="sm:w-[30%] h-auto">
                         <Image
                             className='cursor-pointer'
