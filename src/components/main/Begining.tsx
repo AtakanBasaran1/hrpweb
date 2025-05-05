@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
@@ -25,12 +24,12 @@ export default function Begining() {
         <div className="h-screen flex flex-col items-center justify-center w-full bg-black overflow-hidden pt-[7lvh]">
             <div className="h-auto">
                 <h1 className="shadow-xl text-white text-center font-bold text-5xl sm:text-7xl p-9 leading-tight">
-                    Restoranlarınızı Geleceğe Taşıyan Akıllı Çözümler
+                    Restoranlarınızı Geleceğe <br /> Taşıyan Akıllı Çözümler
                 </h1>
             </div>
 
             <div className="h-auto">
-                <p className="shadow-xl text-gray-300 text-center font-bold text-md sm:text-lg">
+                <p className="shadow-xl text-gray-300 text-center font-bold text-md sm:text-lg p-3">
                     Zincir restoran operasyonlarınızı tek bir sistemle yönetin, zamandan ve maliyetten tasarruf edin.
                 </p>
             </div>
