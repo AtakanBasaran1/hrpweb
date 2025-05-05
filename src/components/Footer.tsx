@@ -42,7 +42,7 @@ export default function Footer() {
 
             <a href='https://maps.app.goo.gl/dVG1dRuZHV7VBYKJ9' className='xl:text-xl text-sm text-center flex flex-row items-start xl:gap-4 px-4 cursor-pointer' target="_blank"><img src='https://upload.wikimedia.org/wikipedia/commons/a/aa/Google_Maps_icon_%282020%29.svg' className='w-5'></img>Topselvi Mah. Arkoz Sk. No: 6 İç Kapı No:1 KARTAL / İSTANBUL</a>
 
-            <p className='xl:text-xl text-sm text-white'>RegeditPos © 2025</p>
+            <p className='xl:text-xl text-sm text-white'>RegeditPos © 2025</p>
 
 
 

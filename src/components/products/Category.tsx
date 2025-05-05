@@ -8,6 +8,7 @@ import { CiCreditCard1 } from "react-icons/ci";
 import { PiCashRegister } from "react-icons/pi";
 import { FaWifi } from "react-icons/fa";
 import { useProduct } from '@/context/ProductContext';
+import { SiOnlyoffice } from "react-icons/si";
 
 export default function Category() {
   const buttonList = [
@@ -19,6 +20,7 @@ export default function Category() {
     { name: "El Terminali", icon: FaMobileScreen },
     { name: "Pos Cihazı", icon: CiCreditCard1 },
     { name: "Bağlantı", icon: FaWifi },
+    { name: "Sarf Malzemeler", icon: SiOnlyoffice },
   ];
 
 
