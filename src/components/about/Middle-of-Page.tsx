@@ -26,7 +26,7 @@ export default function MiddleOfPage() {
                     <div className="sm:w-[30%] h-auto">
                         <Image
                             className='cursor-pointer'
-                            src="/images/aboutpageimage.webp"
+                            src="/images/aboutpage321.webp"
                             alt="Logo"
                             width={400}
                             height={500}
@@ -37,7 +37,7 @@ export default function MiddleOfPage() {
                         <div>
                             <h1 className="sm:text-4xl text-3xl font-bold m-3 bg-gradient-to-r from-blue-700 via-sky-500 to-gray-400 text-transparent bg-clip-text">
                                 İşletmenizin Yanında,
-                                Her Aşamada
+                                Her Aşamada.
                             </h1>
                             <p className='text-left m-3'>Yalnızca yazılım değil, donanımda da yanınızdayız.
                                 Yüksek performanslıanslı, dayanıklı ve kullanım kolaylığıyla öne çıkan POS cihazlarımız, restoran

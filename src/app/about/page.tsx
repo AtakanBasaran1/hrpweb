@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Begining from '@/components/about/Begining';
 import MiddleOfPage from '@/components/about/Middle-of-Page';
 import MissionAndVision from '@/components/about/Mission-and-vision';
+import LogoSection from '@/components/about/LogoSection';
 
 export default function page() {
     return (
@@ -16,6 +17,7 @@ export default function page() {
                 <Begining />
                 <MiddleOfPage />
                 <MissionAndVision/>
+                <LogoSection/>
             </div>
         </Fade>
 
