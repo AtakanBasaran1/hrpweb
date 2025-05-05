@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { Product } from "@/context/ProductContext";
 import { IoClose } from "react-icons/io5";
+import { FaAngleRight } from "react-icons/fa";
 
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import Image from "next/image";
@@ -70,13 +71,19 @@ export default function ProductModal({ product, isOpen, onClose }: Props) {
               </>
             )}
           </div>
-          <div className="md:w-1/2 w-full flex flex-col gap-4">
-            <h2 className="text-3xl font-bold text-gray-800">{product.name}</h2>
-            <span className="text-sm font-medium text-gray-500">
+          <div className="md:w-1/2 w-full flex flex-col gap-4 justify-between">
+           
+            <div>
+            <h2 className="md:text-3xl text-2xl font-bold text-gray-800">{product.name}</h2>
+            <span className="md:text-sm text-sm font-medium text-gray-500">
               /{product.category}
             </span>
-            <p className="text-gray-600 whitespace-pre-line">{product.description}</p>
-            
+            <p className="md:text-md  text-gray-600 whitespace-pre-line">{product.description}</p>
+            </div>
+            <a href="/contact" className='mt-3 self-end float-right cursor-pointer hover:bg-[#123466] hover:text-white rounded-2xl py-2 px-4 flex items-center justify-center gap-2 bg-transparent border-1 border-[#123466] transition duration-300 w-min'>
+              <p>Hizmetlerimiz</p>
+              <FaAngleRight />
+            </a>
           </div>
         </div>
       </div>
