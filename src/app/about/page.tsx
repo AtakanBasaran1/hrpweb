@@ -10,6 +10,9 @@ export default function page() {
 
         <Fade in={true} timeout={500}>
             <div>
+
+
+                
                 <Begining />
                 <MiddleOfPage />
                 <MissionAndVision/>
