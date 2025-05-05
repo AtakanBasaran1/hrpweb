@@ -1,5 +1,4 @@
 'use client';
-
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards, Pagination } from 'swiper/modules';
@@ -9,10 +8,8 @@ import 'swiper/css/effect-cards';
 import 'swiper/css/pagination';
 import { useProduct } from '@/context/ProductContext';
 
-
 export default function Carousel() {
     const { services_posts } = useProduct();
-
     return (
         <div className="w-full">
             <Swiper
@@ -54,7 +51,6 @@ export default function Carousel() {
                         </SwiperSlide>
                     ))
                 }
-
             </Swiper>
         </div>
     );
