@@ -80,10 +80,11 @@ export default function ProductModal({ product, isOpen, onClose }: Props) {
             </span>
             <p className="md:text-md  text-gray-600 whitespace-pre-line">{product.description}</p>
             </div>
-            <a href="/contact" className='mt-3 self-end float-right cursor-pointer hover:bg-[#123466] hover:text-white rounded-2xl py-2 px-4 flex items-center justify-center gap-2 bg-transparent border-1 border-[#123466] transition duration-300 w-min'>
-              <p>Hizmetlerimiz</p>
+            <a href="/contact" className='mt-3 self-end float-right cursor-pointer hover:bg-[#123466] hover:text-white rounded-2xl py-2 px-4 flex items-center justify-center gap-2 bg-transparent border-1 border-[#123466] transition duration-300'>
+              <p>İletişime Geç</p>
               <FaAngleRight />
             </a>
+          
           </div>
         </div>
       </div>

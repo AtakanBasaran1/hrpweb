@@ -7,6 +7,8 @@ import { useRouter } from 'next/navigation'; // App Router'da yönlendirme için
 
 
 export default function MiddleOfPage() {
+
+    
      const router = useRouter();
     
         const handleProductPageRoute = () => {
