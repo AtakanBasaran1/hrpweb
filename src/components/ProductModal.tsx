@@ -3,11 +3,11 @@
 import React, { useState, useEffect } from "react";
 import { Product } from "@/context/ProductContext";
 import { IoClose } from "react-icons/io5";
-import { FaAngleRight } from "react-icons/fa";
 
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import { FaAngleLeft, FaChevronRight } from "react-icons/fa6";
 import Image from "next/image";
 import { Fade } from '@mui/material';
+import { FaAngleRight } from "react-icons/fa6";
 
 interface Props {
   product: Product | null;
@@ -60,13 +60,13 @@ export default function ProductModal({ product, isOpen, onClose }: Props) {
                   className="absolute left-0 text-white p-4 md:p-6 rounded-full aspect-square cursor-pointer"
                   onClick={handlePrev}
                 >
-                  <FaArrowLeft className="md:text-2xl text-xl text-black"/>
+                  <FaAngleLeft className="md:text-2xl text-xl text-black"/>
                 </button>
                 <button
                   className="absolute right-0  text-white p-4 md:p-6 rounded-full aspect-square cursor-pointer"
                   onClick={handleNext}
                 >
-                  <FaArrowRight className="md:text-2xl text-xl text-black"/>
+                  <FaChevronRight className="md:text-2xl text-xl text-black"/>
                 </button>
               </>
             )}
