@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { FaAngleRight } from "react-icons/fa";
 import { useRouter } from 'next/navigation';
 import TypingTitle from '../hooks/animations/TypingTitle';
+import AnimatedImage from '../hooks/animations/AnimatedImage';
 
 export default function MiddleOfPage() {
     const router = useRouter();
@@ -57,13 +58,14 @@ export default function MiddleOfPage() {
                 <div className='w-[95%] gap-6 sm:w-[75%] sm:flex'>
 
                     <div className="order-1 sm:order-2  sm:w-[30%] h-auto">
-                        <Image
-                            className='cursor-pointer'
-                            src="/images/aboutpageimage2.webp"
-                            alt="Logo"
-                            width={400}
-                            height={500}
-                            layout="responsive"
+                       
+                        <AnimatedImage
+                        srcname='/images/aboutpageimage2.webp'
+                        classNameProps='cursor-pointer'
+                        height={500}
+                        width={400}
+                        layoutProps='responsive'
+                    
                         />
                     </div>
                     <div className='order-2 sm:order-1 flex items-center sm:w-[70%] h-auto sm:pt-9 sm:pr-9 sm:pb-9'>
