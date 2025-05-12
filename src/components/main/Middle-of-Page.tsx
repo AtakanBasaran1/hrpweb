@@ -2,9 +2,9 @@
 import Image from 'next/image'
 import { FaAngleRight } from "react-icons/fa";
 import { useRouter } from 'next/navigation'; 
-import { useEffect, useState } from 'react';
 import TypingTitle from '../hooks/animations/TypingTitle';
 import { motion } from 'framer-motion';
+import AnimatedImage from '../hooks/animations/AnimatedImage';
 
 
 export default function MiddleOfPage() {
@@ -38,13 +38,7 @@ export default function MiddleOfPage() {
                 <div className='w-[95%] sm:w-[75%] sm:flex'>
 
                     <div className="sm:w-1/2 h-auto">
-                        <Image
-                            className='cursor-pointer'
-                            src="/images/hardware/kioks4.png"
-                            alt="Logo"
-                            width={400}
-                            height={500}
-                        />
+                       <AnimatedImage></AnimatedImage>
 
                     </div>
 

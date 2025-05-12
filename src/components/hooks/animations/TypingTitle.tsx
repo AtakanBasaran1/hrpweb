@@ -15,7 +15,7 @@ const TypingTitle = ({fullText}:TypingTitlePropsType) => {
             setDisplayedText(fullText.slice(0, index + 1));
             index++;
             if (index === fullText.length) clearInterval(interval);
-        }, 70);
+        }, 40);
 
         return () => clearInterval(interval);
     }, []);
