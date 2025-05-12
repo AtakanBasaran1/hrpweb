@@ -39,7 +39,7 @@ export default function MiddleOfPage() {
 
                     <div className="sm:w-1/2 h-auto">
                     <Image
-                    alt='logo'
+                    alt='Pos Cihazı'
                     className='cursor-pointer'
                     height={500}
                     width={400}
@@ -92,7 +92,7 @@ export default function MiddleOfPage() {
                         </div>
                         <div className="sm:w-[40%] h-auto ">
                             <Image
-                                alt='Logo'
+                                alt='Kiokslar'
                                 src='/images/hardware/dualtransparent2.png'
                                 className='cursor-pointer p-6'
                                 height={600}
