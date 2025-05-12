@@ -5,8 +5,10 @@ import emailjs from "emailjs-com";
 import { time } from "console";
 import { FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { p } from 'framer-motion/client';
+import { useSnackbar } from 'notistack';
 
 export default function Form () {
+    const { enqueueSnackbar } = useSnackbar();
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -15,51 +17,52 @@ export default function Form () {
         phone: "",
       });
     
+      const [isLoading, setIsLoading] = useState(false);
       const [submissionTime, setSubmissionTime] = useState<string | null>(null);  
     
       const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
       };
     
-      const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+      const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         const { name, email, subject, message, phone } = formData;
  
         if (!name || !email || !subject || !message || !phone) {
-            alert("Lütfen tüm alanları doldurun.");
+            enqueueSnackbar("Lütfen tüm alanları doldurun.", { variant: 'error' });
             return;
         }
         
+        setIsLoading(true);
         const currentTime = new Date().toLocaleString();  
         setSubmissionTime(currentTime); 
 
         
     
-        emailjs
-          .send(
-            "service_3fj7cmb", // EmailJS servis ID'si
-            "template_iuc7iy6", // EmailJS template ID'si
-            { 
-              title: formData.subject,
-              name: formData.name,
-              time: currentTime,
-              message: formData.message,
-              email: formData.email,
-              phone: formData.phone,
-            },
-            "oX09rEWUpbyJHSpoe" // EmailJS public key
-          )
-          .then(
-            (response) => {
-              alert(`Mesajınız başarıyla gönderildi! Gönderim Zamanı: ${currentTime}`);
-              setFormData({ name: "", email: "", subject: "", message: "",phone: "" });
-            },
-            (error) => {
-              console.error("Mesaj gönderme hatası:", error);
-              alert("Mesaj gönderilirken bir hata oluştu.");
-            }
-          );
+        try {
+            await emailjs.send(
+                "service_3fj7cmb",
+                "template_iuc7iy6",
+                { 
+                    title: formData.subject,
+                    name: formData.name,
+                    time: currentTime,
+                    message: formData.message,
+                    email: formData.email,
+                    phone: formData.phone,
+                },
+                "oX09rEWUpbyJHSpoe"
+            );
+            
+            enqueueSnackbar(`Mesajınız başarıyla gönderildi! Gönderim Zamanı: ${currentTime}`, { variant: 'success' });
+            setFormData({ name: "", email: "", subject: "", message: "", phone: "" });
+        } catch (error) {
+            console.error("Mesaj gönderme hatası:", error);
+            enqueueSnackbar("Mesaj gönderilirken bir hata oluştu.", { variant: 'error' });
+        } finally {
+            setIsLoading(false);
+        }
       };
 
     
@@ -82,6 +85,7 @@ export default function Form () {
                                     onChange={handleChange}
                                     placeholder="Adınızı girin" 
                                     className="w-full p-3 mt-2 border border-gray-300 rounded-md xl:text-lg text-sm focus:outline-none focus:ring-2 ring-[#123466]-blue-500"
+                                    disabled={isLoading}
                                 />
                             </div>
         
@@ -95,6 +99,7 @@ export default function Form () {
                                     onChange={handleChange}
                                     placeholder="Telefon numarası girin" 
                                     className="w-full p-3 mt-2 border border-gray-300 rounded-md xl:text-lg text-sm focus:outline-none focus:ring-2 ring-[#123466]-blue-500"
+                                    disabled={isLoading}
                                 />
                             </div>
                         </div>
@@ -109,6 +114,7 @@ export default function Form () {
                                     onChange={handleChange}
                                     placeholder="E-posta adresinizi girin" 
                                     className="w-full p-3 mt-2 border border-gray-300 rounded-md xl:text-lg text-sm focus:outline-none focus:ring-2 ring-[#123466]-blue-500"
+                                    disabled={isLoading}
                                 />
                         </div>
                         
@@ -123,6 +129,7 @@ export default function Form () {
                                 onChange={handleChange}
                                 placeholder="Konu girin" 
                                 className="w-full p-3 mt-2 border border-gray-300 rounded-md xl:text-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#123466]-500"
+                                disabled={isLoading}
                             />
                         </div>
     
@@ -135,13 +142,22 @@ export default function Form () {
                                 onChange={handleChange}
                                 placeholder="Mesajınızı yazın"  
                                 className="w-full p-3 mt-2 border border-gray-300 rounded-md xl:text-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#123466] xl:min-h-36 min-h-24"
+                                disabled={isLoading}
                             ></textarea>
                         </div> 
                         <button 
                             type="submit"  
-                            className="xl:w-min bg-[#123466] text-white xl:px-14 xl:py-4 py-3 text-xl rounded-xl hover:bg-blue-600 transition duration-300"
+                            className="xl:w-min bg-[#123466] text-white xl:px-14 xl:py-4 py-3 text-xl rounded-xl hover:bg-blue-600 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                            disabled={isLoading}
                         >
-                            Gönder
+                            {isLoading ? (
+                                <>
+                                    <div className="w-5 h-5 border-t-2 border-white border-solid rounded-full animate-spin"></div>
+                                    Gönderiliyor...
+                                </>
+                            ) : (
+                                'Gönder'
+                            )}
                         </button>
                     </div>
                 </form>
