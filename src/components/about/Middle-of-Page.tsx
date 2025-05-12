@@ -3,6 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import { FaAngleRight } from "react-icons/fa";
 import { useRouter } from 'next/navigation';
+import TypingTitle from '../hooks/animations/TypingTitle';
 
 export default function MiddleOfPage() {
     const router = useRouter();
@@ -32,13 +33,12 @@ export default function MiddleOfPage() {
                             height={500}
                             layout="responsive"
                         />
+                        
                     </div>
                     <div className='sm:w-[70%] ml-3 flex items-center h-auto sm:pt-9 sm:pr-9 sm:pb-9'>
                         <div>
-                            <h1 className="sm:text-4xl text-3xl font-bold m-3 bg-gradient-to-r from-blue-700 via-sky-500 to-gray-400 text-transparent bg-clip-text">
-                                İşletmenizin Yanında,
-                                Her Aşamada.
-                            </h1>
+                           
+                            <TypingTitle classNameProps="sm:text-4xl text-3xl font-bold m-3 bg-gradient-to-r from-blue-700 via-sky-500 to-gray-400 text-transparent bg-clip-text" fullText='İşletmenizin Yanında, Her Aşamada.'/>
                             <p className='text-left m-3'>Yalnızca yazılım değil, donanımda da yanınızdayız.
                                 Yüksek performanslıanslı, dayanıklı ve kullanım kolaylığıyla öne çıkan POS cihazlarımız, restoran
                                 operasyonlarınızı hızlandırmak ve müşterilerinize kusursuz bir deneyim sunmak için tasarlandı.

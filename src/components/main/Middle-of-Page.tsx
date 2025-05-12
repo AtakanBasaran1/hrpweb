@@ -66,7 +66,7 @@ export default function MiddleOfPage() {
             <div className="w-full h-auto gap-2">
 
                 <div className='w-full h-auto flex justify-center items-center'>
-                    <TypingTitle fullText="Her zaman bir adım önde olun!" />
+                    <TypingTitle classNameProps='sm:text-6xl text-4xl text-center font-bold m-3 bg-gradient-to-r from-blue-900 via-sky-500 to-gray-400 text-transparent bg-clip-text' fullText="Her zaman bir adım önde olun!" />
                 </div>
 
                 <div className="flex items-center mt-24 justify-center h-auto my-2 p-2">

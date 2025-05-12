@@ -4,9 +4,10 @@ import { useEffect, useState, useRef } from "react";
 
 type TypingTitlePropsType = {
   fullText: string;
+  classNameProps:string;
 };
 
-const TypingTitle = ({ fullText }: TypingTitlePropsType) => {
+const TypingTitle = ({ fullText,classNameProps }: TypingTitlePropsType) => {
   const [displayedText, setDisplayedText] = useState("");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
@@ -27,7 +28,7 @@ const TypingTitle = ({ fullText }: TypingTitlePropsType) => {
   return (
     <motion.h1
       ref={ref}
-      className="sm:text-6xl text-4xl text-center font-bold m-3 bg-gradient-to-r from-blue-900 via-sky-500 to-gray-400 text-transparent bg-clip-text"
+      className={classNameProps}
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.4 }}
