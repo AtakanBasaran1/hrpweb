@@ -1,4 +1,5 @@
-export default function Referances() {
+import ReferancesText from "../hooks/animations/ReferancesText";
+function Referances() {
     const logos = [
         '1.svg',
         '2.png',
@@ -17,9 +18,7 @@ export default function Referances() {
     ];
     return (
         <div className="h-auto w-full flex flex-col items-center">
-            <h1 className="sm:text-7xl text-4xl text-center font-bold m-3 bg-gradient-to-r from-indigo-900 via-pink-500 to-gray-600 text-transparent bg-clip-text">
-                Referanslarımız
-            </h1>
+           <ReferancesText/>
             <p className="text-gray-700 text-center text-sm sm:text-lg m-5">
                 “Restoranını geleceğe taşıyan markalar bizimle çalışıyor.”
             </p>
@@ -46,3 +45,4 @@ export default function Referances() {
 
     );
 }
+export default Referances;

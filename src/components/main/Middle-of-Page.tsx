@@ -1,7 +1,7 @@
 "use client";
 import Image from 'next/image'
 import { FaAngleRight } from "react-icons/fa";
-import { useRouter } from 'next/navigation'; 
+import { useRouter } from 'next/navigation';
 import TypingTitle from '../hooks/animations/TypingTitle';
 import { motion } from 'framer-motion';
 import AnimatedImage from '../hooks/animations/AnimatedImage';
@@ -38,30 +38,25 @@ export default function MiddleOfPage() {
                 <div className='w-[95%] sm:w-[75%] sm:flex'>
 
                     <div className="sm:w-1/2 h-auto">
-                       <AnimatedImage></AnimatedImage>
+                    <Image
+                    alt='logo'
+                    className='cursor-pointer'
+                    height={500}
+                    width={400}
+                    src='/images/hardware/kioks4.png'
+                    
+                    />
 
                     </div>
 
                     <div className='sm:w-1/2 h-auto'>
-                        <motion.h1
-                            className='text-2xl text-center sm:text-left font-md'
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            transition={{ duration: 0.6, ease: "easeOut" }}
-                            viewport={{ once: true, amount: 0.8 }}
-                        >
-                            Kaliteli POS Cihazlarımızla Tanışın!
 
-                        </motion.h1>
-                        <motion.p
-                            className="text-center sm:text-left"
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            transition={{ duration: 0.6, ease: "easeOut" }}
-                            viewport={{ once: true, amount: 0.8 }}
-                        >
+                        Kaliteli POS Cihazlarımızla Tanışın!
+
+
+                        <p className="text-center sm:text-left">
                             Yalnızca yazılım değil, donanımda da yanınızdayız. Yüksek performanslı, dayanıklı ve kullanım kolaylığıyla öne çıkan POS cihazlarımız, restoran operasyonlarınızı hızlandırmak ve müşterilerinize kusursuz bir deneyim sunmak için tasarlandı. Kaliteden ödün vermeyen yapısıyla, uzun ömürlü ve güvenilir çözümler sunuyoruz.
-                        </motion.p>
+                        </p>
 
                     </div>
                 </div>
@@ -78,12 +73,8 @@ export default function MiddleOfPage() {
 
                     <div className="w-[95%] sm:w-[80%] flex flex-col-reverse sm:flex-row">
                         <div className="sm:w-[60%] flex justify-center h-auto">
-                            <motion.p
-                                className='sm:text-left text-md m-4 sm:m-0' initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
-                                transition={{ duration: 0.6, ease: "easeOut" }}
-                                viewport={{ once: true, amount: 0.8 }}
-                            >
+                            <p
+                                className='sm:text-left text-md m-4 sm:m-0'>
 
                                 İşinizi bir adım öteye taşıyan kiosklar, el terminalleri ve donanım çözümlerimizle tanışın.Siparişten ödemeye tüm süreçleri hızlandıran bu cihazlar, personel yükünü azaltır, müşteri memnuniyetini artırır. Şık tasarımı ve sezgisel arayüzüyle kiosklarımız, self-servis deneyimini kolaylaştırır, markanızın teknolojik imajını güçlendirir.
                                 Yazıcılar, para çekmeceleri ve diğer ekipmanlarla operasyonlarınızı uçtan uca optimize ediyor, zaman kazandırıyor, verimliliği artırıyoruz.
@@ -97,17 +88,20 @@ export default function MiddleOfPage() {
                                     <FaAngleRight />
 
                                 </button>
-                            </motion.p>
+                            </p>
                         </div>
                         <div className="sm:w-[40%] h-auto ">
                             <Image
-                                className="cursor-pointer p-6"
-                                src="/images/hardware/dualtransparent2.png"
-                                alt="Logo"
-                                width={1000}
+                                alt='Logo'
+                                src='/images/hardware/dualtransparent2.png'
+                                className='cursor-pointer p-6'
                                 height={600}
-                                layout="responsive"
+                                width={1000}
+                                layout='responsive'
                             />
+
+
+
 
                         </div>
 
