@@ -24,9 +24,16 @@ export default function Begining() {
     return (
         <div className="h-screen flex flex-col items-center justify-center w-full bg-black overflow-hidden pt-[7lvh]">
             <div className="h-auto">
-                <h1 className="shadow-xl text-white text-center font-bold text-5xl sm:text-7xl p-9 leading-tight">
-                    Restoranlarınızı Geleceğe <br /> Taşıyan Akıllı Çözümler
-                </h1>
+            <motion.h1
+  initial={{ opacity: 0, y: 80, filter: "blur(8px)" }}
+  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+  transition={{ duration: 1, ease: "easeOut" }}
+  viewport={{ once: true, amount: 0.6 }}
+  className="shadow-xl text-white text-center font-bold text-5xl sm:text-7xl p-9 leading-tight"
+>
+  Restoranlarınızı Geleceğe <br /> Taşıyan Akıllı Çözümler
+</motion.h1>
+
             </div>
 
             <div className="h-auto">
