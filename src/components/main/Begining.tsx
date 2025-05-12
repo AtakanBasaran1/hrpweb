@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
+import { motion } from "framer-motion";
 
 export default function Begining() {
     const router = useRouter();
@@ -34,12 +35,27 @@ export default function Begining() {
                 </p>
             </div>
 
-            <button
-                onClick={handleButtonClick}
-                className="cursor-pointer relative flex m-4 rounded-3xl py-3 px-8 items-center justify-center overflow-hidden md:bg-gray-600 bg-blue-800 text-white shadow-2xl hover:bg-blue-700 transition-all duration-300"
-            >
-                <span className="relative text-3xl z-10">Bizi Tanıyın</span>
-            </button>
+            <div className="flex justify-center items-center p-4">
+                <motion.button
+                    onClick={handleButtonClick}
+                    animate={{
+                        background: [
+                            "linear-gradient(90deg, #9333EA 0%, #7E22CE 50%, #6B21A8 100%)",
+                            "linear-gradient(90deg, #3667d1 0%, #1156ed 50%, #1041ad 100%)",
+                            "linear-gradient(90deg, #b542e3 0%, #b626f0 50%, #9f09db 100%)",
+                            "linear-gradient(90deg, #9333EA 0%, #7E22CE 50%, #9333EA 100%)",
+                        ]
+                    }}
+                    transition={{
+                        duration: 4,
+                        repeat: Infinity,
+                        ease: "linear"
+                    }}
+                    className="cursor-pointer relative flex rounded-3xl py-3 px-8 items-center justify-center overflow-hidden text-white shadow-2xs shadow-black"
+                >
+                    <span className="relative text-3xl z-10">Bizi Tanıyın</span>
+                </motion.button>
+            </div>
 
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full md:w-[800px] h-[600px] bg-gradient-to-r from-[#8072FF] via-[#4D2DFF] to-[#1F1DFF] rounded-full blur-[120px] opacity-40 pointer-events-none shadow-2xl" />
         </div>
