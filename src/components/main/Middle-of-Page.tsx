@@ -1,11 +1,10 @@
-
 "use client";
 import Image from 'next/image'
 import { FaAngleRight } from "react-icons/fa";
-import { useRouter } from 'next/navigation'; // App Router'da yönlendirme için useRouter kullanılır
-import { motion } from "framer-motion";
+import { useRouter } from 'next/navigation'; 
 import { useEffect, useState } from 'react';
 import TypingTitle from '../hooks/animations/TypingTitle';
+import { motion } from 'framer-motion';
 
 
 export default function MiddleOfPage() {
@@ -124,3 +123,4 @@ export default function MiddleOfPage() {
         </div>
     );
 }
+

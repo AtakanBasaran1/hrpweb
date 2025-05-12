@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -75,14 +76,14 @@ export default function ProductModal({ product, isOpen, onClose }: Props) {
            
             <div>
             <h2 className="md:text-3xl text-2xl font-bold text-gray-800">{product.name}</h2>
-            <span className="md:text-sm text-sm font-medium text-gray-500">
+            <span className="md:text-sm text-xs font-medium text-gray-500">
               /{product.category}
             </span>
-            <p className="md:text-md  text-gray-600 whitespace-pre-line">{product.description}</p>
+            <p className="md:text-md text-xs  text-gray-600 whitespace-pre-line">{product.description}</p>
             </div>
-            <a href="/contact" className='mt-3 self-end float-right cursor-pointer hover:bg-[#123466] hover:text-white rounded-2xl py-2 px-4 flex items-center justify-center gap-2 bg-transparent border-1 border-[#123466] transition duration-300'>
-              <p>İletişime Geç</p>
-              <FaAngleRight />
+            <a href="/contact" className='sm:mt-3 mt-1 self-end float-right cursor-pointer hover:bg-[#123466] hover:text-white rounded-2xl py-2 px-4 flex items-center justify-center gap-2 bg-transparent border-1 border-[#123466] transition duration-300'>
+              <p className="md:text-sm text-xs">İletişime Geç</p>
+              <FaAngleRight className="md:text-sm text-xs"/>
             </a>
           
           </div>
@@ -91,3 +92,4 @@ export default function ProductModal({ product, isOpen, onClose }: Props) {
     </Fade>
   );
 }
+
