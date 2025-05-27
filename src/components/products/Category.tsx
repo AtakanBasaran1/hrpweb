@@ -8,19 +8,19 @@ import { CiCreditCard1 } from "react-icons/ci";
 import { PiCashRegister } from "react-icons/pi";
 import { FaWifi } from "react-icons/fa";
 import { useProduct } from '@/context/ProductContext';
-import { SiOnlyoffice } from "react-icons/si";
+import { MdBarcodeReader } from "react-icons/md";
 
 export default function Category() {
   const buttonList = [
     { name: "Tüm Ürünler", icon: BiSolidCategory },
     { name: "Kioks", icon: PiDeviceMobileLight },
     { name: "RGT Bilgisayarlar", icon: HiMiniComputerDesktop },
-    { name: "Yazıcı", icon: TiPrinter },
+    { name: "Termal Yazıcı", icon: TiPrinter },
     { name: "Para Çekmecesi", icon: PiCashRegister },
     { name: "El Terminali", icon: FaMobileScreen },
     { name: "Pos Cihazı", icon: CiCreditCard1 },
     { name: "Bağlantı", icon: FaWifi },
-    { name: "Sarf Malzemeler", icon: SiOnlyoffice },
+    { name: "Barkod Okuyucular", icon: MdBarcodeReader},
   ];
 
 
