@@ -37,21 +37,21 @@ export default function MiddleOfPage() {
             <div className="flex items-center mt-24 justify-center h-auto my-2 p-2">
                 <div className='w-[95%] sm:w-[75%] sm:flex'>
 
-                    <div className="sm:w-1/2 h-auto">
-                    <Image
-                    alt='Pos Cihazı'
-                    className='cursor-pointer'
-                    height={500}
-                    width={400}
-                    src='/images/hardware/kioks4.png'
-                    
-                    />
+                    <div className="sm:w-1/2 h-auto p-1 flex justify-center">
+                        <Image
+                            alt='Pos Cihazı'
+                            className='cursor-pointer'
+                            height={500}
+                            width={400}
+                            src='/images/hardware/kioks4.png'
+
+                        />
 
                     </div>
 
                     <div className='sm:w-1/2 h-auto'>
 
-                        Kaliteli POS Cihazlarımızla Tanışın!
+                        <span className='text-2xl'>Kaliteli POS Cihazlarımızla Tanışın!</span>
 
 
                         <p className="text-center sm:text-left">

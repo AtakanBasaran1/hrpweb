@@ -16,6 +16,7 @@ function Referances() {
         '13.webp',
         '14.png',
         '15.png',
+        '16.png',
 
     ];
     return (
