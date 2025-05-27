@@ -1,7 +1,7 @@
 import ReferancesText from "../hooks/animations/ReferancesText";
 function Referances() {
     const logos = [
-        '1.svg',
+        '1.png',
         '2.png',
         '3.png',
         '4.png',
@@ -23,7 +23,7 @@ function Referances() {
                 “Restoranını geleceğe taşıyan markalar bizimle çalışıyor.”
             </p>
 
-            <div className="w-[85%] h-auto p-4 flex flex-wrap justify-center gap-4 my-4">
+            <div className="w-[85%] h-auto p-4 flex flex-wrap justify-center md:gap-4 gap-2 my-4">
                 {logos.map((logo, i) => (
                     <div
                         key={i}
