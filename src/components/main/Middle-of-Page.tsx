@@ -28,7 +28,7 @@ export default function MiddleOfPage() {
                     Ne Üretiyoruz?
                 </motion.h1>
                 <p className="text-md m-4 text-gray-700">RegeditPos olarak POS cihazlarından ödeme yazılımlarına kadar geniş bir yelpazede
-                    müşterilerine çeşitlilik ve kalite sunuyor. <br /> <br className='inline sm:hidden' />
+                    müşterilerine çeşitlilik ve kalite sunuyoruz. <br /> <br className='inline sm:hidden' />
                     Güvenilir teknoloji ve sektördeki
                     deneyimimizle işletmelerin ödeme süreçlerini iyileştirmeyi hedefliyoruz.
                 </p>
@@ -55,7 +55,7 @@ export default function MiddleOfPage() {
 
 
                         <p className="text-center sm:text-left">
-                            Yalnızca yazılım değil, donanımda da yanınızdayız. Yüksek performanslı, dayanıklı ve kullanım kolaylığıyla öne çıkan POS cihazlarımız, restoran operasyonlarınızı hızlandırmak ve müşterilerinize kusursuz bir deneyim sunmak için tasarlandı. Kaliteden ödün vermeyen yapısıyla, uzun ömürlü ve güvenilir çözümler sunuyoruz.
+                            Yüksek performanslı, dayanıklı ve kullanım kolaylığıyla öne çıkan cihazlarımız, restoran operasyonlarınızı hızlandırmak ve müşterilerinize kusursuz bir deneyim sunmak için tasarlandı. Kaliteden ödün vermeyen yapısıyla, uzun ömürlü ve güvenilir çözümler sunuyoruz.
                         </p>
 
                     </div>
@@ -76,7 +76,7 @@ export default function MiddleOfPage() {
                             <p
                                 className='sm:text-left text-md m-4 sm:m-0'>
 
-                                İşinizi bir adım öteye taşıyan kiosklar, el terminalleri ve donanım çözümlerimizle tanışın.Siparişten ödemeye tüm süreçleri hızlandıran bu cihazlar, personel yükünü azaltır, müşteri memnuniyetini artırır. Şık tasarımı ve sezgisel arayüzüyle kiosklarımız, self-servis deneyimini kolaylaştırır, markanızın teknolojik imajını güçlendirir.
+                                İşinizi bir adım öteye taşıyan kiosklar, el terminalleri ve donanım çözümlerimizle tanışın. Siparişten ödemeye tüm süreçleri hızlandıran bu cihazlar, personel yükünü azaltır, müşteri memnuniyetini artırır. Şık tasarımı ve sezgisel arayüzüyle kiosklarımız, self-servis deneyimini kolaylaştırır, markanızın teknolojik imajını güçlendirir.
                                 Yazıcılar, para çekmeceleri ve diğer ekipmanlarla operasyonlarınızı uçtan uca optimize ediyor, zaman kazandırıyor, verimliliği artırıyoruz.
 
 

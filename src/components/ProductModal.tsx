@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -47,12 +46,12 @@ export default function ProductModal({ product, isOpen, onClose }: Props) {
           <IoClose className="cursor-pointer"/>
         </button>
 
-        <div className="bg-white rounded-lg p-6 md:w-full md:max-w-7xl w-[90vw] shadow-xl gap-6 flex flex-col md:flex-row">
+        <div className="bg-white rounded-lg p-6 md:w-full md:max-w-7xl w-[90vw] min-h-[60%] shadow-xl gap-6 flex flex-col md:flex-row">
           <div className="md:w-1/2 w-full relative flex items-center justify-center">
             <img
               src={product.image[currentImageIndex].img}
               alt={product.name}
-              className="rounded md:aspect-square object-cover md:w-112 w-full"
+              className="rounded object-cover md:w-112 w-full"
             />
  
             {product.image.length > 1 && (
@@ -75,11 +74,11 @@ export default function ProductModal({ product, isOpen, onClose }: Props) {
           <div className="md:w-1/2 w-full flex flex-col gap-4 justify-between">
            
             <div>
-            <h2 className="md:text-3xl text-2xl font-bold text-gray-800">{product.name}</h2>
-            <span className="md:text-sm text-xs font-medium text-gray-500">
+            <h2 className="md:text-3xl text-2xl font-bold text-gray-800 mb-4">{product.name}</h2>
+            <span className="md:text-sm text-xs font-medium text-gray-500 mb-2">
               /{product.category}
             </span>
-            <p className="md:text-md my-3 text-sm text-gray-600 whitespace-pre-line">{product.description}</p>
+            <p className="md:text-lg my-3 text-sm text-gray-600 whitespace-pre-line">{product.description}</p>
             </div>
             <a href="/contact" className='sm:mt-3 mt-1 self-end float-right cursor-pointer hover:bg-[#123466] hover:text-white rounded-2xl py-2 px-4 flex items-center justify-center gap-2 bg-transparent border-1 border-[#123466] transition duration-300'>
               <p className="md:text-sm text-xs">İletişime Geç</p>
@@ -92,4 +91,3 @@ export default function ProductModal({ product, isOpen, onClose }: Props) {
     </Fade>
   );
 }
-

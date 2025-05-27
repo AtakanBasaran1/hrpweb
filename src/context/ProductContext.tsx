@@ -86,8 +86,8 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       description: "example",
       image: [
         { img: "/images/hardware/kioks2transparent.png", default: true },
-        { img: "/images/hardware/kioks15.jpg", default: true },
-        { img: "/images/hardware/kioks16.jpg", default: true },
+        { img: "/images/hardware/kioks15.jpg", default: false },
+        { img: "/images/hardware/kioks16.jpg", default: false },
 
       ],
       category: "Kioks"
@@ -156,7 +156,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
     },
     {
       id: 88,
-      name: "Regedit Kart Okuyucu",
+      name: "RGT-50 Kart Okuyucu",
       description: "lOREM İpsum",
       image: [
         { img: "/images/hardware/new_hardware/card1.png", default: true },
@@ -187,16 +187,10 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       image: [{ img: "/images/hardware/ingenicotransparent.png", default: true }],
       category: "Pos Cihazı"
     },
-    {
-      id: 12,
-      name: "Acces Point",
-      description: "300 Mbps, Merkezi Yönetim Platformu, Tavan Montajlı ,Toz Koruyuculu Tasarım",
-      image: [{ img: "/images/hardware/accesstransparent.png", default: true }],
-      category: "Bağlantı"
-    },
+ 
     {
       id: 13,
-      name: "Ubiquiti UniFi AC Lite",
+      name: "Acces Point",
       description: "example",
       image: [{ img: "/images/hardware/aclite2.png", default: true }],
       category: "Bağlantı"

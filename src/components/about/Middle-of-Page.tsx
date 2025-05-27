@@ -19,8 +19,7 @@ export default function MiddleOfPage() {
 
             </h1>
             <p className="text-md sm:m-10 m-5 text-gray-800 text-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br /> Quasi suscipit recusandae voluptatum veritatis magnam ipsum laudantium, natus soluta, nisi, <br /> aspernatur pariatur obcaecati fugit nemo distinctio! Debitis reiciendis obcaecati delectus dolores.
-
+LOREM
             </p>
 
             <div className="flex mb-24 items-center mt-24 justify-center h-auto my-2  p-0 sm:p-2">
