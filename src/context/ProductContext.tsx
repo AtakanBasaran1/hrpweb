@@ -203,7 +203,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
     },
     {
       id: 14,
-      name: "Corpex CR-9520 2D-3D Lazer Kablosuz Barkod Okuyucu",
+      name: "1D/2D Lazer Kablolu/Kablosuz Barkod Okuyucu",
       description: "example",
       image: [{ img: "/images/hardware/barcode.png", default: true }],
       category: "Barkod Okuyucular"
