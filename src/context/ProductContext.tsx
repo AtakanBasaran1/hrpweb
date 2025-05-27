@@ -27,7 +27,7 @@ interface ProductContextType {
   setSelectedCategory: (category: string) => void;
   products: Product[];
   filteredProducts: Product[];
-  services_posts:Post[];
+  services_posts: Post[];
 }
 
 const ProductContext = createContext<ProductContextType | undefined>(undefined);
@@ -38,7 +38,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
   const services_posts: Post[] = [
     {
       id: 1,
-      description:"Doyuyo Bursa Anatolium Avm Kiosk ve Pos Sistem Kurulumu",
+      description: "Doyuyo Bursa Anatolium Avm Kiosk ve Pos Sistem Kurulumu",
       image: "/images/services1.jpeg",
     },
     {
@@ -76,7 +76,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
         { img: "/images/hardware/kioks13.jpg", default: false },
         { img: "/images/hardware/kioks14.jpg", default: false },
 
-       
+
       ],
       category: "Kioks"
     },
@@ -101,7 +101,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       ],
       category: "RGT Bilgisayarlar"
     },
-    
+
     {
       id: 5,
       name: "Regedit Sektörel Android Pos Cihazı RGT-40A",
@@ -136,7 +136,18 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       id: 8,
       name: "Regedit Müşteri Göstergesi RGT-90",
       description: "9,7 Lcd Ekran",
-      image: [{ img: "/images/hardware/dual2transparent.png", default: true }],
+      image: [
+        { img: "/images/hardware/dual2transparent.png", default: true },
+        { img: "/images/hardware/new_hardware/mg1.png", default: false },
+        { img: "/images/hardware/new_hardware/mg2.png", default: false },
+        { img: "/images/hardware/new_hardware/mg3.png", default: false },
+        { img: "/images/hardware/new_hardware/mg4.png", default: false },
+
+
+
+
+
+      ],
       category: "RGT Bilgisayarlar"
     },
     {
@@ -145,7 +156,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       description: "İşlemci: Qualcomm MSM8916 @ 1.2GHz Quad-Core APQ8016. İşlemci Hız:1.2 GHz Ram: 2 GB - Bellek:16 GB Ekran Boyut:5.0 - Ekran Çözünürlük:720x1280 Batarya: 4000 mAh NFC.IP67’yi destekleyen zorlu çalışma koşullarına yüksek performans Capacitive dokunmatik ekranla; Geniş görüş açısı ve gün ışığında okuma kolaylığı Darbeye karşı yüksek dayanıklılık.",
       image: [
         { img: "/images/hardware/new_hardware/mobilett.png", default: true },
-         { img: "/images/hardware/new_hardware/mobilett2.png", default: false }
+        { img: "/images/hardware/new_hardware/mobilett2.png", default: false }
 
       ],
       category: "El Terminali"
@@ -180,7 +191,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
     },
     {
       id: 14,
-      name: "Corpex CR-9520 2d Lazer Kablosuz Barkod Okuyucu",
+      name: "Corpex CR-9520 2D Lazer Kablosuz Barkod Okuyucu",
       description: "example",
       image: [{ img: "/images/hardware/barcode.png", default: true }],
       category: "Barkod Okuyucular"

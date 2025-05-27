@@ -79,7 +79,7 @@ export default function ProductModal({ product, isOpen, onClose }: Props) {
             <span className="md:text-sm text-xs font-medium text-gray-500">
               /{product.category}
             </span>
-            <p className="md:text-md text-xs  text-gray-600 whitespace-pre-line">{product.description}</p>
+            <p className="md:text-md my-3 text-sm text-gray-600 whitespace-pre-line">{product.description}</p>
             </div>
             <a href="/contact" className='sm:mt-3 mt-1 self-end float-right cursor-pointer hover:bg-[#123466] hover:text-white rounded-2xl py-2 px-4 flex items-center justify-center gap-2 bg-transparent border-1 border-[#123466] transition duration-300'>
               <p className="md:text-sm text-xs">İletişime Geç</p>
