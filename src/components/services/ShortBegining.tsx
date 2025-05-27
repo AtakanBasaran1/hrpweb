@@ -7,7 +7,7 @@ export default function ShortBegining() {
                 Hizmetlerimiz
             </h1>
             <p className="sm:text-xl w-full text-md px-3 my-6 text-center text-gray-700">
-                Projeleriniz baştan sonra anahtar teslim olacak şekilde güvenceyle tamamlanır.
+                Projeleriniz baştan sona anahtar teslim olacak şekilde güvenceyle tamamlanır.
             </p>
 
         </div>

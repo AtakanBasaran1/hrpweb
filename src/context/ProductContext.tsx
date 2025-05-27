@@ -97,7 +97,15 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       name: "Regedit Sektörel Pos Cihazı RGT-50",
       description: "Ekran boyutu: True Flat 15 Capacitive Touch Screen İşlemci: İntel Celeron J6412 Quad Core (Fansız) Ram: Kingston DDR4 8 GB. Kingston 128 GB M.2 Sata - Dahili Wifi - Dahili Hoparlör 6 Adet Usb Port(4 adet Usb 3.0, 2 adet Usb 2.0) • 1 Adet RJ11 (Para Çekmecesi Port) • 1 Adet VGA Port • 1 Adet Ethernet Port • 1 Adet Audio Port • 3 Adet ComPort • Harici Müşteri Göstergesi Portu • Harici Kart Okuyucu Portu",
       image: [
-        { img: "/images/hardware/dualtransparent2.png", default: true },
+        { img: "/images/hardware/new_hardware/window/rgt1.png", default: true },
+        { img: "/images/hardware/new_hardware/window/rgt2.png", default: false },
+        { img: "/images/hardware/new_hardware/window/rgt3.png", default: false },
+        { img: "/images/hardware/new_hardware/window/rgt4.png", default: false },
+        { img: "/images/hardware/new_hardware/window/rgt5.png", default: false },
+        { img: "/images/hardware/new_hardware/window/rgt6.png", default: false },
+
+
+
       ],
       category: "RGT Bilgisayarlar"
     },
@@ -143,10 +151,6 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
         { img: "/images/hardware/new_hardware/mg3.png", default: false },
         { img: "/images/hardware/new_hardware/mg4.png", default: false },
 
-
-
-
-
       ],
       category: "RGT Bilgisayarlar"
     },
@@ -161,13 +165,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       ],
       category: "El Terminali"
     },
-    {
-      id: 10,
-      name: "Profilo S900 Yazarkasa",
-      description: "Yeni Nesil ÖKC Pos Yazılım sistemleri ile entegre çalışı",
-      image: [{ img: "/images/hardware/profilos900.png", default: true }],
-      category: "Pos Cihazı"
-    },
+    
     {
       id: 11,
       name: "INGENİCO",
@@ -191,7 +189,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
     },
     {
       id: 14,
-      name: "Corpex CR-9520 2D Lazer Kablosuz Barkod Okuyucu",
+      name: "Corpex CR-9520 2D-3D Lazer Kablosuz Barkod Okuyucu",
       description: "example",
       image: [{ img: "/images/hardware/barcode.png", default: true }],
       category: "Barkod Okuyucular"
