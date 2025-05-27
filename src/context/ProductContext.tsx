@@ -155,6 +155,20 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       category: "RGT Bilgisayarlar"
     },
     {
+      id: 88,
+      name: "Regedit Kart Okuyucu",
+      description: "lOREM İpsum",
+      image: [
+        { img: "/images/hardware/new_hardware/card1.png", default: true },
+        { img: "/images/hardware/new_hardware/card2.png", default: false },
+        { img: "/images/hardware/new_hardware/card3.png", default: false },
+        { img: "/images/hardware/new_hardware/card4.png", default: false },
+
+      ],
+      category: "Sarf Malzemeler"
+    },
+
+    {
       id: 9,
       name: "Regedit Mobil Terminal RGT-70",
       description: "İşlemci: Qualcomm MSM8916 @ 1.2GHz Quad-Core APQ8016. İşlemci Hız:1.2 GHz Ram: 2 GB - Bellek:16 GB Ekran Boyut:5.0 - Ekran Çözünürlük:720x1280 Batarya: 4000 mAh NFC.IP67’yi destekleyen zorlu çalışma koşullarına yüksek performans Capacitive dokunmatik ekranla; Geniş görüş açısı ve gün ışığında okuma kolaylığı Darbeye karşı yüksek dayanıklılık.",
@@ -165,7 +179,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       ],
       category: "El Terminali"
     },
-    
+
     {
       id: 11,
       name: "INGENİCO",

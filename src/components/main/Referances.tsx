@@ -14,11 +14,13 @@ function Referances() {
         '11.png',
         '12.png',
         '13.webp',
+        '14.png',
+        '15.png',
 
     ];
     return (
         <div className="h-auto w-full flex flex-col items-center">
-           <ReferancesText/>
+            <ReferancesText />
             <p className="text-gray-700 text-center text-sm sm:text-lg m-5">
                 “Restoranını geleceğe taşıyan markalar bizimle çalışıyor.”
             </p>

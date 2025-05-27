@@ -9,6 +9,8 @@ import { PiCashRegister } from "react-icons/pi";
 import { FaWifi } from "react-icons/fa";
 import { useProduct } from '@/context/ProductContext';
 import { MdBarcodeReader } from "react-icons/md";
+import { IoLayers } from "react-icons/io5";
+
 
 export default function Category() {
   const buttonList = [
@@ -20,7 +22,9 @@ export default function Category() {
     { name: "El Terminali", icon: FaMobileScreen },
     { name: "Pos Cihazı", icon: CiCreditCard1 },
     { name: "Bağlantı", icon: FaWifi },
-    { name: "Barkod Okuyucular", icon: MdBarcodeReader},
+    { name: "Barkod Okuyucular", icon: MdBarcodeReader },
+    { name: "Sarf Malzemeler", icon: IoLayers },
+
   ];
 
 
@@ -29,7 +33,7 @@ export default function Category() {
   // Kategori değiştirme fonksiyonu
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category); // Butona tıklanıldığında kategori ayarlanır
-   
+
   };
 
   return (
@@ -58,5 +62,5 @@ export default function Category() {
       </div>
     </div>
   );
-  
+
 }
