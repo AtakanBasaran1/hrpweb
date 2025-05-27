@@ -55,12 +55,17 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
     {
       id: 4,
       description: "Doyuyo Adana Turgut Özal Bulvarı Kiosk ve Pos Sistem Projesi ",
-      image: "/images/doyuyoadana.jpeg",
+      image: "/images/adana123.png",
     },
     {
       id: 5,
       description: "21.5” Tabletop Kiosk Ürünümüz",
       image: "/images/services5.png",
+    },
+      {
+      id: 6,
+      description: "Doyuyo Capacity Avm Kiosk ve Pos Sistem Kurulumu",
+      image: "/images/kioksavm.png",
     },
   ];
 

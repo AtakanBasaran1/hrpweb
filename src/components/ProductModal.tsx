@@ -41,7 +41,7 @@ export default function ProductModal({ product, isOpen, onClose }: Props) {
 
   return (
     <Fade in={true} timeout={500}>
-      <div className="fixed inset-0 flex justify-center items-center z-50 backdrop-blur bg-black/60">
+      <div className="fixed inset-0 flex md:justify-center items-center flex-col z-50 backdrop-blur bg-black/60 md:pt-0 pt-15" >
         <button className="absolute top-3 right-3 text-3xl text-white hover:text-gray-400 transition" onClick={onClose}> 
           <IoClose className="cursor-pointer"/>
         </button>
@@ -51,7 +51,7 @@ export default function ProductModal({ product, isOpen, onClose }: Props) {
             <img
               src={product.image[currentImageIndex].img}
               alt={product.name}
-              className="rounded object-cover md:w-112 w-full"
+              className="rounded md:object-cover md:w-112 w-full"
             />
  
             {product.image.length > 1 && (
@@ -78,10 +78,10 @@ export default function ProductModal({ product, isOpen, onClose }: Props) {
             <span className="md:text-sm text-xs font-medium text-gray-500 mb-2">
               /{product.category}
             </span>
-            <p className="md:text-lg my-3 text-sm text-gray-600 whitespace-pre-line">{product.description}</p>
+            <p className="md:text-lg my-3 text-xs text-gray-600 whitespace-pre-line">{product.description}</p>
             </div>
-            <a href="/contact" className='sm:mt-3 mt-1 self-end float-right cursor-pointer hover:bg-[#123466] hover:text-white rounded-2xl py-2 px-4 flex items-center justify-center gap-2 bg-transparent border-1 border-[#123466] transition duration-300'>
-              <p className="md:text-sm text-xs">İletişime Geç</p>
+            <a href="/contact" className='sm:mt-3 bg-sky-transparent mt-1 self-end float-right cursor-pointer hover:bg-[#123466] hover:text-white rounded-2xl py-2 px-4 flex items-center justify-center gap-2 border-1 border-[#123466] transition duration-300'>
+              <p className="sm:text-xl text-sm">İletişime Geç</p>
               <FaAngleRight className="md:text-sm text-xs"/>
             </a>
           
