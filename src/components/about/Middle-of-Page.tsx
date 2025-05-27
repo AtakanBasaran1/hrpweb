@@ -19,7 +19,8 @@ export default function MiddleOfPage() {
 
             </h1>
             <p className="text-md sm:m-10 m-5 text-gray-800 text-center">
-LOREM
+                Restoranların arka plandaki görünmeyen kahramanıyız. Mutfakta işler hızlı, kasada kuyruk kısa, müşteri memnun...  <br />  Hepsinin arkasında, size zaman kazandıran ve işinizi kolaylaştıran teknolojilerimiz var.
+
             </p>
 
             <div className="flex mb-24 items-center mt-24 justify-center h-auto my-2  p-0 sm:p-2">
@@ -39,10 +40,8 @@ LOREM
                         <div>
                            
                             <TypingTitle classNameProps="sm:text-4xl text-3xl font-bold m-3 bg-gradient-to-r from-blue-700 via-sky-500 to-gray-400 text-transparent bg-clip-text" fullText='İşletmenizin Yanında, Her Aşamada.'/>
-                            <p className='text-left m-3'>Yalnızca yazılım değil, donanımda da yanınızdayız.
-                                Yüksek performanslıanslı, dayanıklı ve kullanım kolaylığıyla öne çıkan POS cihazlarımız, restoran
-                                operasyonlarınızı hızlandırmak ve müşterilerinize kusursuz bir deneyim sunmak için tasarlandı.
-                                yapısıyla, uzun ömürlü ve güvenilir çözümler sunuyoruz.
+                            <p className='text-left m-3'>
+                                Sipariş ilk alındığı andan, fiş son kez yazdırılana kadar sizinleyiz. Yoğun bir öğle servisinde hızınız, sakin bir akşamda ise konforunuz oluyoruz. Kasa başında, mutfakta, servis alanında... Nerede ihtiyaç varsa oradayız. Cihazlarımız sadece çalışmaz, işletmenizi anlar, sizinle birlikte büyür. Kurulumdan desteğe, yazılımdan donanıma her adımda yanınızda duran bir çözüm ortağıyız. Çünkü biz, sadece satış yapmıyoruz; restoranınızın ritmine ayak uyduruyor, her aşamasına eşlik ediyoruz.
                             </p>
                         </div>
 
@@ -72,10 +71,12 @@ LOREM
                             <h1 className="sm:text-4xl text-3xl font-bold m-3 bg-gradient-to-r from-blue-700 via-sky-500 to-gray-400 text-transparent bg-clip-text">
                                 Bizi Neden Tercih etmelisiniz?
                             </h1>
-                            <p className='text-left m-3 '>LOREMYalnızca yazılım değil, donanımda da yanınızdayız.
-                                Yüksek performanslıanslı, dayanıklı ve kullanım kolaylığıyla öne çıkan POS cihazlarımız, restoran
-                                operasyonlarınızı hızlandırmak ve müşterilerinize kusursuz bir deneyim sunmak için tasarlandı.
-                                yapısıyla, uzun ömürlü ve güvenilir çözümler sunuyoruz.</p>
+                            <p className='text-left m-3 '>
+
+                                 POS cihazlarımızdan kiosk çözümlerimize kadar her ürünümüz, restoran operasyonlarını daha akıllı, hızlı ve keyifli hale getirmek için tasarlandı. Sadece cihaz değil; konfor, güven ve gelecek sunuyoruz. Çünkü biz, bugünü kolaylaştırmakla kalmayıp, sizi yarına hazırlıyoruz.
+                              
+                              
+                                </p>
                             <button onClick={(e) => handleContactPageRoute()} className='mt-3 mx-3 cursor-pointer hover:bg-blue-900 hover:text-white rounded-2xl py-2 px-4 flex items-center justify-center gap-2 bg-transparent border-1 border-black transition duration-300'>
                                 <p>İletişime Geç</p>
                                 <FaAngleRight />

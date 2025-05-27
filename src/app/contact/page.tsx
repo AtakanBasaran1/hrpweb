@@ -13,7 +13,7 @@ export default function page() {
                         İletişim
                     </h1>
                     <p className="sm:text-xl text-lg m-2 text-center text-gray-700">
-                        "Bizimle İletişime Geçiniz." 
+                       Bizimle iletişim kurun, cevap bekletmez.
                     </p>
                 </div>
                 <Form />

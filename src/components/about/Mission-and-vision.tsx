@@ -16,7 +16,9 @@ export default function MissionAndVision() {
                 onClick={()=> setIsVisionHovered(false)}
             >
                 <h1 className="text-6xl m-5 font-bold">Misyon</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, consequatur? Quis, animi cumque illum voluptatibus ea blanditiis! Incidunt, dolores fuga.</p>
+                <p>
+                    RegeditPos olarak, POS cihazlarından ödeme yazılımlarına kadar uzanan ürün yelpazemizle işletmelerin ihtiyaçlarına akıllı, güvenilir ve kullanıcı dostu çözümler sunuyoruz. Deneyimimizi teknolojiyle birleştiriyor, her ölçekteki işletmenin operasyonel verimliliğini artırmak için çalışıyoruz. Amacımız; sadeleştiren sistemler, hızlandıran cihazlar ve güven veren bir iş ortaklığı ile her müşterimizin yanında olmak.
+                </p>
             </div>
  
             <div
@@ -30,7 +32,9 @@ export default function MissionAndVision() {
                 onClick={()=> setIsVisionHovered(true)}
             >
                 <h1 className="text-6xl m-5 font-bold">Vizyon</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, qui! Voluptatem amet quis ad accusamus saepe id quas eligendi cumque voluptatibus aut.</p>
+                <p>
+                    Restoran ve hizmet sektöründe ödeme teknolojilerinde yeniliğin öncüsü olmak; işletmelere sadece bugünü değil, geleceği de kolaylaştıran çözümler sunarak sektöre yön vermek.
+                </p>
             </div>
         </div>
     );
