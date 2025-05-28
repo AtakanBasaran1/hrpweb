@@ -88,7 +88,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
     {
       id: 2,
       name: "Kioks Masa Tipi",
-      description: "example",
+      description: "21,5' MASAÜSTÜ KIOSK INTELJ6412 CPU (Fan Yok), KINGSTON 8G DDR4 RAM, KINGSTON 128G (M2)SSD, WIN10 İşletim Sistemi, USB, WIFI, LAN Modül: QR-Kod Okuyucu, Epson Termal Yazıcı, POS Bağlantı Aparatı.",
       image: [
         { img: "/images/hardware/kioks2transparent.png", default: true },
         { img: "/images/hardware/kioks15.jpg", default: false },
@@ -112,18 +112,18 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
 
 
       ],
-      category: "RGT Bilgisayarlar"
+      category: "POS Bilgisayarlar"
     },
 
     {
-      id: 5,
+      id: 4,
       name: "Regedit Sektörel Android Pos Cihazı RGT-40A",
       description: "Ekran boyutu: True Flat 15,6 Capacitive Touch Screen İşlemci: RK 3568 Ram: DDR4 4 GB. EMMC FLASH 128 gb - Dahili Wifi - Dahili Hoparlör 6 Adet Usb Port(4 adet Usb 2.0, 2 adet Usb 3.0) • 1 Adet RJ11 (Para Çekmecesi Port) • 1 Adet Ethernet Port • 1 Adet Audio Port • 2 Adet ComPort • Harici Müşteri Göstergesi Portu • Harici Kart Okuyucu Portu",
       image: [{ img: "/images/hardware/androidtransparent.png", default: true }],
       category: "RGT Bilgisayarlar"
     },
     {
-      id: 6,
+      id: 5,
       name: "Regedit Termal Yazıcı RGT-60",
       description: "80 mm Termal Printer; 203 DPI. YAZDIRMA HIZI: 230mm/s USB+ETHERNET Port - Metal Termal Kafa",
       image: [
@@ -135,7 +135,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       category: "Termal Yazıcı"
     },
     {
-      id: 7,
+      id: 6,
       name: "Regedit Para Çekmecesi RGT-80",
       description: "5 Kağıt/8 Bozuk Para Haznesi. RJ11 1.5 m Kablo 410x420x100mm",
       image: [
@@ -146,7 +146,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       category: "Para Çekmecesi"
     },
     {
-      id: 8,
+      id: 7,
       name: "Regedit Müşteri Göstergesi RGT-90",
       description: "9,7 Lcd Ekran",
       image: [
@@ -158,19 +158,6 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
 
       ],
       category: "RGT Bilgisayarlar"
-    },
-    {
-      id: 88,
-      name: "RGT-50 Kart Okuyucu",
-      description: "lOREM İpsum",
-      image: [
-        { img: "/images/hardware/new_hardware/card1.png", default: true },
-        { img: "/images/hardware/new_hardware/card2.png", default: false },
-        { img: "/images/hardware/new_hardware/card3.png", default: false },
-        { img: "/images/hardware/new_hardware/card4.png", default: false },
-
-      ],
-      category: "Sarf Malzemeler"
     },
 
     {
@@ -186,24 +173,24 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
     },
 
     {
-      id: 11,
+      id: 10,
       name: "INGENİCO",
-      description: "example",
+      description: " Temassız, çipli ve manyetik kart desteği, hızlı işlemci ile yüksek işlem hızı, geniş ve dokunmatik ekran, dahili yazıcı, Wi-Fi, 4G ve Bluetooth bağlantı seçenekleri (modeline göre değişir), sağlam ve şık tasarım, restoran, mağaza ve saha satışları için uygundur.",
       image: [{ img: "/images/hardware/ingenicotransparent.png", default: true }],
       category: "Pos Cihazı"
     },
  
     {
-      id: 13,
+      id: 11,
       name: "Acces Point",
-      description: "example",
+      description: " 802.11ac Dual Band (2.4GHz & 5GHz), 2.4GHz’de 300 Mbps ve 5GHz’de 867 Mbps hız, yaklaşık 122 metre kapsama alanı, 1 adet Gigabit Ethernet portu, 802.3af PoE desteği (adaptör dahil değildir), duvar ve tavan montajına uygun, iç mekan kullanımına uygundur, UniFi Controller ile merkezi yönetim.",
       image: [{ img: "/images/hardware/aclite2.png", default: true }],
       category: "Bağlantı"
     },
     {
-      id: 14,
+      id: 12,
       name: "1D/2D Lazer Kablolu/Kablosuz Barkod Okuyucu",
-      description: "example",
+      description: "1D veya 2D barkod okuma seçenekleri, kablolu (USB) veya kablosuz (Bluetooth) modeller, yüksek okuma hızı ve hassasiyet, dayanıklı ve ergonomik tasarım, otomatik tarama modu, perakende, depo ve lojistik kullanımına uygundur.",
       image: [{ img: "/images/hardware/barcode.png", default: true }],
       category: "Barkod Okuyucular"
     }

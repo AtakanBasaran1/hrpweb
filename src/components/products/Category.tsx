@@ -16,7 +16,7 @@ export default function Category() {
   const buttonList = [
     { name: "Tüm Ürünler", icon: BiSolidCategory },
     { name: "Kioks", icon: PiDeviceMobileLight },
-    { name: "RGT Bilgisayarlar", icon: HiMiniComputerDesktop },
+    { name: "POS Bilgisayarlar", icon: HiMiniComputerDesktop },
     { name: "Termal Yazıcı", icon: TiPrinter },
     { name: "Para Çekmecesi", icon: PiCashRegister },
     { name: "El Terminali", icon: FaMobileScreen },
