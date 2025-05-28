@@ -6,10 +6,13 @@ import { usePathname } from 'next/navigation';
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import { motion, AnimatePresence } from 'framer-motion';
 import path from 'path';
+import { useTheme } from '@/context/ThemeContext';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+
+  const { isDarkMode} = useTheme();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -17,7 +20,8 @@ export default function Navbar() {
     { label: 'Anasayfa', href: '/' },
     { label: 'Hakkımızda', href: '/about' },
     { label: 'Ürünlerimiz', href: '/products' },
-    { label: 'Hizmetlerimiz', href: '/services' },
+    { label: 'Örnek Projeler', href: '/services' },
+    { label: 'Referanslar', href: '/referances' },
     { label: 'İletişim', href: '/contact' },
   ];
 
@@ -65,23 +69,42 @@ export default function Navbar() {
       <div className={`w-full backdrop-blur-md  
         ${pathname === '/products'
           ? "bg-transparent"
-          :
-          showHeader
-            ? "bg-white"
-            :
-            pathname === '/contact'
-              ? "bg-[#123466]"
-              : "bg-black"}
-        
-        text-white flex items-center px-8 md:px-20 py-2 overflow-hidden self-center h-[7lvh] `}>
+          : pathname === '/contact'
+            ? showHeader
+              ? "bg-transparent"
+              : "bg-[#123466]"
+            : pathname === '/' || pathname === '/about'
+              ? isDarkMode
+                ? showHeader
+                  ? "bg-transparent"
+                  : "bg-black"
+                : showHeader
+                  ? "bg-transparent"
+                  : "bg-transparent"
+              : showHeader
+                ? "bg-transparent"
+                : "bg-white"}
+        flex items-center px-8 md:px-20 py-2 overflow-hidden self-center h-[7lvh] `}>
         <Link href="/" className="flex items-center space-x-2">
           <img
             src={
               pathname === '/products'
-                ? "/images/regedit_blue.png"
-                : showHeader
+                ? showHeader
                   ? "/images/regedit_black.png"
-                  : "/images/regedit_white.png"
+                  : "/images/regedit_blue.png"
+                : pathname === '/contact'
+                  ? showHeader
+                    ? "/images/regedit_black.png"
+                    : "/images/regedit_white.png"
+                  : pathname === '/' || pathname === '/about'
+                    ? isDarkMode
+                      ? showHeader
+                        ? "/images/regedit_black.png"
+                        : "/images/regedit_white.png"
+                      : "/images/regedit_black.png"
+                    : showHeader
+                      ? "/images/regedit_black.png"
+                      : "/images/regedit_black.png"
             }
             alt="Regedit Informatics"
             className="h-26 rounded-md"
@@ -96,7 +119,27 @@ export default function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`hover:text-gray-300 transition-colors ${showHeader ? "text-black" : "text-white"}    flex items-center gap-2 ${isActive && 'border-b-2 ${showHeader ? "border-white":"border-black"}'}`}
+                  className={`text-xl hover:text-gray-300 transition-colors ${
+                    pathname === '/products'
+                      ? showHeader
+                        ? "text-black"
+                        : "text-white"
+                      : pathname === '/contact'
+                        ? showHeader
+                          ? "text-black"
+                          : "text-white"
+                        : pathname === '/' || pathname === '/about'
+                          ? isDarkMode
+                            ? showHeader
+                              ? "text-black"
+                              : "text-white"
+                            : showHeader
+                              ? "text-black"
+                              : "text-white"
+                          : showHeader
+                            ? "text-black"
+                            : "text-black"
+                  } flex items-center gap-2 ${isActive && 'border-b-2'}`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}

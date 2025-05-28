@@ -41,7 +41,7 @@ export default function MiddleOfPage() {
                         <Image
                             alt='Pos Cihazı'
                             className='cursor-pointer'
-                            height={500}
+                            height={600}
                             width={400}
                             src='/images/hardware/kioks4.png'
 
@@ -51,7 +51,7 @@ export default function MiddleOfPage() {
 
                     <div className='sm:w-1/2 h-auto'>
 
-                        <span className='text-2xl'>Kaliteli POS Cihazlarımızla Tanışın!</span>
+                        <span className='text-2xl'>Kaliteli Kiosk Cihazlarımızla Tanışın!</span>
 
 
                         <p className="text-center sm:text-left">

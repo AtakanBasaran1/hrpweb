@@ -9,7 +9,8 @@ export default function Footer() {
         { label: 'Anasayfa', href: '/' },
         { label: 'Hakkımızda', href: '/about' },
         { label: 'Ürünlerimiz', href: '/products' },
-        { label: 'Hizmetlerimiz', href: '/services' },
+        { label: 'Örnek Projeler', href: '/services' },
+        { label: 'Referanslar', href: '/referances' },
         { label: 'İletişim', href: '/contact' },
       ];
     return (
@@ -34,9 +35,9 @@ export default function Footer() {
                 </div>
                 
                 <ul className='gap-3 m-5 flex xl:text-3xl text-2xl'>
-                    <FaLinkedin  className='cursor-pointer transition transform hover:scale-105 duration-300'/>
-                    <FaInstagram className='cursor-pointer transition transform hover:scale-105 duration-300'/>
-                    <IoMdMail    className='cursor-pointer transition transform hover:scale-105 duration-300'/>
+                    <a href='https://www.linkedin.com/company/regeditpos/'><FaLinkedin  className='cursor-pointer transition transform hover:scale-105 duration-300'/></a>
+                    <a href='https://www.instagram.com/regeditposs/'><FaInstagram className='cursor-pointer transition transform hover:scale-105 duration-300'/></a>
+                    <a href='mailto:info@regedit.com'><IoMdMail className='cursor-pointer transition transform hover:scale-105 duration-300'/></a>
                 </ul>
             </div>
 
@@ -44,10 +45,6 @@ export default function Footer() {
 
             <p className='xl:text-xl text-sm text-white'>RegeditPos © 2025</p>
 
-
-
         </footer>
-
-
     )
 }
