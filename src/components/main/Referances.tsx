@@ -4,19 +4,19 @@ function Referances() {
         '1.png',
         '2.png',
         '3.png',
-        '4.png',
+        '15.png',
+        '8.jpeg',
         '5.jpg',
         '6.jpg',
         '7.png',
-        '8.jpeg',
-        '9.png',
+        '14.png',
         '10.jpg',
         '11.png',
         '12.png',
         '13.webp',
-        '14.png',
-        '15.png',
+        '9.png',
         '16.png',
+
 
     ];
     return (
@@ -26,7 +26,7 @@ function Referances() {
                 “Restoranını geleceğe taşıyan markalar bizimle çalışıyor.”
             </p>
 
-            <div className="w-[85%] h-auto p-4 flex flex-wrap justify-center md:gap-4 gap-2 my-4">
+            <div className="w-[85%] h-auto p-4 flex flex-wrap justify-center md:gap-9 gap-4 my-4">
                 {logos.map((logo, i) => (
                     <div
                         key={i}

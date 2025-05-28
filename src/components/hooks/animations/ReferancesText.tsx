@@ -9,28 +9,13 @@ const ReferancesText = () => {
   return (
     <motion.h1
       ref={ref}
-      initial={{
-        backgroundImage: 'linear-gradient(to right, #888, #888)', // gri ton
-        opacity: 0,
-      }}
-      animate={
-        isInView
-          ? {
-              backgroundImage:
-                'linear-gradient(to right, #312e81, #ec4899, #4b5563)', // orijinal renkler
-              opacity: 1,
-            }
-          : {}
-      }
+      initial={{ opacity: 0 }}
+      animate={isInView ? { opacity: 1 } : {}}
       transition={{
         duration: 1.4,
         ease: "easeOut",
       }}
-      style={{
-        WebkitBackgroundClip: "text",
-        color: "transparent",
-      }}
-      className="sm:text-7xl text-4xl text-center font-bold m-3"
+      className="sm:text-7xl text-4xl text-center font-bold m-3 bg-gradient-to-r from-blue-700 via-sky-500 to-gray-400 text-transparent bg-clip-text"
     >
       Referanslarımız
     </motion.h1>
