@@ -41,32 +41,50 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       description: "Doyuyo Bursa Anatolium Avm Kiosk ve Pos Sistem Kurulumu",
       image: "/images/services1.jpeg",
     },
-    {
-      id: 2,
-      description: "Green Salads Tema World Avm Kiosk Kurulumu",
-      image: "/images/services2.jpeg",
-    },
-    {
-      id: 3,
-      description: "Doyuyo Marmara Forum Avm Kiosk ve Pos Sistem Projesi ",
-      image: "/images/services3.jpeg",
-    },
+
 
     {
-      id: 4,
+      id: 2,
       description: "Doyuyo Adana Turgut Özal Bulvarı Kiosk ve Pos Sistem Projesi ",
       image: "/images/adana123.png",
     },
+
+    {
+      id: 3,
+      description: "21.5” Tabletop Kiosk Ürünümüz",
+      image: "/images/services/image.png",
+    },
+
+
+
+    {
+      id: 4,
+      description: "Doyuyo Marmara Forum Avm Kiosk ve Pos Sistem Projesi",
+      image: "/images/services/servicesphoto1.jpg",
+    },
+
+
     {
       id: 5,
-      description: "21.5” Tabletop Kiosk Ürünümüz",
-      image: "/images/services5.png",
+      description: "Green Salads Tema World Avm Kiosk Kurulumu",
+      image: "/images/services/servicesphoto2.jpg",
     },
-      {
+
+
+    {
       id: 6,
-      description: "Doyuyo Capacity Avm Kiosk ve Pos Sistem Kurulumu",
-      image: "/images/kioksavm.png",
+      description: "CONTENT GİRİLECEK",
+      image: "/images/services/servicesphoto3.jpg",
     },
+
+    {
+      id: 7,
+      description: "CONTENT GİRİLECEK",
+      image: "/images/services/servicesphoto4.jpg",
+    },
+
+
+
   ];
 
   const products: Product[] = [
@@ -179,7 +197,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       image: [{ img: "/images/hardware/ingenicotransparent.png", default: true }],
       category: "Pos Cihazı"
     },
- 
+
     {
       id: 11,
       name: "Acces Point",
