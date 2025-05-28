@@ -23,7 +23,6 @@ export default function Category() {
     { name: "Pos Cihazı", icon: CiCreditCard1 },
     { name: "Bağlantı", icon: FaWifi },
     { name: "Barkod Okuyucular", icon: MdBarcodeReader },
-    { name: "Sarf Malzemeler", icon: IoLayers },
 
   ];
 
