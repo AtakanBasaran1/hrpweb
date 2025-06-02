@@ -10,6 +10,7 @@ import { FaWifi } from "react-icons/fa";
 import { useProduct } from '@/context/ProductContext';
 import { MdBarcodeReader } from "react-icons/md";
 import { IoLayers } from "react-icons/io5";
+import { IoReceiptOutline } from "react-icons/io5";
 
 
 export default function Category() {
@@ -23,6 +24,8 @@ export default function Category() {
     { name: "Pos Cihazı", icon: CiCreditCard1 },
     { name: "Bağlantı", icon: FaWifi },
     { name: "Barkod Okuyucular", icon: MdBarcodeReader },
+    { name: "Yazar Kasa", icon: IoReceiptOutline },
+
 
   ];
 

@@ -55,8 +55,6 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       image: "/images/services/image.png",
     },
 
-
-
     {
       id: 4,
       description: "Doyuyo Marmara Forum Avm Kiosk ve Pos Sistem Projesi",
@@ -211,7 +209,22 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       description: "1D veya 2D barkod okuma seçenekleri, kablolu (USB) veya kablosuz (Bluetooth) modeller, yüksek okuma hızı ve hassasiyet, dayanıklı ve ergonomik tasarım, otomatik tarama modu, perakende, depo ve lojistik kullanımına uygundur.",
       image: [{ img: "/images/hardware/barcode.png", default: true }],
       category: "Barkod Okuyucular"
-    }
+    },
+
+      {
+      id: 13,
+      name: "Pavo UN20",
+      description: "İşletim Sistemi: Android 11.0, İşlemci: 2.0  GHZ Quad-Core Cortex  A53 Güvenlik Çipi İşlemci, Hafıza: 2GB Ram+8GB Flash, İletişim: 4G, Wi-Fi, LAN, Bluetooth, Bağlantı: 1 x USB Type-A, 1 x USB Type-C, 1 x LAN, 2 x RS232, 1 x MDB Master & Executive, 1 x MDB Slave 1,  x Digital I/O, 1 x SMA, Kamera: Üst Kamera 2mp, Alt Kamera 2mp, Ekran: 5.0” HD 1280×720 Renkli LCD Kapasitif Dokunmatik Ekran, E-imza Destekler), Ölçüler/Ağırlık: 146*101*57mm Kesme Boyutu: 108.7mm*86.4mm, Sertifikalar: PCI 6.x, EMV L1&L2, EMV CL1, QPBOC L1, Quickpass, Paypass, Paywave, TQM, JCB, Discover, Amex. IP65, IK08, ATEX, CE, RoHS, Çevresel: Çalışma Sıcaklığı : -20°C – 70°C , Depolama Sıcaklığı : -30°C – 80°C, Nem: 10% – 95% (Yoğuşmasız), Su Geçirmez ve Toz Geçirmez: Match IP65 Standartı.",
+      image: [{ img: "/images/hardware/un20.png", default: true }],
+      category: "Yazar Kasa"
+    },
+        {
+      id: 14,
+      name: "Pavo N86",
+      description: "İşletim Sistemi: Android 9.0, İşlemci: Quad-Core işlemcili Güvenlik Çipi, Hafıza: 2GB Ram+16GB Flash, İletişim: 4G/3G/2G, Wi-Fi, Bluetooth, Lokasyon: GPS, GLONASS, BEIDOU, Yazıcı: Yüksek Hızlı Termal Yazıcı Kağıt Rulo Genişliği: 58mm Çap:40mm, Kamera: Arka Kamera 5mp, AF, Flash 2MB FF(Opsiyonel), Ön Kamera: 2MP, FF(Opsiyonel) Barkod, Okuyucu 1D & 2D, Pil: 2600mAh Şarj edilebilir Li-on Pil, Ekran:5.0” HD 1280×720 Renkli LCD Kapasitif Dokunmatik Ekran, E-imza Destekler), Ölçüler/Ağırlık: 194 mm Ux82 mm Gx68mm Y 417g (Pil Dahil), Güvenlik: PCI5, UPTS 2.0 Onaylı.",
+      image: [{ img: "/images/hardware/n86.png", default: true }],
+      category: "Yazar Kasa"
+    },
   ];
 
 
