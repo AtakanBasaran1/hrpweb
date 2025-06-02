@@ -119,7 +119,7 @@ export default function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`text-xl hover:text-gray-300 transition-colors ${
+                  className={`text-lg hover:text-gray-300 transition-colors ${
                     pathname === '/products'
                       ? showHeader
                         ? "text-black"

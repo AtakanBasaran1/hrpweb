@@ -16,8 +16,6 @@ function Referances() {
         '13.webp',
         '9.png',
         '16.png',
-
-
     ];
     return (
         <div className="h-auto w-full flex flex-col items-center">
@@ -35,14 +33,11 @@ function Referances() {
                         <img
                             src={`/images/referances/${logo}`}
                             alt={`Referanslarımız ${i + 1}`}
-                            className="max-w-full max-h-full object-contain md:grayscale grayscale-0 hover:grayscale-0 transition duration-150"
+                            className="max-w-full max-h-full object-contain"
                         />
                     </div>
                 ))}
             </div>
-
-
-
 
         </div>
 

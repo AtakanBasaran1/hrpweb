@@ -41,8 +41,8 @@ const TiltImage = () => {
         style={{ transformStyle: 'preserve-3d' }}
       >
         <Image
-          className="rounded-xl cursor-pointer"
-          src="/images/regeditlogo2.png"
+          className="rounded-xl cursor-pointer bg-sky-400"
+          src="/images/regeditartistikfoto.webp"
           alt="Logo"
           width={400}
           height={500}

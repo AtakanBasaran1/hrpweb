@@ -19,7 +19,7 @@ export default function Home() {
         <Begining />
         <MiddleOfPage />
         <CompanyInfo />
-        <Referances />
+    
       </div>
     </Fade>
   );
