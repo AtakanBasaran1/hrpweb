@@ -71,13 +71,13 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
 
     {
       id: 6,
-      description: "",
+      description: "Sofra Grup Şekerbank Cafe Kurulumu",
       image: "/images/services/servicesphoto3.jpg",
     },
 
     {
       id: 7,
-      description: "",
+      description: "Burger Yiyelim Aqua Florya Avm Kurulumu",
       image: "/images/services/servicesphoto4.jpg",
     },
 
