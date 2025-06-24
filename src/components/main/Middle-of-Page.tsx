@@ -17,9 +17,9 @@ export default function MiddleOfPage() {
     return (
         <div id='whitezone' className="h-auto w-full mb-24">
 
-            <div className="text-center mx-9" style={{ marginTop: '80px' }}>
+            <div className="text-center mx-9" style={{ marginTop: '60px' }}>
                 <motion.h1
-                    className="text-6xl font-bold m-3"
+                    className="text-6xl font-bold m-3, mb-15"
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, ease: "easeOut" }}

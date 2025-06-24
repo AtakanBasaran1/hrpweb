@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react';
 import { BiSolidCategory } from "react-icons/bi";
 import { HiMiniComputerDesktop } from "react-icons/hi2";
 import { FaMobileScreen } from "react-icons/fa6";
@@ -7,11 +7,9 @@ import { TiPrinter } from "react-icons/ti";
 import { CiCreditCard1 } from "react-icons/ci";
 import { PiCashRegister } from "react-icons/pi";
 import { FaWifi } from "react-icons/fa";
-import { useProduct } from '@/context/ProductContext';
 import { MdBarcodeReader } from "react-icons/md";
-import { IoLayers } from "react-icons/io5";
 import { IoReceiptOutline } from "react-icons/io5";
-
+import { useProduct } from '@/context/ProductContext';
 
 export default function Category() {
   const buttonList = [
@@ -25,37 +23,37 @@ export default function Category() {
     { name: "Bağlantı", icon: FaWifi },
     { name: "Barkod Okuyucular", icon: MdBarcodeReader },
     { name: "Yazar Kasa", icon: IoReceiptOutline },
-
-
   ];
-
 
   const { selectedCategory, setSelectedCategory } = useProduct();
 
-  // Kategori değiştirme fonksiyonu
   const handleCategoryChange = (category: string) => {
-    setSelectedCategory(category); // Butona tıklanıldığında kategori ayarlanır
-
+    setSelectedCategory(category);
   };
 
   return (
-    <div className="w-full flex items-center justify-center">
-      <div className="w-full h-auto border-b border-gray-400 px-4 py-2 overflow-x-auto">
-        <ul className="flex flex-nowrap gap-2">
+    <div className="w-full flex items-center justify-center bg-white">
+      <div className="w-full max-w-6xl border-b border-gray-200 px-2 py-3">
+        <ul className="flex flex-nowrap gap-3 overflow-x-auto scrollbar-thin scrollbar-thumb-blue-200 scrollbar-track-transparent md:justify-center md:overflow-x-visible">
           {buttonList.map((item, index) => {
             const Icon = item.icon;
+            const isActive = selectedCategory === item.name;
             return (
               <li key={index} className="flex-shrink-0">
                 <button
                   onClick={() => handleCategoryChange(item.name)}
-                  className={`flex items-center justify-center gap-2 border p-3 rounded-xl transition-all duration-150
-                    ${selectedCategory === item.name
-                      ? "bg-black text-white"
-                      : "bg-white text-black hover:text-white hover:bg-black"}
+                  className={`
+                    flex flex-col items-center justify-center gap-1 px-4 py-2 rounded-lg border
+                    transition-all duration-200 shadow-sm min-w-[90px]
+                    ${isActive
+                      ? "bg-gradient-to-b from-blue-600 to-blue-400 text-white border-blue-600 shadow-md scale-105"
+                      : "bg-white text-gray-700 border-gray-200 hover:bg-blue-50 hover:text-blue-700"}
                   `}
                 >
-                  <Icon className="text-2xl" />
-                  <p className="text-sm font-bold">{item.name}</p>
+                  <Icon className={`text-2xl mb-1 ${isActive ? "text-white" : "text-blue-600"}`} />
+                  <span className={`text-xs font-semibold tracking-tight ${isActive ? "text-white" : "text-gray-700"}`}>
+                    {item.name}
+                  </span>
                 </button>
               </li>
             );
@@ -64,5 +62,4 @@ export default function Category() {
       </div>
     </div>
   );
-
 }

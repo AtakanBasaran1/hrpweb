@@ -7,6 +7,7 @@ import { ProductProvider } from "@/context/ProductContext";
 import ClientLayoutWrapper from "./ClientLayout";
 
 import type { Metadata } from "next";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "RegeditPos",
@@ -23,6 +24,8 @@ export default function RootLayout({
     <ProductProvider>
       <html>
         <body className={`${poppins.className} antialiased bg-black text-white`}>
+                  
+
           <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
         </body>
       </html>

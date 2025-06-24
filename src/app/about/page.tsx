@@ -17,7 +17,7 @@ export default function page() {
                     image="/images/regedit_logo.ico"
                 />
 
-                <Begining />
+                <Begining />    
                 <MiddleOfPage />
                 <MissionAndVision />
                 {/* <LogoSection /> */}

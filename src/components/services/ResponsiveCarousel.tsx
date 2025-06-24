@@ -19,7 +19,7 @@ export default function ResponsiveCarousel() {
           services_posts.map((post) => (
 
             <SwiperSlide key={post.id} className='my-24'>
-              <div className='h-96 relative overflow-hidden'>
+              <div className='h-96 relative '>
                 <Image
                   src={post.image}
                   alt="Image"

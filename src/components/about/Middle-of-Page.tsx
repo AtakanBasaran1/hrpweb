@@ -71,7 +71,7 @@ export default function MiddleOfPage() {
                             <h1 className="sm:text-4xl text-3xl font-bold m-3 bg-gradient-to-r from-blue-700 via-sky-500 to-gray-400 text-transparent bg-clip-text">
                                 Bizi Neden Tercih etmelisiniz?
                             </h1>
-                            <p className='text-left m-3 '>
+                            <p className='text-left m-3'>
 
                                  POS cihazlarımızdan kiosk çözümlerimize kadar her ürünümüz, restoran operasyonlarını daha akıllı, hızlı ve keyifli hale getirmek için tasarlandı. Sadece cihaz değil; konfor, güven ve gelecek sunuyoruz. Çünkü biz, bugünü kolaylaştırmakla kalmayıp, sizi yarına hazırlıyoruz.
                               

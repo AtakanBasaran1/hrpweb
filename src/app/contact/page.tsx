@@ -3,18 +3,15 @@ import { Fade } from '@mui/material';
 
 import Form from '@/components/contact/form';
 import Maps from '@/components/contact/google-maps';
+import Begining from '@/components/contact/Begining';
 
 export default function page() {
     return ( 
         <Fade in={true} timeout={500}>
                     <div className='bg-gray-100'>
-                    <div className='w-full flex flex-col items-center sm:pt-24 pt-12 '>
-                    <h1 className=" cursor-pointer text-7xl font-bold m-3 py-6 bg-gradient-to-r from-blue-600 via-sky-600 to-sky-300 text-transparent bg-clip-text">
-                        İletişim
-                    </h1>
-                    <p className="sm:text-xl text-lg m-2 text-center text-gray-700">
-                       Bizimle iletişim kurun, cevap bekletmez.
-                    </p>
+                    <div className='w-full flex flex-col items-center pt-0 '>
+                                 <Begining/>
+
                 </div>
                 <Form />
                 <Maps />
