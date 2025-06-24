@@ -73,12 +73,8 @@ export default function Navbar() {
   const getLogoSrc = () => isDarkMode ? "/images/regedit_white.png" : "/images/regedit_blue.png";
 
   // Navbar arkaplanı
-  const getNavbarBg = () => {
-    if (pathname === '/') {
-      if (isDarkMode) return showHeader ? "bg-transparent" : "bg-black";
-      return showHeader ? "bg-transparent" : "bg-white";
-    }
-    return showHeader ? "bg-transparent" : (isDarkMode ? "bg-black" : "bg-white");
+const getNavbarBg = () => {
+    return isDarkMode ? "bg-black" : "bg-white";
   };
 
   return (
