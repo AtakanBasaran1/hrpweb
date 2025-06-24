@@ -45,7 +45,7 @@ export default function Begining() {
 
             <div className="h-auto">
                 <p className={`${isDarkMode ? 'text-gray-300' : 'text-[#123466]'} text-center font-bold text-md sm:text-lg p-3`}>
-                    Bizimle iletişim kurun, cevap bekletmez.
+                Her türlü soru, öneri ve iş birliği talepleriniz için lütfen bizimle irtibata geçiniz.
                 </p>
             </div>
 
