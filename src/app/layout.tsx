@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <ProductProvider>
-      <html>
+      <html lang="tr">
         <body className={`${poppins.className} antialiased bg-black text-white`}>
                   
 
