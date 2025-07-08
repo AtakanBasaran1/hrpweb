@@ -49,7 +49,7 @@ export default function Begining() {
                         duration: 0.8,
                         ease: "easeOut",
                     }}
-                    className={`p-2 sm:text-9xl text-6xl font-bold m-3 bg-gradient-to-r 
+                    className={`p-2 sm:text-7xl text-6xl font-bold m-3 bg-gradient-to-r 
                         ${isDarkMode
                             ? 'from-[#93c5fd] via-[#38bdf8] to-[#2563eb]'
                             : 'from-[#38bdf8] via-[#2563eb] to-[#0ea5e9]'

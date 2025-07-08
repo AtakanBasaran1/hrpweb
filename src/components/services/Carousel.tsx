@@ -8,41 +8,45 @@ import 'swiper/css/effect-cards';
 import 'swiper/css/pagination';
 import { useProduct } from '@/context/ProductContext';
 import { Swiper as SwiperType } from 'swiper';
-
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Carousel() {
     const { services_posts } = useProduct();
     const swiperRef = useRef<SwiperType | null>(null);
 
-
     return (
         <div className="w-full relative">
 
-            {/* SOL GİZLİ BUTON */}
             <button
-                className="hidden md:block absolute left-0 top-0 h-full w-1/3 z-10"
+                className="absolute cursor-pointer left-3 top-1/2 -translate-y-1/2 z-50 bg-white/90 hover:bg-white rounded-full p-2 shadow-md active:scale-95 transition"
                 onClick={() => swiperRef.current?.slidePrev()}
-            />
+            >
+                <ChevronLeft size={24} />
+            </button>
 
-            {/* SAĞ GİZLİ BUTON */}
             <button
-                className="md:block absolute right-0 top-0 h-full w-1/3 z-10"
+                className="absolute cursor-pointer right-3 top-1/2 -translate-y-1/2 z-50 bg-white/90 hover:bg-white rounded-full p-2 shadow-md active:scale-95 transition"
                 onClick={() => swiperRef.current?.slideNext()}
-            />
+            >
+                <ChevronRight size={24} />
+            </button>
 
             <Swiper
                 effect={'cards'}
                 grabCursor={true}
                 pagination={{ clickable: true }}
                 modules={[EffectCards, Pagination]}
-                className="mySwiper"
+                className="mySwiper z-10"
                 onSwiper={(swiper) => {
                     swiperRef.current = swiper;
                 }}
             >
                 {services_posts.map((post) => (
-                    <SwiperSlide key={post.id} className="flex justify-center items-center ">
-                        <div className="relative w-full max-w-[calc(100%-2rem)] h-[calc(100vh-2rem)] rounded-3xl overflow-hidden">
+                    <SwiperSlide
+                        key={post.id}
+                        className="flex justify-center items-center pointer-events-none"
+                    >
+                        <div className="relative w-full max-w-[calc(100%-2rem)] h-[calc(100vh-2rem)] rounded-3xl overflow-hidden pointer-events-auto">
                             <Image
                                 src={post.image}
                                 alt="İmage"
@@ -55,12 +59,12 @@ export default function Carousel() {
                                     <div className='flex items-center p-2 shadow-xl rounded-3xl justify-center'>
                                         <Image
                                             src="/images/regedit_black.png"
-                                            width={64}
-                                            height={64}
+                                            width={48}
+                                            height={48}
                                             alt='Logo'
                                         />
                                     </div>
-                                    <h1 className='text-xl p-1 font-semibold'>
+                                    <h1 className='text-base md:text-xl p-1 font-semibold'>
                                         {post.description}
                                     </h1>
                                 </div>
@@ -72,4 +76,3 @@ export default function Carousel() {
         </div>
     );
 }
-
