@@ -1,28 +1,71 @@
 "use client";
-import React from 'react'
-import { Fade } from '@mui/material';
-import Carousel from '@/components/services/Carousel';
-import ShortBegining from '@/components/services/ShortBegining';
-import ResponsiveCarousel from '@/components/services/ResponsiveCarousel';
-import SEO from '@/components/SEO';
 
-export default function page() {
+import React from 'react';
+import { motion } from 'framer-motion';
+import SEO from '@/components/SEO';
+import ShortBegining from '@/components/services/ShortBegining';
+import Carousel from '@/components/services/Carousel';
+import ResponsiveCarousel from '@/components/services/ResponsiveCarousel';
+import { useTheme } from '@/context/ThemeContext';
+
+export default function ServicesPage() {
+  const { isDarkMode } = useTheme();
+
   return (
-    <Fade in={true} timeout={500}>
-      <div className='h-auto w-full flex flex-col justify-center sm:px-64 py-24 overflow-hidden'>
-        <SEO
-          title="Hizmetlerimiz | RegeditPos"
-          description="Projeleriniz baştan sonra anahtar teslim olacak şekilde güvenceyle tamamlanır."
-          image="/images/regedit_logo.ico"
-        />
-        <ShortBegining></ShortBegining>
-        <div className="hidden md:block">
-          <Carousel />
+    <main className={`min-h-screen transition-colors duration-1000 overflow-x-hidden
+      ${isDarkMode ? 'bg-[#020202]' : 'bg-[#fafafa]'}`}>
+      
+      <SEO
+        title="Hizmetlerimiz | Regedit Informatics"
+        description="Projeleriniz baştan sona anahtar teslim olacak şekilde, Regedit güvencesi ve üstün teknoloji altyapısıyla tamamlanır."
+        image="/images/regedit_logo.ico"
+      />
+
+      {/* Sayfa Giriş Animasyonu */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="relative z-10"
+      >
+        {/* Üst Başlık Bölümü */}
+        <div className="pt-20">
+            <ShortBegining />
         </div>
-        <div className="block md:hidden">
-          <ResponsiveCarousel />
-        </div>
+
+        {/* Carousel Showcase Bölümü */}
+        <section className="w-full max-w-[1200px] mx-auto px-4 md:px-10 pb-32">
+          {/* Masaüstü Görünüm */}
+          <div className="hidden lg:block">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.98 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+            >
+              <Carousel />
+            </motion.div>
+          </div>
+
+          {/* Mobil & Tablet Görünüm */}
+          <div className="block lg:hidden">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <ResponsiveCarousel />
+            </motion.div>
+          </div>
+        </section>
+      </motion.div>
+
+      {/* Dekoratif Arka Plan Elemanları */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <div className={`absolute top-[20%] right-[-10%] w-[500px] h-[500px] blur-[150px] rounded-full opacity-20
+          ${isDarkMode ? 'bg-blue-600/20' : 'bg-blue-400/10'}`} />
+        <div className={`absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] blur-[130px] rounded-full opacity-10
+          ${isDarkMode ? 'bg-indigo-600/20' : 'bg-indigo-400/10'}`} />
       </div>
-    </Fade>
-  )
+    </main>
+  );
 }

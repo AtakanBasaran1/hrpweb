@@ -1,74 +1,119 @@
 "use client";
-import React from 'react'
-import Image from 'next/image'
-import { motion } from 'framer-motion'; 
-import { FaSun, FaMoon } from 'react-icons/fa';
+
+import React from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion'; 
 import { useTheme } from '@/context/ThemeContext';
+import { MdHistoryEdu, MdOutlineSecurity, MdAutoGraph } from 'react-icons/md';
 
 export default function Begining() {
-  const { isDarkMode, toggleTheme } = useTheme();
+  const { isDarkMode } = useTheme();
+  
+  // Scroll tabanlı hafif parallax derinliği
+  const { scrollY } = useScroll();
+  const yTranslate = useTransform(scrollY, [0, 500], [0, -80]);
+
   const titles = [
     {
       id: 1,
       text: "15 Yıllık Tecrübe",
-      textSize: "sm:text-8xl text-4xl",
+      // Mobilde text-4xl'e çekildi, PC'de aynı kaldı
+      textSize: "text-4xl sm:text-5xl md:text-[8rem]",
+      icon: <MdHistoryEdu />,
+      gradient: isDarkMode ? "from-blue-400 via-sky-300 to-indigo-400" : "from-blue-900 via-blue-700 to-indigo-800"
     },
     {
       id: 2,
       text: "Güvenilir Teknoloji",
-      textSize: "sm:text-6xl text-3xl",
+      // Mobilde text-3xl'e çekildi, PC'de aynı kaldı
+      textSize: "text-3xl sm:text-4xl md:text-[6rem]",
+      icon: <MdOutlineSecurity />,
+      gradient: isDarkMode ? "from-sky-400 via-blue-400 to-white" : "from-blue-600 via-sky-600 to-neutral-900"
     },
     {
       id: 3,
       text: "Kalıcı Çözümler",
-      textSize: "sm:text-6xl text-2xl",
+      // Mobilde text-2xl'e çekildi, PC'de aynı kaldı
+      textSize: "text-2xl sm:text-3xl md:text-[5rem]",
+      icon: <MdAutoGraph />,
+      gradient: isDarkMode ? "from-indigo-400 to-blue-500" : "from-indigo-900 to-blue-800"
     },
   ];
+
   return (
-    <div className={`relative h-screen w-full overflow-hidden pt-[5lvh] ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
-      {/* Tema butonu */}
-     
-      {/* Gradient arka plan */}
-      <div className={`flex flex-col absolute left-1/2 -translate-x-1/2 w-full md:w-[800px] h-[500px] rounded-full blur-[120px] pointer-events-none z-0 ${isDarkMode ? 'top-[-150px] bg-gradient-to-b from-[#2563eb] via-[#38bdf8] to-transparent opacity-70' : 'bottom-[-100px] bg-gradient-to-t from-[#e0f2fe] via-[#38bdf8] to-[#2563eb] opacity-70'}`} />
-      {/* Başlıklar */}
-      <div className='flex flex-col-reverse w-full h-auto m-2 sm:p-9 items-center md:flex-col-reverse space-y-12 justify-center' style={{ marginTop: '150px' }}>
-        <div className='order-1 sm:order-2 flex flex-col items-center sm:w-[60%]'>
+    <section className={`relative min-h-screen w-full overflow-hidden flex flex-col items-center justify-center transition-colors duration-1000 ${isDarkMode ? 'bg-[#020202]' : 'bg-[#fafafa]'}`}>
+      
+      {/* ATMOSFERİK ARKA PLAN */}
+      <div className="absolute inset-0 pointer-events-none">
+        <motion.div 
+          animate={{ 
+            scale: [1, 1.15, 1],
+            opacity: [0.4, 0.6, 0.4]
+          }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+          className={`absolute left-1/2 -translate-x-1/2 w-full max-w-[1200px] h-[700px] rounded-full blur-[150px]
+            ${isDarkMode 
+              ? 'top-[-20%] bg-gradient-to-b from-blue-600/30 to-transparent' 
+              : 'bottom-[-20%] bg-gradient-to-t from-blue-400/20 to-transparent'}`} 
+        />
+        
+        <div className={`absolute inset-0 opacity-[0.03] ${isDarkMode ? 'invert' : ''}`}
+             style={{ backgroundImage: `radial-gradient(circle, #000 1px, transparent 1px)`, backgroundSize: '48px 48px' }} />
+      </div>
+
+      {/* İÇERİK MERKEZİ - pt-20 eklenerek mobilde navbar'ın altına girmesi engellendi */}
+      <motion.div 
+        style={{ y: yTranslate }}
+        className="relative z-10 w-full max-w-7xl px-6 flex flex-col items-center pt-24 md:pt-0"
+      >
+        {/* Üst Badge */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className={`mb-8 md:mb-16 mt-0 px-6 py-2 rounded-full border text-[9px] md:text-[11px] font-black tracking-[0.3em] md:tracking-[0.5em] uppercase backdrop-blur-xl text-center
+            ${isDarkMode ? 'bg-white/5 border-white/10 text-blue-400' : 'bg-blue-50 border-blue-100 text-blue-700'}`}
+        >
+          Kurumsal Vizyon & Gelecek
+        </motion.div>
+
+        {/* ANA BAŞLIKLAR */}
+        <div className="flex flex-col items-center space-y-2 md:space-y-4 w-full">
           {titles.map((item, index) => (
-            <motion.h1
+            <motion.div
               key={item.id}
-              initial={{
-                opacity: 0,
-                y: 20,
-                filter: "blur(10px)",
-              }}
-              animate={{
-                opacity: 1,
-                y: 0,
-                filter: "blur(0px)",
-              }}
-              transition={{
-                delay: index * 0.3,
-                duration: 0.8,
-                ease: "easeOut",
-              }}
-              className={`font-extrabold m-3 text-transparent bg-clip-text drop-shadow-[0_4px_24px_rgba(59,130,246,0.7)] ${item.textSize} ${
-                isDarkMode
-                  ? 'bg-gradient-to-r from-[#2563eb] via-[#38bdf8] to-[#0ea5e9]'
-                  : 'bg-gradient-to-r from-[#38bdf8] via-[#2563eb] to-[#0ea5e9]'
-              }`}
+              initial={{ opacity: 0, y: 30, filter: "blur(20px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ delay: index * 0.2, duration: 1, ease: [0.19, 1, 0.22, 1] }}
+              className="group relative w-full text-center"
             >
-              {item.text}
-            </motion.h1>
+              <h1 className={`font-black tracking-tighter leading-[1.1] md:leading-[0.9] bg-gradient-to-r bg-clip-text text-transparent transition-all duration-700 cursor-default
+                group-hover:tracking-tight group-hover:opacity-80 ${item.textSize} ${item.gradient} break-words`}>
+                {item.text}
+              </h1>
+              
+              <div className="hidden md:block absolute -bottom-2 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-500 to-transparent transition-all duration-1000 group-hover:w-full opacity-50" />
+            </motion.div>
           ))}
         </div>
-      </div>
-      {/* Açıklama */}
-      <div className={`flex justify-center items-center sm:text-xl text-sm text-center h-auto w-full mt-8 p-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-900'}`}>
-        <p>
-          Regedit Bilişim olarak, sektördeki deneyimimiz ve uzman ekibimizle, <br className='hidden sm:inline' />
-          işletmeniz için sürdürülebilir ve yenilikçi çözümler sunuyoruz.
-        </p>
-      </div>
-    </div>
-  )
+
+        {/* ALT AÇIKLAMA */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 1 }}
+          className="mt-12 md:mt-24 max-w-3xl w-full relative"
+        >
+          <div className={`absolute -inset-1 rounded-[2.5rem] blur-2xl opacity-20 ${isDarkMode ? 'bg-blue-500' : 'bg-blue-300'}`} />
+        </motion.div>
+      </motion.div>
+
+      {/* SAYFA SONU DEKORASYONU - Mobilde gizlendi veya küçültüldü */}
+      <motion.div 
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        className="absolute bottom-6 md:bottom-10 flex flex-col items-center gap-3 opacity-30"
+      >
+        <div className={`w-[1px] h-10 md:h-16 bg-gradient-to-b from-blue-500 to-transparent`} />
+      </motion.div>
+    </section>
+  );
 }

@@ -225,6 +225,20 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
       image: [{ img: "/images/hardware/n86.png", default: true }],
       category: "Yazar Kasa"
     },
+     {
+      id: 15,
+      name: "Pavo CT20",
+      description: "Pavo CT20, endüstriyel dayanıklılığı modern bir estetikle harmanlayan, yoğun işlem hacmine sahip işletmeler için tasarlanmış yüksek performanslı bir masaüstü ödeme terminalidir; güçlü işlemci mimarisi ve geniş dokunmatik ekranı sayesinde Regedit POS ekosistemiyle tam entegre çalışarak ödeme süreçlerini hızlandırırken, çoklu bağlantı seçenekleri ve uluslararası güvenlik standartlarıyla (PCI) güvenilir, kesintisiz ve premium bir kullanıcı deneyimi sunar.",
+      image: [{ img: "/images/hardware/pavoct20.png", default: true }],
+      category: "Yazar Kasa"
+    },
+     {
+      id: 16,
+      name: " İngenico Move 5000f",
+      description: "İşletim Sistemi: Android 9.0, İşlemci: Quad-Core işlemcili Güvenlik Çipi, Hafıza: 2GB Ram+16GB Flash, İletişim: 4G/3G/2G, Wi-Fi, Bluetooth, Lokasyon: GPS, GLONASS, BEIDOU, Yazıcı: Yüksek Hızlı Termal Yazıcı Kağıt Rulo Genişliği: 58mm Çap:40mm, Kamera: Arka Kamera 5mp, AF, Flash 2MB FF(Opsiyonel), Ön Kamera: 2MP, FF(Opsiyonel) Barkod, Okuyucu 1D & 2D, Pil: 2600mAh Şarj edilebilir Li-on Pil, Ekran:5.0” HD 1280×720 Renkli LCD Kapasitif Dokunmatik Ekran, E-imza Destekler), Ölçüler/Ağırlık: 194 mm Ux82 mm Gx68mm Y 417g (Pil Dahil), Güvenlik: PCI5, UPTS 2.0 Onaylı.",
+      image: [{ img: "images/hardware/ingenicotransparent.png", default: true }],
+      category: "Yazar Kasa"
+    },
   ];
 
 
