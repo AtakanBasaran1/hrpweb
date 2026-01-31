@@ -1,26 +1,39 @@
-"use client";
-import Begining from "@/components/main/Begining";
-import CompanyInfo from "@/components/main/CompanyInfo";
-import MiddleOfPage from "@/components/main/Middle-of-Page";
-import Referances from "@/components/main/Referances";
-import SEO from "@/components/SEO";
-import { Fade } from '@mui/material';
+'use client';
+
+import Header from '@/components/Header';
+import CurriculumDetailed from '@/components/CurriculumDetailed';
+import ProjectsSection from '@/components/ProjectsSection';
+import AtaturkCorner from '@/components/AtaturkCorner';
+import SEO from '@/components/SEO';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
-    <Fade in={true} timeout={500}>
-      
-      <div className="h-auto w-full">
-      <SEO 
-        title="Anasayfa | RegeditPos"
-        description="Zincir restoran operasyonlarınızı tek bir sistemle yönetin, zamandan ve maliyetten tasarruf edin."
-        image="/images/regedit_logo.ico"
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      className="min-h-screen bg-white overflow-x-hidden"
+    >
+      <SEO
+        title="Halil Rıfat Paşa MTAL - Elektrik Elektronik Teknolojisi"
+        description="Geleceğin teknolojisini tasarlayan, yenilikçi ve donanımlı bireyler yetiştiriyoruz. 9, 10, 11 ve 12. sınıf detaylı eğitim müfredatı."
+        image="/images/whatsapp-image-2026-01-23-at-14-21-07.jpeg"
       />
-        <Begining />
-        <MiddleOfPage />
-        <CompanyInfo />
-    
-      </div>
-    </Fade>
+
+      {/* Hero Header */}
+      <Header />
+
+      {/* Detailed Curriculum Section */}
+      <CurriculumDetailed />
+
+      {/* Student Projects Section */}
+      <ProjectsSection />
+
+      {/* Atatürk Corner - Replaces Vision/CTA Section */}
+      <AtaturkCorner />
+
+    </motion.main>
   );
 }

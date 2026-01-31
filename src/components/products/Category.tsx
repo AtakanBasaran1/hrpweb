@@ -11,7 +11,6 @@ import { TiPrinter } from "react-icons/ti";
 import { MdBarcodeReader } from "react-icons/md";
 import { IoReceiptOutline } from "react-icons/io5";
 import { useProduct } from '@/context/ProductContext';
-import { useTheme } from '@/context/ThemeContext';
 
 interface ICategoryItem {
     id: number;
@@ -33,21 +32,16 @@ const CATEGORY_LIST: ICategoryItem[] = [
 
 export default function Category() {
     const { selectedCategory, setSelectedCategory } = useProduct();
-    const { isDarkMode } = useTheme();
     const scrollRef = useRef<HTMLUListElement>(null);
 
     return (
         /* top-20 md:top-24: Mobilde Navbar'ın (header) yüksekliğine göre ayarlandı. 
            Böylece Navbar ile çakışmaz, tam altına yapışır.
         */
-        <nav className={`sticky top-[72px] md:top-[88px] z-[90] w-full transition-all duration-500 backdrop-blur-xl border-b
-            ${isDarkMode 
-                ? "bg-black/80 border-white/5" 
-                : "bg-white/90 border-gray-100"
-            }`}>
-            
+        <nav className="sticky top-[72px] md:top-[88px] z-[90] w-full transition-all duration-500 backdrop-blur-xl border-b bg-white/90 border-gray-100">
+
             <div className="max-w-7xl mx-auto px-4 md:px-6">
-                <ul 
+                <ul
                     ref={scrollRef}
                     className="flex items-center justify-start lg:justify-between gap-2 md:gap-4 py-2 md:py-4 overflow-x-auto no-scrollbar scroll-smooth touch-pan-x"
                 >
@@ -60,17 +54,16 @@ export default function Category() {
                                 <button
                                     onClick={() => setSelectedCategory(item.label)}
                                     className={`relative flex flex-col items-center justify-center w-[90px] md:w-[110px] py-2 md:py-3 rounded-xl transition-all duration-300 active:scale-95
-                                        ${isActive 
-                                            ? (isDarkMode ? "text-sky-400" : "text-blue-600") 
-                                            : (isDarkMode ? "text-gray-500 hover:text-gray-300" : "text-gray-400 hover:text-gray-800")
+                                        ${isActive
+                                            ? "text-blue-600"
+                                            : "text-gray-400 hover:text-gray-800"
                                         }`}
                                 >
                                     {/* Aktif Göstergesi - Mobilde daha ince ve zarif */}
                                     {isActive && (
-                                        <motion.div 
+                                        <motion.div
                                             layoutId="activeBar"
-                                            className={`absolute -bottom-[9px] md:-bottom-[17px] left-2 right-2 h-[2px] z-10 rounded-full
-                                                ${isDarkMode ? "bg-sky-400 shadow-[0_0_10px_rgba(56,189,248,0.5)]" : "bg-blue-600"}`}
+                                            className="absolute -bottom-[9px] md:-bottom-[17px] left-2 right-2 h-[2px] z-10 rounded-full bg-blue-600"
                                         />
                                     )}
 

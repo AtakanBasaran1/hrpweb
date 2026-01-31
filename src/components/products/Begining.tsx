@@ -3,11 +3,9 @@
 import React, { useRef } from 'react';
 import Image from 'next/image';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
-import { useTheme } from '@/context/ThemeContext';
 import { HiOutlineArrowRight } from "react-icons/hi2";
 
 export default function Beginning() {
-    const { isDarkMode } = useTheme();
     const sectionRef = useRef<HTMLElement>(null);
 
     const { scrollYProgress } = useScroll({
@@ -34,27 +32,25 @@ export default function Beginning() {
     };
 
     return (
-        <section 
+        <section
             ref={sectionRef}
-            className={`relative min-h-screen lg:min-h-[120vh] w-full flex items-center justify-center overflow-hidden transition-colors duration-1000 py-10 lg:py-0
-                ${isDarkMode ? 'bg-[#030303]' : 'bg-[#f8f9fa]'}`}
+            className="relative min-h-screen lg:min-h-[120vh] w-full flex items-center justify-center overflow-hidden transition-colors duration-1000 py-10 lg:py-0 bg-[#f8f9fa]"
         >
             {/* Arka Plan Glow */}
             <div className="absolute inset-0 pointer-events-none">
-                <div className={`absolute top-[-5%] lg:top-[-25%] left-[-10%] w-full lg:w-[80%] h-[60%] lg:h-[90%] rounded-full blur-[80px] lg:blur-[200px] opacity-20 transition-colors duration-1000
-                    ${isDarkMode ? 'bg-blue-600' : 'bg-blue-400'}`} 
+                <div className="absolute top-[-5%] lg:top-[-25%] left-[-10%] w-full lg:w-[80%] h-[60%] lg:h-[90%] rounded-full blur-[80px] lg:blur-[200px] opacity-20 transition-colors duration-1000 bg-blue-400"
                 />
             </div>
 
             {/* Ana Grid */}
             <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
-                
+
                 {/* İÇERİK BÖLÜMÜ */}
                 <motion.div
                     // Mobilde yavaşça kaybolma efektini devre dışı bırakıyoruz (opsiyonel)
-                    style={{ 
-                        opacity: typeof window !== 'undefined' && window.innerWidth > 1024 ? contentOpacity : 1, 
-                        y: typeof window !== 'undefined' && window.innerWidth > 1024 ? contentY : 0 
+                    style={{
+                        opacity: typeof window !== 'undefined' && window.innerWidth > 1024 ? contentOpacity : 1,
+                        y: typeof window !== 'undefined' && window.innerWidth > 1024 ? contentY : 0
                     }}
                     className="flex flex-col space-y-6 lg:space-y-10 order-1 lg:order-2 lg:col-span-7 lg:pl-16 text-center lg:text-left items-center lg:items-start"
                 >
@@ -64,39 +60,33 @@ export default function Beginning() {
                             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                             viewport={{ once: true }}
                             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                            className={`text-4xl md:text-7xl xl:text-[100px] font-black tracking-tighter leading-[0.9]
-                                ${isDarkMode ? 'text-blue-600' : 'text-blue-900'}`}
+                            className="text-4xl md:text-7xl xl:text-[100px] font-black tracking-tighter leading-[0.9] text-blue-900"
                         >
                             ÜRÜNLERİMİZ
                         </motion.h1>
-                        
-                        <p className={`text-base lg:text-2xl font-light leading-relaxed max-w-xl transition-colors duration-500
-                            ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+
+                        <p className="text-base lg:text-2xl font-light leading-relaxed max-w-xl transition-colors duration-500 text-gray-600">
                             İleri düzey mühendisliği minimalist tasarımla buluşturduk. İşletmenizi geleceğe taşıyan <span className="font-bold text-sky-500 underline decoration-sky-500/30 underline-offset-8">ekosistemi</span> keşfedin.
                         </p>
                     </div>
 
                     {/* Eylem ve İstatistikler */}
                     <div className="flex flex-col sm:flex-row items-center gap-6 lg:gap-10 pt-4 w-full lg:w-auto">
-                        <button 
+                        <button
                             onClick={scrollToProducts}
-                            className={`group relative flex items-center justify-center gap-4 px-8 lg:px-12 py-4 lg:py-6 rounded-2xl lg:rounded-[2rem] font-black text-xs lg:text-lg tracking-widest transition-all duration-700 w-full sm:w-auto
-                                ${isDarkMode 
-                                    ? 'bg-white text-black hover:bg-sky-500 hover:text-white' 
-                                    : 'bg-blue-600 text-white hover:bg-blue-400'}`}
+                            className="group relative flex items-center justify-center gap-4 px-8 lg:px-12 py-4 lg:py-6 rounded-2xl lg:rounded-[2rem] font-black text-xs lg:text-lg tracking-widest transition-all duration-700 w-full sm:w-auto bg-blue-600 text-white hover:bg-blue-400"
                         >
                             <span className="relative z-10 uppercase">Göz At</span>
                             <HiOutlineArrowRight className="relative z-10 text-xl lg:text-2xl group-hover:translate-x-2 transition-transform duration-500" />
                         </button>
 
-                        <div className={`flex gap-6 lg:gap-10 border-t-2 sm:border-t-0 sm:border-l-2 pt-6 sm:pt-0 sm:pl-10 transition-colors w-full sm:w-auto justify-center sm:justify-start
-                            ${isDarkMode ? 'border-white/10' : 'border-black/10'}`}>
+                        <div className="flex gap-6 lg:gap-10 border-t-2 sm:border-t-0 sm:border-l-2 pt-6 sm:pt-0 sm:pl-10 transition-colors w-full sm:w-auto justify-center sm:justify-start border-black/10">
                             <div className="flex flex-col items-center lg:items-start">
-                                <span className={`text-xl lg:text-4xl font-black ${isDarkMode ? 'text-white' : 'text-slate-950'}`}>%100</span>
+                                <span className="text-xl lg:text-4xl font-black text-slate-950">%100</span>
                                 <span className="text-[7px] lg:text-[10px] text-gray-500 font-bold tracking-[0.2em] uppercase mt-1">Verimlilik</span>
                             </div>
                             <div className="flex flex-col items-center lg:items-start">
-                                <span className={`text-xl lg:text-4xl font-black ${isDarkMode ? 'text-white' : 'text-slate-950'}`}>4K</span>
+                                <span className="text-xl lg:text-4xl font-black text-slate-950">4K</span>
                                 <span className="text-[7px] lg:text-[10px] text-gray-500 font-bold tracking-[0.2em] uppercase mt-1">Ultra HD</span>
                             </div>
                         </div>
@@ -113,8 +103,7 @@ export default function Beginning() {
                 >
                     <div className="relative w-full max-w-[280px] md:max-w-[400px] lg:max-w-none aspect-square lg:aspect-[3/4] max-h-[45vh] lg:max-h-none">
                         {/* Arka Glow (Görsel Altı) */}
-                        <div className={`absolute inset-0 blur-[40px] lg:blur-[100px] rounded-full scale-90 opacity-30
-                            ${isDarkMode ? 'bg-sky-500' : 'bg-blue-600'}`} 
+                        <div className="absolute inset-0 blur-[40px] lg:blur-[100px] rounded-full scale-90 opacity-30 bg-blue-600"
                         />
                         <Image
                             src="/images/hardware/kiosk5.png"
@@ -128,17 +117,16 @@ export default function Beginning() {
             </div>
 
             {/* Alt Geçiş Katmanı */}
-            <div className={`absolute bottom-0 left-0 w-full h-24 lg:h-48 z-20 pointer-events-none
-                ${isDarkMode ? 'bg-gradient-to-t from-[#030303] to-transparent' : 'bg-gradient-to-t from-[#f8f9fa] to-transparent'}`} 
+            <div className="absolute bottom-0 left-0 w-full h-24 lg:h-48 z-20 pointer-events-none bg-gradient-to-t from-[#f8f9fa] to-transparent"
             />
 
             {/* Scroll Indicator (PC Only) */}
-            <motion.div 
+            <motion.div
                 animate={{ opacity: [0.3, 1, 0.3], y: [0, 10, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
                 className="absolute bottom-12 left-1/2 -translate-x-1/2 hidden lg:block"
             >
-                <div className={`w-[1px] h-16 ${isDarkMode ? 'bg-white/20' : 'bg-black/10'}`} />
+                <div className="w-[1px] h-16 bg-black/10" />
             </motion.div>
         </section>
     );

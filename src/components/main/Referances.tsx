@@ -2,11 +2,9 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useTheme } from '@/context/ThemeContext';
 import ReferancesText from "../hooks/animations/ReferancesText";
 
 export default function Referances() {
-    const { isDarkMode } = useTheme();
 
     const logos = [
         '1.png', '2.png', '3.png', '15.png', '8.jpeg',
@@ -29,25 +27,25 @@ export default function Referances() {
     };
 
     return (
-        <section className={`w-full pt-12 pb-24 flex flex-col items-center transition-colors duration-1000 ${isDarkMode ? 'bg-[#020202]' : 'bg-[#fafafa]'}`}>
-            
+        <section className="w-full pt-12 pb-24 flex flex-col items-center transition-colors duration-1000 bg-[#fafafa]">
+
             {/* Üst Başlık Grubu - Daha Kompakt */}
             <div className="max-w-4xl w-full text-center px-6 mb-12 space-y-4">
                 <div className="flex justify-center transform scale-90 md:scale-100">
                     <ReferancesText />
                 </div>
-                
-                <motion.p 
+
+                <motion.p
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    className={`text-base md:text-lg font-medium tracking-tight ${isDarkMode ? 'text-neutral-400' : 'text-neutral-600'}`}
+                    className="text-base md:text-lg font-medium tracking-tight text-neutral-600"
                 >
                     “Restoranını geleceğe taşıyan <span className="text-blue-600">öncü markaların</span> teknoloji ortağıyız.”
                 </motion.p>
             </div>
 
             {/* Referans Logoları Grid Yapısı - Renkli & Canlı */}
-            <motion.div 
+            <motion.div
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -59,10 +57,7 @@ export default function Referances() {
                         key={i}
                         variants={itemVariants}
                         whileHover={{ scale: 1.03, zIndex: 10 }}
-                        className={`group relative aspect-square flex items-center justify-center p-6 rounded-2xl border transition-all duration-300
-                            ${isDarkMode 
-                                ? 'bg-white/10 border-white/5 hover:bg-white/20' 
-                                : 'bg-white border-neutral-100 shadow-sm hover:shadow-xl hover:shadow-blue-500/10'}`}
+                        className="group relative aspect-square flex items-center justify-center p-6 rounded-2xl border transition-all duration-300 bg-white border-neutral-100 shadow-sm hover:shadow-xl hover:shadow-blue-500/10"
                     >
                         {/* Logo Görseli - Full Color */}
                         <div className="relative w-full h-full">
@@ -82,12 +77,11 @@ export default function Referances() {
             </motion.div>
 
             {/* Alt Bilgi - Sosyal Kanıt */}
-            <motion.div 
+            <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className={`mt-16 flex items-center gap-4 px-6 py-2 rounded-full border text-[10px] font-black tracking-[0.3em] uppercase
-                    ${isDarkMode ? 'bg-white/5 border-white/10 text-neutral-500' : 'bg-white border-neutral-200 text-neutral-400'}`}
+                className="mt-16 flex items-center gap-4 px-6 py-2 rounded-full border text-[10px] font-black tracking-[0.3em] uppercase bg-white border-neutral-200 text-neutral-400"
             >
                 Güvenle Büyüyen İşletmeler Ekosistemi
             </motion.div>

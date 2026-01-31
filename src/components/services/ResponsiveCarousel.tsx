@@ -17,7 +17,7 @@ export default function ResponsiveCarousel() {
   const { services_posts } = useProduct();
 
   return (
-    <div className="relative w-full group overflow-hidden bg-neutral-950">
+    <div className="relative w-full group overflow-hidden bg-white">
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
         effect="fade"
@@ -48,13 +48,13 @@ export default function ResponsiveCarousel() {
 
               {/* LOGO WATERMARK */}
               <div className="absolute top-12 left-12 z-20 opacity-50">
-                 <Image src="/images/regedit_white.png" width={120} height={40} alt="Regedit Logo" className="grayscale brightness-200" />
+                <Image src="/images/regedit_white.png" width={120} height={40} alt="Regedit Logo" className="grayscale brightness-200" />
               </div>
 
               {/* BİLGİ PANELİ (Modern Glassmorphism) */}
               <div className="absolute bottom-16 left-1/2 -translate-x-1/2 z-20 w-[90%] max-w-5xl">
                 <div className="bg-black/20 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] p-6 md:p-10 flex flex-col md:flex-row items-center gap-8 shadow-2xl">
-                  
+
                   {/* Marka İkonu */}
                   <div className="hidden md:flex shrink-0 w-20 h-20 bg-white rounded-2xl items-center justify-center shadow-inner">
                     <Image src="/images/regedit_black.png" width={48} height={48} alt="Logo" />
@@ -70,7 +70,7 @@ export default function ResponsiveCarousel() {
 
                   {/* Dekoratif Çizgi (Mobilde gizli) */}
                   <div className="hidden md:block w-px h-16 bg-white/10 mx-4" />
-                  
+
                   <div className="flex flex-col items-center md:items-end opacity-40">
                     <span className="text-[10px] text-white font-black tracking-widest uppercase">Regedit Quality</span>
                     <span className="text-[9px] text-white/60">EST. 2025</span>

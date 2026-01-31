@@ -3,12 +3,10 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ScrollHide from "./tools/scrollHide";
 import HeaderControl from "./tools/headerControl";
 import Loading from "./tools/Loading";
 import { Suspense } from 'react';
 import { SnackbarProvider } from 'notistack';
-import { ThemeProvider } from '@/context/ThemeContext';
 
 export default function ClientLayout({
   children,
@@ -20,35 +18,35 @@ export default function ClientLayout({
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <ThemeProvider>
-      <SnackbarProvider maxSnack={3}>
-        <>
-          {isLoading && (
-            <div className="fixed inset-0 bg-white flex items-center justify-center z-50">
+    <SnackbarProvider maxSnack={3}>
+      <>
+        {isLoading && (
+          <div className="fixed inset-0 bg-white flex items-center justify-center z-50">
+            <div className="flex flex-col items-center gap-6">
+              <div className="w-16 h-16 border-t-4 border-blue-500 border-solid rounded-full animate-spin"></div>
               <div className="flex flex-col items-center">
-                <div className="w-16 h-16 border-t-4 border-blue-500 border-solid rounded-full animate-spin"></div>
-                <img src="/images/regedit_blue.png" className="w-48" />
+                <h2 className="text-2xl font-black text-blue-600 mb-2">HRP MTAL</h2>
+                <p className="text-sm font-bold text-neutral-600">Elektrik-Elektronik Teknolojisi</p>
               </div>
             </div>
-          )}
-
-          <div className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${showHeader ? 'translate-y-0' : '-translate-y-full'}`}>
-            <Navbar />
           </div>
+        )}
 
-          <div className={isLoading ? 'invisible' : 'visible'}>
-            {children}
-            <Footer />
-            {/* <ScrollHide />  Scrool gzükmemesini sağlar*/}
-            <HeaderControl setShowHeader={setShowHeader} lastScrollY={lastScrollY} setLastScrollY={setLastScrollY} />
-          </div>
+        <div className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${showHeader ? 'translate-y-0' : '-translate-y-full'}`}>
+          <Navbar />
+        </div>
 
-          {/* Suspending the Loading component */}
-          <Suspense fallback={null}>
-            <Loading setIsLoading={setIsLoading} />
-          </Suspense>
-        </>
-      </SnackbarProvider>
-    </ThemeProvider>
+        <div className={isLoading ? 'invisible' : 'visible'}>
+          {children}
+          <Footer />
+          <HeaderControl setShowHeader={setShowHeader} lastScrollY={lastScrollY} setLastScrollY={setLastScrollY} />
+        </div>
+
+        {/* Suspending the Loading component */}
+        <Suspense fallback={null}>
+          <Loading setIsLoading={setIsLoading} />
+        </Suspense>
+      </>
+    </SnackbarProvider>
   );
 }

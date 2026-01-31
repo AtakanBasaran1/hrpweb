@@ -4,13 +4,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import SEO from '@/components/SEO';
 import Referances from '@/components/main/Referances';
-import { useTheme } from '@/context/ThemeContext';
 
 export default function ReferancesPage() {
-    const { isDarkMode } = useTheme();
 
     return (
-        <main className={`min-h-screen -mt-20 transition-colors duration-1000 ${isDarkMode ? 'bg-[#020202]' : 'bg-[#fafafa]'}`}>
+        <main className="min-h-screen -mt-20 transition-colors duration-1000 bg-[#fafafa]">
             {/* SEO Bileşeni - Meta verileri en başta yüklenir */}
             <SEO
                 title="Referanslarımız | Regedit Informatics"
@@ -32,8 +30,7 @@ export default function ReferancesPage() {
 
                 {/* Dekoratif Arka Plan Işıması (Opsiyonel) */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] pointer-events-none overflow-hidden opacity-50">
-                    <div className={`absolute top-[-20%] left-1/2 -translate-x-1/2 w-[800px] h-[400px] blur-[120px] rounded-full
-                        ${isDarkMode ? 'bg-blue-900/10' : 'bg-blue-400/5'}`} />
+                    <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[800px] h-[400px] blur-[120px] rounded-full bg-blue-400/5" />
                 </div>
             </motion.div>
         </main>

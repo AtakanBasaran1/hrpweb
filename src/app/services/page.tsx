@@ -6,15 +6,12 @@ import SEO from '@/components/SEO';
 import ShortBegining from '@/components/services/ShortBegining';
 import Carousel from '@/components/services/Carousel';
 import ResponsiveCarousel from '@/components/services/ResponsiveCarousel';
-import { useTheme } from '@/context/ThemeContext';
 
 export default function ServicesPage() {
-  const { isDarkMode } = useTheme();
 
   return (
-    <main className={`min-h-screen transition-colors duration-1000 overflow-x-hidden
-      ${isDarkMode ? 'bg-[#020202]' : 'bg-[#fafafa]'}`}>
-      
+    <main className="min-h-screen transition-colors duration-1000 overflow-x-hidden bg-[#fafafa]">
+
       <SEO
         title="Hizmetlerimiz | Regedit Informatics"
         description="Projeleriniz baştan sona anahtar teslim olacak şekilde, Regedit güvencesi ve üstün teknoloji altyapısıyla tamamlanır."
@@ -30,7 +27,7 @@ export default function ServicesPage() {
       >
         {/* Üst Başlık Bölümü */}
         <div className="pt-20">
-            <ShortBegining />
+          <ShortBegining />
         </div>
 
         {/* Carousel Showcase Bölümü */}
@@ -61,10 +58,8 @@ export default function ServicesPage() {
 
       {/* Dekoratif Arka Plan Elemanları */}
       <div className="fixed inset-0 pointer-events-none z-0">
-        <div className={`absolute top-[20%] right-[-10%] w-[500px] h-[500px] blur-[150px] rounded-full opacity-20
-          ${isDarkMode ? 'bg-blue-600/20' : 'bg-blue-400/10'}`} />
-        <div className={`absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] blur-[130px] rounded-full opacity-10
-          ${isDarkMode ? 'bg-indigo-600/20' : 'bg-indigo-400/10'}`} />
+        <div className="absolute top-[20%] right-[-10%] w-[500px] h-[500px] blur-[150px] rounded-full opacity-20 bg-blue-400/10" />
+        <div className="absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] blur-[130px] rounded-full opacity-10 bg-indigo-400/10" />
       </div>
     </main>
   );

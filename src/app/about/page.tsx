@@ -12,8 +12,8 @@ export default function page() {
         <Fade in={true} timeout={500}>
             <div>
                 <SEO
-                    title="Hakkımızda | RegeditPos"
-                    description="15 Yıllık Tecrübe, Güvenilir Teknoloji, Kalıcı Çözümler"
+                    title="Hakkımızda | Elektrik-Elektronik Teknolojisi - Halil Rıfat Paşa MTAL"
+                    description="Halil Rıfat Paşa Mesleki ve Teknik Anadolu Lisesi Elektrik-Elektronik Teknolojisi Bölümü hakkında bilgi. Bölüm tarihçesi, misyon ve vizyon."
                     image="/images/regedit_logo.ico"
                 />
 

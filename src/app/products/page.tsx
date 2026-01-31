@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useTheme } from '@/context/ThemeContext';
 import Beginning from '@/components/products/Begining';
 import MiddleOfPage from '@/components/products/Middle-of-Page';
 import SEO from '@/components/SEO';
@@ -12,14 +11,11 @@ import SEO from '@/components/SEO';
  * Bu sayfa, merkezi tema yönetimini kullanarak dark/light mode geçişlerini yönetir.
  */
 export default function ProductsPage() {
-    const { isDarkMode } = useTheme();
 
     return (
-        <main className={`min-h-screen transition-colors duration-700 ${
-            isDarkMode ? 'bg-[#050505] text-white' : 'bg-[#fafafa] text-neutral-900'
-        }`}>
+        <main className="min-h-screen transition-colors duration-700 bg-[#fafafa] text-neutral-900">
             {/* Dinamik SEO Yönetimi */}
-            <SEO 
+            <SEO
                 title="Ürünlerimiz | RegeditPos"
                 description="İleri düzey mühendislik ve minimalist tasarımın buluştuğu RegeditPos donanım ekosistemini keşfedin."
                 image="/images/regedit_logo.ico"
@@ -28,7 +24,6 @@ export default function ProductsPage() {
             {/* Sayfa Geçiş Animasyonu */}
             <AnimatePresence mode="wait">
                 <motion.div
-                    key={isDarkMode ? 'dark' : 'light'}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
@@ -48,11 +43,7 @@ export default function ProductsPage() {
             </AnimatePresence>
 
             {/* Sayfa Sonu Yumuşak Geçiş (Dekoratif) */}
-            <div className={`h-32 w-full ${
-                isDarkMode 
-                ? 'bg-gradient-to-t from-[#0a0a0a] to-transparent' 
-                : 'bg-gradient-to-t from-neutral-100 to-transparent'
-            }`} />
+            <div className="h-32 w-full bg-gradient-to-t from-neutral-100 to-transparent" />
         </main>
     );
 }
