@@ -58,7 +58,7 @@ export default function Carousel() {
                                 <div className="bg-white/80 backdrop-blur-md border border-white/20 shadow-2xl rounded-3xl w-full max-w-3xl p-6 text-center flex items-center gap-2">
                                     <div className='flex items-center p-2 shadow-xl rounded-3xl justify-center'>
                                         <Image
-                                            src="/images/regedit_black.png"
+                                            src="/images/hrp_black.png"
                                             width={48}
                                             height={48}
                                             alt='Logo'

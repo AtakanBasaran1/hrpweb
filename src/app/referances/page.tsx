@@ -11,9 +11,9 @@ export default function ReferancesPage() {
         <main className="min-h-screen -mt-20 transition-colors duration-1000 bg-[#fafafa]">
             {/* SEO Bileşeni - Meta verileri en başta yüklenir */}
             <SEO
-                title="Referanslarımız | Regedit Informatics"
-                description="Türkiye'nin önde gelen restoran zincirleri ve işletmeleri RegeditPos ekosistemi ile dijital dönüşümünü tamamlıyor."
-                image="/images/regedit_logo.ico"
+                title="Referanslarımız | Hrp Informatics"
+                description="Türkiye'nin önde gelen restoran zincirleri ve işletmeleri HrpPos ekosistemi ile dijital dönüşümünü tamamlıyor."
+                image="/hrp_logo.ico"
             />
 
             {/* Sayfa İçeriği Animasyonu */}

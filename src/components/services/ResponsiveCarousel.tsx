@@ -48,7 +48,7 @@ export default function ResponsiveCarousel() {
 
               {/* LOGO WATERMARK */}
               <div className="absolute top-12 left-12 z-20 opacity-50">
-                <Image src="/images/regedit_white.png" width={120} height={40} alt="Regedit Logo" className="grayscale brightness-200" />
+                <Image src="/images/hrp_white.png" width={120} height={40} alt="Hrp Logo" className="grayscale brightness-200" />
               </div>
 
               {/* BİLGİ PANELİ (Modern Glassmorphism) */}
@@ -57,7 +57,7 @@ export default function ResponsiveCarousel() {
 
                   {/* Marka İkonu */}
                   <div className="hidden md:flex shrink-0 w-20 h-20 bg-white rounded-2xl items-center justify-center shadow-inner">
-                    <Image src="/images/regedit_black.png" width={48} height={48} alt="Logo" />
+                    <Image src="/images/hrp_black.png" width={48} height={48} alt="Logo" />
                   </div>
 
                   {/* Açıklama Metni */}
@@ -72,7 +72,7 @@ export default function ResponsiveCarousel() {
                   <div className="hidden md:block w-px h-16 bg-white/10 mx-4" />
 
                   <div className="flex flex-col items-center md:items-end opacity-40">
-                    <span className="text-[10px] text-white font-black tracking-widest uppercase">Regedit Quality</span>
+                    <span className="text-[10px] text-white font-black tracking-widest uppercase">Hrp Quality</span>
                     <span className="text-[9px] text-white/60">EST. 2025</span>
                   </div>
                 </div>

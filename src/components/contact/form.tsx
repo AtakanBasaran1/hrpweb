@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 import ReCAPTCHA from "react-google-recaptcha";
 
 /**
- * RegeditPos - Premium Contact Center
+ * HrpPos - Premium Contact Center
  * Fokus: Hatasız ReCAPTCHA Entegrasyonu & High-End UI
  */
 export default function Form() {
@@ -117,8 +117,8 @@ KARTAL / İSTANBUL`}
                                 <ContactBento
                                     icon={<MdEmail size={20} />}
                                     label="E-Posta"
-                                    value="info@regeditpos.com"
-                                    href="mailto:info@regeditpos.com"
+                                    value="info@hrppos.com"
+                                    href="mailto:info@hrppos.com"
                                 />
                             </div>
                         </div>

@@ -13,9 +13,9 @@ export default function ServicesPage() {
     <main className="min-h-screen transition-colors duration-1000 overflow-x-hidden bg-[#fafafa]">
 
       <SEO
-        title="Hizmetlerimiz | Regedit Informatics"
-        description="Projeleriniz baştan sona anahtar teslim olacak şekilde, Regedit güvencesi ve üstün teknoloji altyapısıyla tamamlanır."
-        image="/images/regedit_logo.ico"
+        title="Hizmetlerimiz | Hrp Informatics"
+        description="Projeleriniz baştan sona anahtar teslim olacak şekilde, Hrp güvencesi ve üstün teknoloji altyapısıyla tamamlanır."
+        image="/hrp_logo.ico"
       />
 
       {/* Sayfa Giriş Animasyonu */}

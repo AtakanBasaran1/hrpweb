@@ -16,9 +16,9 @@ export default function ProductsPage() {
         <main className="min-h-screen transition-colors duration-700 bg-[#fafafa] text-neutral-900">
             {/* Dinamik SEO Yönetimi */}
             <SEO
-                title="Ürünlerimiz | RegeditPos"
-                description="İleri düzey mühendislik ve minimalist tasarımın buluştuğu RegeditPos donanım ekosistemini keşfedin."
-                image="/images/regedit_logo.ico"
+                title="Ürünlerimiz | HrpPos"
+                description="İleri düzey mühendislik ve minimalist tasarımın buluştuğu HrpPos donanım ekosistemini keşfedin."
+                image="/hrp_logo.ico"
             />
 
             {/* Sayfa Geçiş Animasyonu */}

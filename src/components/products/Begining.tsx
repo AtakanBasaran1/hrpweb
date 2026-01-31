@@ -107,7 +107,7 @@ export default function Beginning() {
                         />
                         <Image
                             src="/images/hardware/kiosk5.png"
-                            alt="Regedit Kiosk Elite"
+                            alt="Hrp Kiosk Elite"
                             fill
                             priority
                             className="object-contain relative z-10 drop-shadow-[0_20px_40px_rgba(0,0,0,0.2)] lg:drop-shadow-[0_80px_120px_rgba(0,0,0,0.4)]"

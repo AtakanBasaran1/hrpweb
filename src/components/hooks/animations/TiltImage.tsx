@@ -42,7 +42,7 @@ const TiltImage = () => {
       >
         <Image
           className="rounded-xl cursor-pointer bg-sky-400"
-          src="/images/regeditartistikfoto.webp"
+          src="/images/hrpartistikfoto.webp"
           alt="Logo"
           width={400}
           height={500}

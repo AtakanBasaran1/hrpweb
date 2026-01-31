@@ -12,7 +12,7 @@ import Navbar from "@/components/Navbar";
 export const metadata: Metadata = {
   title: "Elektrik-Elektronik Teknolojisi | Halil Rıfat Paşa MTAL",
   description: "Halil Rıfat Paşa Mesleki ve Teknik Anadolu Lisesi Elektrik-Elektronik Teknolojisi Bölümü - 9, 10, 11 ve 12. Sınıf eğitim programları hakkında bilgi",
-  icons: "/regedit_logo.ico",
+  icons: "/hrp_logo.ico",
 };
 
 export default function RootLayout({

@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 import { HiOutlineArrowRight } from "react-icons/hi2";
 
 /**
- * RegeditPos - About Section (Minimalist & Professional)
+ * HrpPos - About Section (Minimalist & Professional)
  * Fokus: Okunabilirlik, Net Hiyerarşi, Temiz Boşluklar.
  */
 export default function MiddleOfPage() {
@@ -80,7 +80,7 @@ export default function MiddleOfPage() {
                 </div>
             </div>
 
-            {/* --- SECTION 2: NEDEN REGEDIT? (Inverted Layout) --- */}
+            {/* --- SECTION 2: NEDEN HRP? (Inverted Layout) --- */}
             <div className="max-w-7xl mx-auto px-6 mb-32">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                     <motion.div {...fadeInUp} className="order-2 lg:order-1 space-y-8">
@@ -103,7 +103,7 @@ export default function MiddleOfPage() {
                     <motion.div {...fadeInUp} transition={{ delay: 0.2 }} className="order-1 lg:order-2 relative aspect-[4/5] rounded-3xl overflow-hidden bg-neutral-100">
                         <Image
                             src="/images/aboutpageimage2.webp"
-                            alt="Neden Regedit"
+                            alt="Neden Hrp"
                             fill
                             className="object-cover"
                         />

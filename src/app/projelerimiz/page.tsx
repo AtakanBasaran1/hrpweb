@@ -86,7 +86,7 @@ export default function Projelerimiz() {
                 <SEO
                     title="Öğrenci Projeleri | Elektrik-Elektronik Teknolojisi - Halil Rıfat Paşa MTAL"
                     description="Halil Rıfat Paşa MTAL Elektrik-Elektronik Teknolojisi Bölümü öğrencilerinin gerçekleştirdiği projeler ve çalışmalar."
-                    image="/images/regedit_logo.ico"
+                    image="/hrp_logo.ico"
                 />
 
                 {/* Hero Section */}

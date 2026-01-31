@@ -13,6 +13,7 @@ export default function ContactPage() {
             <SEO
                 title="İletişim - Halil Rıfat Paşa MTAL"
                 description="Bizimle iletişime geçin. Adres, telefon ve iletişim formu."
+                image="/hrp_logo.ico"
             />
 
             {/* Decorative Background Elements */}

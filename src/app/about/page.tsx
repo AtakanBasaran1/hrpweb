@@ -14,7 +14,7 @@ export default function page() {
                 <SEO
                     title="Hakkımızda | Elektrik-Elektronik Teknolojisi - Halil Rıfat Paşa MTAL"
                     description="Halil Rıfat Paşa Mesleki ve Teknik Anadolu Lisesi Elektrik-Elektronik Teknolojisi Bölümü hakkında bilgi. Bölüm tarihçesi, misyon ve vizyon."
-                    image="/images/regedit_logo.ico"
+                    image="/hrp_logo.ico"
                 />
 
                 <Begining />    
