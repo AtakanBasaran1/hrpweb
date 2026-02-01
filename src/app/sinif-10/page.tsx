@@ -59,7 +59,7 @@ export default function Sinif10Page() {
                     className="relative h-[400px] w-full rounded-3xl overflow-hidden mb-16 shadow-2xl"
                 >
                     <Image
-                        src="/images/2700_buyuk-500x295.jpg" // Using an existing image related to electronics
+                        src="/images/WhatsApp Image 2026-01-23 at 14.21.07.jpeg" // Updated to match 9. Sınıf image
                         alt="10. Sınıf Elektronik Çalışması"
                         fill
                         className="object-cover"

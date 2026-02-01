@@ -30,8 +30,15 @@ export default function Navbar() {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
+      document.documentElement.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+      document.documentElement.style.overflow = 'unset';
     }
   }, [isOpen]);
 
@@ -101,33 +108,65 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, clipPath: "circle(0% at 100% 0%)" }}
-            animate={{ opacity: 1, clipPath: "circle(150% at 100% 0%)" }}
-            exit={{ opacity: 0, clipPath: "circle(0% at 100% 0%)" }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="fixed inset-0 z-[990] md:hidden flex flex-col pt-28 px-6 bg-white"
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            className="fixed inset-0 z-[9999] md:hidden flex flex-col bg-white h-[100dvh]"
           >
-            <div className="flex flex-col gap-4">
-              {navItems.map((item, idx) => (
-                <motion.div
-                  key={item.href}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: idx * 0.1 }}
-                >
-                  <Link
-                    href={item.href}
-                    onClick={() => setIsOpen(false)}
-                    className="block p-4 rounded-2xl text-2xl font-bold transition-all border text-gray-900 bg-gray-50 border-gray-100"
-                  >
-                    {item.label}
-                  </Link>
-                </motion.div>
-              ))}
+            {/* MENU HEADER */}
+            <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 bg-white/50 backdrop-blur-md">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 bg-gradient-to-tr from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center text-white shadow-md">
+                  <FaGraduationCap size={16} />
+                </div>
+                <span className="text-lg font-black tracking-tighter leading-none text-gray-900">
+                  HRP<span className="text-blue-600">MTAL</span>
+                </span>
+              </div>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-50 text-gray-500 hover:bg-red-50 hover:text-red-500 transition-colors border border-gray-100"
+              >
+                <FaTimes size={20} />
+              </button>
             </div>
 
-            <div className="mt-auto mb-10 text-center">
-              <p className="text-sm font-medium text-gray-400">HRP MTAL © {new Date().getFullYear()}</p>
+            {/* LINKS */}
+            <div className="flex-1 overflow-y-auto py-8 px-6">
+              <div className="flex flex-col gap-3">
+                {navItems.map((item, idx) => (
+                  <motion.div
+                    key={item.href}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 + (idx * 0.05) }}
+                  >
+                    <Link
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
+                      className="flex items-center justify-between p-4 rounded-xl text-lg font-semibold text-gray-800 transition-all hover:bg-blue-50 hover:text-blue-600 group"
+                    >
+                      {item.label}
+                      <span className="opacity-0 group-hover:opacity-100 transition-opacity text-blue-400 text-sm">
+                        →
+                      </span>
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* FOOTER */}
+            <div className="p-6 bg-gray-50 border-t border-gray-100">
+              <div className="flex flex-col gap-2 text-center">
+                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider">İletişim</p>
+                <p className="text-sm text-gray-600">info@hrpmtal.k12.tr</p>
+                <p className="text-sm text-gray-600">+90 (212) 123 45 67</p>
+                <div className="mt-4 pt-4 border-t border-gray-200/50">
+                  <p className="text-[10px] text-gray-400">© {new Date().getFullYear()} HRP MTAL Elektrik Elektronik</p>
+                </div>
+              </div>
             </div>
           </motion.div>
         )}

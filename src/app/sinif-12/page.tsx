@@ -59,7 +59,7 @@ export default function Sinif12Page() {
                     className="relative h-[400px] w-full rounded-3xl overflow-hidden mb-16 shadow-2xl"
                 >
                     <Image
-                        src="/images/akilliev.jpg" // Using an existing image related to smart projects/capstone
+                        src="/images/WhatsApp Image 2026-01-23 at 14.21.07.jpeg" // Updated to match 9. Sınıf image
                         alt="12. Sınıf Proje ve Staj"
                         fill
                         className="object-cover"

@@ -65,7 +65,7 @@ export default function Sinif11Page() {
                     className="relative h-[400px] w-full rounded-3xl overflow-hidden mb-16 shadow-2xl"
                 >
                     <Image
-                        src="/images/plc.jpg" // Using an existing image related to PLC/Automation
+                        src="/images/WhatsApp Image 2026-01-23 at 14.21.07.jpeg" // Updated to match 9. Sınıf image
                         alt="11. Sınıf PLC ve Otomasyon"
                         fill
                         className="object-cover"
