@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: 'https://hrpelektronik.vercel.app',
+  siteUrl: 'https://hrp.vercel.app',
   generateRobotsTxt: true,
 }
